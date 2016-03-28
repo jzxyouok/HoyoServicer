@@ -20,17 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
 
-    lazy var loginViewController: LoginViewController = {
-        //let vc = LoginViewController
-        return LoginViewController()
+    lazy var loginViewController: LoginAndRegisterViewController = {
+        return LoginAndRegisterViewController(nibName: "LoginAndRegisterViewController", bundle: nil)
     }()
     /// 网络状态
     var reachOfNetwork:Reachability?
     //主视图控制器
     var mainViewController: MainViewController!
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window!.rootViewController = loginViewController
-        window!.makeKeyAndVisible()
+        
         
         //检查网络状况，无网络，wifi，普通网络三种情况实时变化通知
         reachOfNetwork = Reachability(hostName: "www.baidu.com")
@@ -42,13 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //提醒用户给app打分
-        //        Appirater.setAppId("955305764")
-        //        Appirater.setDaysUntilPrompt(1)
-        //        Appirater.setUsesUntilPrompt(1)
-        //        Appirater.setSignificantEventsUntilPrompt(-1)
-        //        Appirater.setTimeBeforeReminding(2)
-        //        Appirater.setDebug(true)
-        //        Appirater.appLaunched(true)
+//        Appirater.setAppId("955305764")
+//        Appirater.setDaysUntilPrompt(1)
+//        Appirater.setUsesUntilPrompt(1)
+//        Appirater.setSignificantEventsUntilPrompt(-1)
+//        Appirater.setTimeBeforeReminding(2)
+//        Appirater.setDebug(true)
+//        Appirater.appLaunched(true)
+
+        //设置状态栏字体为白色
+        UIApplication.sharedApplication().statusBarStyle=UIStatusBarStyle.LightContent
+        window!.rootViewController = loginViewController
+        window!.makeKeyAndVisible()
         return true
     }
 

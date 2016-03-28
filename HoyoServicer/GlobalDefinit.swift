@@ -8,26 +8,26 @@
 
 import UIKit
 //状态栏高度
-let StatusBar_HEIGHT:CGFloat=20
+let HEIGHT_StatusBar:CGFloat=20
 //导航栏高度
-let NavBar_HEIGHT:CGFloat=64
+let HEIGHT_NavBar:CGFloat=64
 //导航栏高度
-let TabBar_HEIGHT:CGFloat=49
+let HEIGHT_TabBar:CGFloat=49
 //获取当前屏幕 宽度、高度
-let SCREEN_WIDTH:CGFloat = UIScreen.mainScreen().bounds.size.width
-let SCREEN_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.size.height
+let WIDTH_SCREEN:CGFloat = UIScreen.mainScreen().bounds.size.width
+let HEIGHT_SCREEN:CGFloat = UIScreen.mainScreen().bounds.size.height
 //参考的设计图纸尺寸
 let WidthOfDesign:CGFloat=375.0
 let HeightOfDesign:CGFloat=667.0
 //宽比例尺寸换算
 func WidthFromTranslat(width:CGFloat)->CGFloat
 {
-    return width*SCREEN_WIDTH/WidthOfDesign
+    return width*WIDTH_SCREEN/WidthOfDesign
 }
 //高比例尺寸换算
 func HeightFromTranslat(height:CGFloat)->CGFloat
 {
-    return height*SCREEN_HEIGHT/HeightOfDesign
+    return height*HEIGHT_SCREEN/HeightOfDesign
 }
 //系统版本号
 let IOS_VERSION:Float = Float((UIDevice.currentDevice().systemVersion as NSString).substringToIndex(1))!

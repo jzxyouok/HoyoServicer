@@ -12,7 +12,7 @@ class ManageTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       self.automaticallyAdjustsScrollViewInsets=false
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,6 +25,10 @@ class ManageTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden=true
+    }
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

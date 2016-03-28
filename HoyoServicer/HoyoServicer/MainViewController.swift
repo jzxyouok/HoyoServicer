@@ -13,34 +13,39 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let c1=UIViewController()
-        c1.view.backgroundColor=UIColor.grayColor()
+        let c1=HomeTableViewController()
         c1.tabBarItem.title="首页"
-        c1.tabBarItem.image=UIImage(named: "first")
+        c1.tabBarItem.image=UIImage(named: "HomeIcon")
+        c1.tabBarItem.selectedImage=UIImage(named: "HomeIcon_on")
         c1.tabBarItem.badgeValue=nil
-        
-        let c2=UIViewController()
-        c2.view.backgroundColor=UIColor.redColor()
+        let nav1=UINavigationController(rootViewController: c1)
+        nav1.navigationBar.loadBlackBgBar()
+        let c2=ManageTableViewController()
         c2.tabBarItem.title="管理"
-        c2.tabBarItem.image=UIImage(named: "second")
+        c2.tabBarItem.image=UIImage(named: "ManageIcon")
+        c2.tabBarItem.selectedImage=UIImage(named: "ManageIcon_on")
         c2.tabBarItem.badgeValue=nil
-        
-        let c3=UIViewController()
-        c3.view.backgroundColor=UIColor.whiteColor()
+        let nav2=UINavigationController(rootViewController: c2)
+        nav2.navigationBar.loadBlackBgBar()
+        let c3=NewsTableViewController()
         c3.tabBarItem.title="消息"
-        c3.tabBarItem.image=UIImage(named: "first")
+        c3.tabBarItem.image=UIImage(named: "NewsIcon")
+        c3.tabBarItem.selectedImage=UIImage(named: "NewsIcon_on")
         c3.tabBarItem.badgeValue="5"
-        
-        let c4=UIViewController()
-        c4.view.backgroundColor=UIColor.blueColor()
+        let nav3=UINavigationController(rootViewController: c3)
+        nav3.navigationBar.loadBlackBgBar()
+        let c4=MyCenterTableViewController()
         c4.tabBarItem.title="我的"
-        c4.tabBarItem.image=UIImage(named: "second")
+        c4.tabBarItem.image=UIImage(named: "MyCenterIcon")
+        c4.tabBarItem.selectedImage=UIImage(named: "MyCenterIcon_on")
         c4.tabBarItem.badgeValue=nil
+        let nav4=UINavigationController(rootViewController: c4)
+        nav4.navigationBar.loadBlackBgBar()
         
-        self.viewControllers=[c1,c2,c3,c4]
+        self.viewControllers=[nav1,nav2,nav3,nav4]
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -12,41 +12,55 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.automaticallyAdjustsScrollViewInsets=false
+        tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "HomeTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden=true
+    }
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return HEIGHT_SCREEN-HEIGHT_TabBar
+    }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("HomeTableViewCell", forIndexPath: indexPath) as! HomeTableViewCell
+        cell.selectionStyle=UITableViewCellSelectionStyle.None
+        cell.buttonClickCallBack={ [weak self] buttonTag in
+            if let strongSelf = self {
+                strongSelf.buttonClick(buttonTag)
+            }
+            
+        }
         // Configure the cell...
 
         return cell
     }
-    */
-
+    /**
+     点击菜单的哪个按钮
+     
+     - parameter Tag: 从左到右，从上到下，1、2....8
+     */
+    private func buttonClick(Tag:Int)
+    {
+        print(Tag)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

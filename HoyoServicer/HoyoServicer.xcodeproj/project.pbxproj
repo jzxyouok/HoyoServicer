@@ -25,7 +25,6 @@
 		8D340CD51CA8FBC300407F30 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CD11CA8FBC300407F30 /* DataManager.swift */; };
 		8D340CD61CA8FBC300407F30 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CD21CA8FBC300407F30 /* SettingsManager.swift */; };
 		8D340CD91CA8FCCD00407F30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CD81CA8FCCD00407F30 /* MainViewController.swift */; };
-		8D340CDB1CA8FCF400407F30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CDA1CA8FCF400407F30 /* LoginViewController.swift */; };
 		8D340CFA1CA9049B00407F30 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CE81CA9049B00407F30 /* AFHTTPRequestOperation.m */; };
 		8D340CFB1CA9049B00407F30 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CEA1CA9049B00407F30 /* AFHTTPRequestOperationManager.m */; };
 		8D340CFC1CA9049B00407F30 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CEC1CA9049B00407F30 /* AFHTTPSessionManager.m */; };
@@ -73,6 +72,11 @@
 		8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D6B1CA9141D00407F30 /* ManageTableViewController.swift */; };
 		8D340D6E1CA9146600407F30 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D6D1CA9146600407F30 /* NewsTableViewController.swift */; };
 		8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D6F1CA9148200407F30 /* MyCenterTableViewController.swift */; };
+		8D340D731CA9353D00407F30 /* LoginAndRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D711CA9353D00407F30 /* LoginAndRegisterViewController.swift */; };
+		8D340D741CA9353D00407F30 /* LoginAndRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */; };
+		8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */; };
+		8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */; };
+		8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D821CA9841C00407F30 /* CALayer+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +121,6 @@
 		8D340CD11CA8FBC300407F30 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8D340CD21CA8FBC300407F30 /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		8D340CD81CA8FCCD00407F30 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		8D340CDA1CA8FCF400407F30 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8D340CDC1CA8FD3000407F30 /* HoyoServicer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HoyoServicer-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D340CE71CA9049B00407F30 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		8D340CE81CA9049B00407F30 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -201,6 +204,11 @@
 		8D340D6B1CA9141D00407F30 /* ManageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTableViewController.swift; sourceTree = "<group>"; };
 		8D340D6D1CA9146600407F30 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		8D340D6F1CA9148200407F30 /* MyCenterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCenterTableViewController.swift; sourceTree = "<group>"; };
+		8D340D711CA9353D00407F30 /* LoginAndRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterViewController.swift; sourceTree = "<group>"; };
+		8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginAndRegisterViewController.xib; sourceTree = "<group>"; };
+		8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		8D340D821CA9841C00407F30 /* CALayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +330,7 @@
 		8D340CAE1CA8E20700407F30 /* ToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				8D340D821CA9841C00407F30 /* CALayer+extension.swift */,
 				8D340CBE1CA8F09700407F30 /* GlobalDefinit.swift */,
 				8D340CBF1CA8F09700407F30 /* UIColor+Expand.swift */,
 				8D340CB41CA8EA2F00407F30 /* String+Expand.swift */,
@@ -353,7 +362,8 @@
 		8D340CB11CA8E26A00407F30 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
-				8D340CDA1CA8FCF400407F30 /* LoginViewController.swift */,
+				8D340D711CA9353D00407F30 /* LoginAndRegisterViewController.swift */,
+				8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */,
 			);
 			name = LoginAndRegister;
 			sourceTree = "<group>";
@@ -554,6 +564,8 @@
 		8D340D601CA9070E00407F30 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */,
+				8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -721,6 +733,8 @@
 				8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */,
 				8D340CD41CA8FBC300407F30 /* NetworkConfig.plist in Resources */,
 				8D2681EE1CA8DB37009E7BAC /* Assets.xcassets in Resources */,
+				8D340D741CA9353D00407F30 /* LoginAndRegisterViewController.xib in Resources */,
+				8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */,
 				8D340D511CA904C200407F30 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,6 +761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */,
+				8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */,
 				8D340D391CA904B900407F30 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				8D340D531CA904C200407F30 /* SnapKit.swift in Sources */,
 				8D340D2D1CA904A900407F30 /* UIButton+WebCache.m in Sources */,
@@ -755,7 +770,6 @@
 				8D340CD51CA8FBC300407F30 /* DataManager.swift in Sources */,
 				8D340CFC1CA9049B00407F30 /* AFHTTPSessionManager.m in Sources */,
 				8D340D291CA904A900407F30 /* SDWebImageDownloader.m in Sources */,
-				8D340CDB1CA8FCF400407F30 /* LoginViewController.swift in Sources */,
 				8D340D5F1CA904E200407F30 /* Reachability.m in Sources */,
 				8D340D271CA904A900407F30 /* SDWebImageCompat.m in Sources */,
 				8D340CFD1CA9049B00407F30 /* AFNetworkReachabilityManager.m in Sources */,
@@ -797,11 +811,13 @@
 				8D340D4A1CA904C200407F30 /* ConstraintAttributes.swift in Sources */,
 				8D340D5C1CA904D900407F30 /* Appirater.m in Sources */,
 				8D340D541CA904C200407F30 /* View+SnapKit.swift in Sources */,
+				8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */,
 				8D340CC71CA8F62F00407F30 /* DataObject+CoreDataProperties.swift in Sources */,
 				8D340D2C1CA904A900407F30 /* SDWebImagePrefetcher.m in Sources */,
 				8D340D4F1CA904C200407F30 /* Debugging.swift in Sources */,
 				8D340D3A1CA904B900407F30 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				8D340D241CA904A900407F30 /* MKAnnotationView+WebCache.m in Sources */,
+				8D340D731CA9353D00407F30 /* LoginAndRegisterViewController.swift in Sources */,
 				8D340D2E1CA904A900407F30 /* UIImage+GIF.m in Sources */,
 				8D340D011CA9049B00407F30 /* AFURLResponseSerialization.m in Sources */,
 				8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */,
