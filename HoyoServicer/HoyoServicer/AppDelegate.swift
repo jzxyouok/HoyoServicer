@@ -8,18 +8,92 @@
 
 import UIKit
 import CoreData
-
+var appDelegate: AppDelegate {
+    return UIApplication.sharedApplication().delegate as! AppDelegate
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? = {
+        let v = UIWindow(frame: UIScreen.mainScreen().bounds)
+        return v
+    }()
 
 
+    lazy var loginViewController: LoginViewController = {
+        //let vc = LoginViewController
+        return LoginViewController()
+    }()
+    /// 网络状态
+    var reachOfNetwork:Reachability?
+    //主视图控制器
+    var mainViewController: MainViewController!
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window!.rootViewController = loginViewController
+        window!.makeKeyAndVisible()
+        
+        //检查网络状况，无网络，wifi，普通网络三种情况实时变化通知
+        reachOfNetwork = Reachability(hostName: "www.baidu.com")
+        reachOfNetwork!.startNotifier()
+        
+        //网络变化通知，在需要知道的地方加上此通知即可
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reachabilityChanged), name: kReachabilityChangedNotification, object: nil)
+        
+        
+        
+        //提醒用户给app打分
+        //        Appirater.setAppId("955305764")
+        //        Appirater.setDaysUntilPrompt(1)
+        //        Appirater.setUsesUntilPrompt(1)
+        //        Appirater.setSignificantEventsUntilPrompt(-1)
+        //        Appirater.setTimeBeforeReminding(2)
+        //        Appirater.setDebug(true)
+        //        Appirater.appLaunched(true)
         return true
     }
 
+    /**
+     登出处理
+     */
+    func LoginOut()
+    {
+        //清理用户文件
+        appDelegate.clearCaches()
+        appDelegate.mainViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    //接收到网络变化后处理事件
+    func reachabilityChanged(notification:NSNotification){
+        let reach = notification.object
+        print(reachOfNetwork?.currentReachabilityString())
+        if ((reach?.isKindOfClass(Reachability.classForCoder())) != false){
+            
+            let status:NetworkStatus = (reach?.currentReachabilityStatus())! //currentReachabilityStatus];
+            
+            switch status
+            {
+            case .NotReachable:
+                print("网络不可用")
+                break
+            case .ReachableViaWiFi:
+                print("WIFI已连接")
+                break
+            case .ReachableViaWWAN:
+                print("普通网络已连接")
+                break
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    func clearCaches() {
+        NetworkManager.clearCookies()
+        //NSFileManager.defaultManager().removeItemAtURL(cacheFileURL, error: nil)
+        DataManager.defaultManager = nil
+        //DataManager.temporaryManager = nil
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -28,6 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        UIScreen.mainScreen()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
