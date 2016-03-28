@@ -69,6 +69,10 @@
 		8D340D581CA904CD00407F30 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D571CA904CD00407F30 /* MBProgressHUD.m */; };
 		8D340D5C1CA904D900407F30 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D5A1CA904D900407F30 /* Appirater.m */; };
 		8D340D5F1CA904E200407F30 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D5E1CA904E200407F30 /* Reachability.m */; };
+		8D340D6A1CA9138F00407F30 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D691CA9138F00407F30 /* HomeTableViewController.swift */; };
+		8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D6B1CA9141D00407F30 /* ManageTableViewController.swift */; };
+		8D340D6E1CA9146600407F30 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D6D1CA9146600407F30 /* NewsTableViewController.swift */; };
+		8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D6F1CA9148200407F30 /* MyCenterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +197,10 @@
 		8D340D5B1CA904D900407F30 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
 		8D340D5D1CA904E200407F30 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8D340D5E1CA904E200407F30 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8D340D691CA9138F00407F30 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		8D340D6B1CA9141D00407F30 /* ManageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTableViewController.swift; sourceTree = "<group>"; };
+		8D340D6D1CA9146600407F30 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		8D340D6F1CA9148200407F30 /* MyCenterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCenterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +361,7 @@
 		8D340CC91CA8F74200407F30 /* MyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				8D340D6F1CA9148200407F30 /* MyCenterTableViewController.swift */,
 				8D340D671CA9074200407F30 /* View */,
 				8D340D661CA9074000407F30 /* Controller */,
 			);
@@ -362,6 +371,7 @@
 		8D340CCA1CA8F74400407F30 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				8D340D6D1CA9146600407F30 /* NewsTableViewController.swift */,
 				8D340D651CA9073D00407F30 /* View */,
 				8D340D641CA9073A00407F30 /* Controller */,
 			);
@@ -371,6 +381,7 @@
 		8D340CCB1CA8F74600407F30 /* Manage */ = {
 			isa = PBXGroup;
 			children = (
+				8D340D6B1CA9141D00407F30 /* ManageTableViewController.swift */,
 				8D340D631CA9073600407F30 /* View */,
 				8D340D621CA9073300407F30 /* Controller */,
 			);
@@ -380,6 +391,7 @@
 		8D340CCC1CA8F74900407F30 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8D340D691CA9138F00407F30 /* HomeTableViewController.swift */,
 				8D340D601CA9070E00407F30 /* View */,
 				8D340D611CA9071500407F30 /* Controller */,
 			);
@@ -752,6 +764,7 @@
 				8D340D501CA904C200407F30 /* EdgeInsets.swift in Sources */,
 				8D340D001CA9049B00407F30 /* AFURLRequestSerialization.m in Sources */,
 				8D340D521CA904C200407F30 /* LayoutConstraint.swift in Sources */,
+				8D340D6A1CA9138F00407F30 /* HomeTableViewController.swift in Sources */,
 				8D340D331CA904A900407F30 /* UIView+WebCacheOperation.m in Sources */,
 				8D340CFF1CA9049B00407F30 /* AFURLConnectionOperation.m in Sources */,
 				8D340D021CA9049B00407F30 /* AFURLSessionManager.m in Sources */,
@@ -759,6 +772,7 @@
 				8D340D301CA904A900407F30 /* UIImage+WebP.m in Sources */,
 				8D340D261CA904A900407F30 /* SDImageCache.m in Sources */,
 				8D340D4C1CA904C200407F30 /* ConstraintItem.swift in Sources */,
+				8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */,
 				8D340D2F1CA904A900407F30 /* UIImage+MultiFormat.m in Sources */,
 				8D340D4E1CA904C200407F30 /* ConstraintRelation.swift in Sources */,
 				8D340D2A1CA904A900407F30 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -777,6 +791,7 @@
 				8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */,
 				8D340D281CA904A900407F30 /* SDWebImageDecoder.m in Sources */,
 				8D340CFE1CA9049B00407F30 /* AFSecurityPolicy.m in Sources */,
+				8D340D6E1CA9146600407F30 /* NewsTableViewController.swift in Sources */,
 				8D340CC11CA8F09700407F30 /* UIColor+Expand.swift in Sources */,
 				8D340CFB1CA9049B00407F30 /* AFHTTPRequestOperationManager.m in Sources */,
 				8D340D4A1CA904C200407F30 /* ConstraintAttributes.swift in Sources */,
@@ -789,6 +804,7 @@
 				8D340D241CA904A900407F30 /* MKAnnotationView+WebCache.m in Sources */,
 				8D340D2E1CA904A900407F30 /* UIImage+GIF.m in Sources */,
 				8D340D011CA9049B00407F30 /* AFURLResponseSerialization.m in Sources */,
+				8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */,
 				8D340D4B1CA904C200407F30 /* ConstraintDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
