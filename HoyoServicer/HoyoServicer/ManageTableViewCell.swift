@@ -7,9 +7,18 @@
 //
 
 import UIKit
-
+protocol ManageTableViewCellDelegate {
+    func ButtonOfManageCell(Tag:Int)
+}
 class ManageTableViewCell: UITableViewCell {
 
+    //从左到右，从上到下,button的tag分别为，1...8
+    var delegate:ManageTableViewCellDelegate?
+    @IBAction func ButtonClick(sender: UIButton) {
+        if delegate != nil {
+            delegate?.ButtonOfManageCell(sender.tag)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -71,6 +71,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0J-H7-o9z">
+                                <rect key="frame" x="15" y="66.5" width="360" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.74534574468085102" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2ga-95-w9k"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,9 +88,12 @@
                             <constraint firstItem="fNu-Sj-CRB" firstAttribute="centerY" secondItem="SsQ-bd-EdJ" secondAttribute="centerY" id="Eva-xd-eTh"/>
                             <constraint firstAttribute="trailing" secondItem="fVz-re-37M" secondAttribute="trailing" constant="15" id="NBu-dB-T5u"/>
                             <constraint firstItem="1RD-BV-UI7" firstAttribute="leading" secondItem="hN9-br-GgT" secondAttribute="trailing" constant="5" id="UO6-PZ-yIq"/>
+                            <constraint firstAttribute="bottom" secondItem="C0J-H7-o9z" secondAttribute="bottom" id="WGf-Zf-Brd"/>
                             <constraint firstItem="1RD-BV-UI7" firstAttribute="centerY" secondItem="hN9-br-GgT" secondAttribute="centerY" id="WdL-gG-oIE"/>
                             <constraint firstItem="fNu-Sj-CRB" firstAttribute="leading" secondItem="SsQ-bd-EdJ" secondAttribute="leading" constant="15" id="YGB-Q7-vUt"/>
+                            <constraint firstItem="C0J-H7-o9z" firstAttribute="leading" secondItem="SsQ-bd-EdJ" secondAttribute="leading" constant="15" id="bxb-ct-G7W"/>
                             <constraint firstItem="hN9-br-GgT" firstAttribute="leading" secondItem="fNu-Sj-CRB" secondAttribute="trailing" constant="11" id="i8H-Zn-NEp"/>
+                            <constraint firstAttribute="trailing" secondItem="C0J-H7-o9z" secondAttribute="trailing" id="umC-Gi-sNe"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -14,6 +14,7 @@ class NewsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title="消息"
         tableView.registerNib(UINib(nibName: "NewsTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "NewsTableViewCell")
+        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
         
     }
 
@@ -37,7 +38,7 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 3
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

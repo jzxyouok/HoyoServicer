@@ -15,6 +15,7 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         self.title="我的"
         self.automaticallyAdjustsScrollViewInsets=false
         tableView.registerNib(UINib(nibName: "MyCenterTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyCenterTableViewCell")
+        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
     }
 
     override func viewWillAppear(animated: Bool) {

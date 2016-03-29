@@ -15,7 +15,10 @@ class MyCenterTableViewCell: UITableViewCell {
     
     var delegate:MyCenterTableViewCellDelegate?
     @IBAction func toNextClick(sender: UIButton) {
-        delegate?.ToDetailController(sender.tag)
+        if delegate != nil{
+            delegate?.ToDetailController(sender.tag)
+        }
+        
     }
     
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManageTableViewController: UITableViewController {
+class ManageTableViewController: UITableViewController,ManageTableViewCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +46,19 @@ class ManageTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ManageTableViewCell", forIndexPath: indexPath) as!  ManageTableViewCell
         cell.selectionStyle=UITableViewCellSelectionStyle.None
+        cell.delegate=self
         // Configure the cell...
 
         return cell
     }
-    
-
+    /**
+     ManageTableViewCellDelegate代理方法，从左到右，从上到下,button的tag分别为，1...8
+     
+     - parameter Tag: button的tag
+     */
+    func ButtonOfManageCell(Tag: Int) {
+        print(Tag)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

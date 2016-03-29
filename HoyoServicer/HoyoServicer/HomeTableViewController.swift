@@ -14,6 +14,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets=false
         tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
     }
 
     override func didReceiveMemoryWarning() {
