@@ -48,10 +48,12 @@ class HomeTableViewController: UITableViewController {
             }
             
         }
+        cell.imageArray=[UIImage(named: "banner1"),UIImage(named: "banner2"),UIImage(named: "banner3")]
         // Configure the cell...
 
         return cell
     }
+    
     /**
      点击菜单的哪个按钮
      

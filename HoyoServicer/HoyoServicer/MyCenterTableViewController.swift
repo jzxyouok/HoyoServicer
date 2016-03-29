@@ -8,17 +8,13 @@
 
 import UIKit
 
-class MyCenterTableViewController: UITableViewController {
+class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="我的"
         self.automaticallyAdjustsScrollViewInsets=false
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.registerNib(UINib(nibName: "MyCenterTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyCenterTableViewCell")
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -34,24 +30,33 @@ class MyCenterTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return HEIGHT_SCREEN-HEIGHT_NavBar-HEIGHT_TabBar
+    }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("MyCenterTableViewCell", forIndexPath: indexPath) as! MyCenterTableViewCell
+        cell.selectionStyle=UITableViewCellSelectionStyle.None
+        cell.delegate=self
 
         return cell
     }
-    */
-
+    /**
+     MyCenterTableViewCellDelegate 方法
+     
+     - parameter Whitch: 1...6,从上到下
+     */
+    func ToDetailController(Whitch: Int) {
+        print(Whitch)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

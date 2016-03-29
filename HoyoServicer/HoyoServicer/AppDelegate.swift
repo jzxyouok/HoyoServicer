@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     lazy var loginViewController: LoginAndRegisterViewController = {
-        return LoginAndRegisterViewController(nibName: "LoginAndRegisterViewController", bundle: nil)
+        return LoginAndRegisterViewController()
     }()
     /// 网络状态
     var reachOfNetwork:Reachability?

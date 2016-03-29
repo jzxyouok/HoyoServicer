@@ -12,12 +12,10 @@ class ManageTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       self.automaticallyAdjustsScrollViewInsets=false
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       
+        self.automaticallyAdjustsScrollViewInsets=false
+        tableView.registerNib(UINib(nibName: "ManageTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "ManageTableViewCell")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,25 +29,28 @@ class ManageTableViewController: UITableViewController {
     }
     // MARK: - Table view data source
 
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return HEIGHT_SCREEN-HEIGHT_TabBar
+    }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("ManageTableViewCell", forIndexPath: indexPath) as!  ManageTableViewCell
+        cell.selectionStyle=UITableViewCellSelectionStyle.None
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
