@@ -56,7 +56,22 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
      - parameter Whitch: 1...6,从上到下
      */
     func ToDetailController(Whitch: Int) {
-        print(Whitch)
+        switch Whitch {
+        case 1:
+            print("查看资料")
+        case 2:
+            presentViewController(AuthenticationController(dissCall: nil), animated: true, completion: nil)
+        case 3:
+            print("我的考试")
+        case 4:
+            print("我的网点")
+        case 5:
+            print("我的评价")
+        case 6:
+            print("设置")
+        default:
+            break
+        }
     }
     /*
     // Override to support conditional editing of the table view.

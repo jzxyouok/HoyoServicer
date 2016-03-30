@@ -10,6 +10,13 @@ import Foundation
 // string 扩展，一些常用字符串处理等等
 extension String{
     //md5加密
-    //
+    //判断字符串是否全是数字
+    var isAllNumber:Bool{
+        let pred = NSPredicate(format: "SELF MATCHES %@", "^[0-9]*$")
+        if pred.evaluateWithObject(self) {
+            return true
+        }
+        return false
+    }
     
 }

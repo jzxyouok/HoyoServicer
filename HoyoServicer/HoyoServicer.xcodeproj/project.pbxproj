@@ -13,6 +13,10 @@
 		8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2681EF1CA8DB37009E7BAC /* LaunchScreen.storyboard */; };
 		8D2681FC1CA8DB37009E7BAC /* HoyoServicerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681FB1CA8DB37009E7BAC /* HoyoServicerTests.swift */; };
 		8D2682071CA8DB37009E7BAC /* HoyoServicerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2682061CA8DB37009E7BAC /* HoyoServicerUITests.swift */; };
+		8D28F4841CABB10C00C7E99B /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28F4821CABB10C00C7E99B /* AuthenticationController.swift */; };
+		8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */; };
+		8D28F4871CABCA6E00C7E99B /* AuthDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */; };
+		8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */; };
 		8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB41CA8EA2F00407F30 /* String+Expand.swift */; };
 		8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */; };
 		8D340CBB1CA8EA2F00407F30 /* Other+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB61CA8EA2F00407F30 /* Other+Expand.swift */; };
@@ -85,6 +89,14 @@
 		8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */; };
 		8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */; };
 		8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */; };
+		8DF2A6E01CAAD33C00A0883D /* LoginFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6DF1CAAD33C00A0883D /* LoginFooterView.swift */; };
+		8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E11CAAD34A00A0883D /* LoginFooterView.xib */; };
+		8DF2A6E41CAAD39400A0883D /* RegistFooterView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E31CAAD39400A0883D /* RegistFooterView1.xib */; };
+		8DF2A6E61CAAD3A300A0883D /* RegistFooterView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E51CAAD3A300A0883D /* RegistFooterView1.swift */; };
+		8DF2A6E81CAAD3B200A0883D /* RegistFooterView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E71CAAD3B200A0883D /* RegistFooterView2.swift */; };
+		8DF2A6EA1CAAD3C000A0883D /* RegistFooterView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E91CAAD3C000A0883D /* RegistFooterView3.swift */; };
+		8DF2A6EC1CAAD3CC00A0883D /* RegistFooterView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6EB1CAAD3CC00A0883D /* RegistFooterView2.xib */; };
+		8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6ED1CAAD3D900A0883D /* RegistFooterView3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +129,10 @@
 		8D2682021CA8DB37009E7BAC /* HoyoServicerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoyoServicerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2682061CA8DB37009E7BAC /* HoyoServicerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyoServicerUITests.swift; sourceTree = "<group>"; };
 		8D2682081CA8DB37009E7BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D28F4821CABB10C00C7E99B /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticationController.xib; sourceTree = "<group>"; };
+		8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDetailView.swift; sourceTree = "<group>"; };
+		8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthDetailView.xib; sourceTree = "<group>"; };
 		8D340CB41CA8EA2F00407F30 /* String+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Expand.swift"; sourceTree = "<group>"; };
 		8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Expand.swift"; sourceTree = "<group>"; };
 		8D340CB61CA8EA2F00407F30 /* Other+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Other+Expand.swift"; sourceTree = "<group>"; };
@@ -225,6 +241,14 @@
 		8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCenterTableViewCell.xib; sourceTree = "<group>"; };
 		8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageTableViewCell.xib; sourceTree = "<group>"; };
+		8DF2A6DF1CAAD33C00A0883D /* LoginFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFooterView.swift; sourceTree = "<group>"; };
+		8DF2A6E11CAAD34A00A0883D /* LoginFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFooterView.xib; sourceTree = "<group>"; };
+		8DF2A6E31CAAD39400A0883D /* RegistFooterView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistFooterView1.xib; sourceTree = "<group>"; };
+		8DF2A6E51CAAD3A300A0883D /* RegistFooterView1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistFooterView1.swift; sourceTree = "<group>"; };
+		8DF2A6E71CAAD3B200A0883D /* RegistFooterView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistFooterView2.swift; sourceTree = "<group>"; };
+		8DF2A6E91CAAD3C000A0883D /* RegistFooterView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistFooterView3.swift; sourceTree = "<group>"; };
+		8DF2A6EB1CAAD3CC00A0883D /* RegistFooterView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistFooterView2.xib; sourceTree = "<group>"; };
+		8DF2A6ED1CAAD3D900A0883D /* RegistFooterView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistFooterView3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +402,7 @@
 		8D340CB11CA8E26A00407F30 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				8DF2A6DE1CAAD24A00A0883D /* View */,
 				8D340D711CA9353D00407F30 /* LoginAndRegisterViewController.swift */,
 				8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */,
 			);
@@ -630,6 +655,8 @@
 		8D340D661CA9074000407F30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8D28F4821CABB10C00C7E99B /* AuthenticationController.swift */,
+				8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -639,6 +666,8 @@
 			children = (
 				8DD2269A1CAA628F00E8DA5B /* MyCenterTableViewCell.swift */,
 				8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */,
+				8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */,
+				8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -648,6 +677,21 @@
 			children = (
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		8DF2A6DE1CAAD24A00A0883D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2A6DF1CAAD33C00A0883D /* LoginFooterView.swift */,
+				8DF2A6E11CAAD34A00A0883D /* LoginFooterView.xib */,
+				8DF2A6E51CAAD3A300A0883D /* RegistFooterView1.swift */,
+				8DF2A6E31CAAD39400A0883D /* RegistFooterView1.xib */,
+				8DF2A6E71CAAD3B200A0883D /* RegistFooterView2.swift */,
+				8DF2A6EB1CAAD3CC00A0883D /* RegistFooterView2.xib */,
+				8DF2A6E91CAAD3C000A0883D /* RegistFooterView3.swift */,
+				8DF2A6ED1CAAD3D900A0883D /* RegistFooterView3.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -756,10 +800,16 @@
 			files = (
 				8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */,
 				8D340CD41CA8FBC300407F30 /* NetworkConfig.plist in Resources */,
+				8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */,
+				8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */,
+				8DF2A6E41CAAD39400A0883D /* RegistFooterView1.xib in Resources */,
 				8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */,
 				8D2681EE1CA8DB37009E7BAC /* Assets.xcassets in Resources */,
+				8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */,
 				8DD226951CAA5ABB00E8DA5B /* DetailOfNewsViewController.xib in Resources */,
+				8DF2A6EC1CAAD3CC00A0883D /* RegistFooterView2.xib in Resources */,
 				8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */,
+				8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */,
 				8D340D741CA9353D00407F30 /* LoginAndRegisterViewController.xib in Resources */,
 				8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */,
 				8D340D511CA904C200407F30 /* Info.plist in Resources */,
@@ -803,13 +853,16 @@
 				8D340D271CA904A900407F30 /* SDWebImageCompat.m in Sources */,
 				8D340CFD1CA9049B00407F30 /* AFNetworkReachabilityManager.m in Sources */,
 				8D340CFA1CA9049B00407F30 /* AFHTTPRequestOperation.m in Sources */,
+				8DF2A6E61CAAD3A300A0883D /* RegistFooterView1.swift in Sources */,
 				8D340D551CA904C200407F30 /* ViewController+SnapKit.swift in Sources */,
+				8D28F4841CABB10C00C7E99B /* AuthenticationController.swift in Sources */,
 				8D340D501CA904C200407F30 /* EdgeInsets.swift in Sources */,
 				8D340D001CA9049B00407F30 /* AFURLRequestSerialization.m in Sources */,
 				8D340D521CA904C200407F30 /* LayoutConstraint.swift in Sources */,
 				8D340D6A1CA9138F00407F30 /* HomeTableViewController.swift in Sources */,
 				8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */,
 				8D340D331CA904A900407F30 /* UIView+WebCacheOperation.m in Sources */,
+				8DF2A6E01CAAD33C00A0883D /* LoginFooterView.swift in Sources */,
 				8D340CFF1CA9049B00407F30 /* AFURLConnectionOperation.m in Sources */,
 				8D340D021CA9049B00407F30 /* AFURLSessionManager.m in Sources */,
 				8D340D321CA904A900407F30 /* UIImageView+WebCache.m in Sources */,
@@ -827,11 +880,13 @@
 				8D340CD31CA8FBC300407F30 /* NetworkManager.swift in Sources */,
 				8D340CD91CA8FCCD00407F30 /* MainViewController.swift in Sources */,
 				8D340CC81CA8F62F00407F30 /* DataObject.swift in Sources */,
+				8DF2A6E81CAAD3B200A0883D /* RegistFooterView2.swift in Sources */,
 				8D340D251CA904A900407F30 /* NSData+ImageContentType.m in Sources */,
 				8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */,
 				8D340D581CA904CD00407F30 /* MBProgressHUD.m in Sources */,
 				8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */,
 				8D340D491CA904C200407F30 /* Constraint.swift in Sources */,
+				8DF2A6EA1CAAD3C000A0883D /* RegistFooterView3.swift in Sources */,
 				8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */,
 				8D340D281CA904A900407F30 /* SDWebImageDecoder.m in Sources */,
 				8D340CFE1CA9049B00407F30 /* AFSecurityPolicy.m in Sources */,
@@ -854,6 +909,7 @@
 				8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */,
 				8DD226941CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift in Sources */,
 				8D340D4B1CA904C200407F30 /* ConstraintDescription.swift in Sources */,
+				8D28F4871CABCA6E00C7E99B /* AuthDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
