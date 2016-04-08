@@ -3,9 +3,19 @@
     <entity name="DataObject" representedClassName=".DataObject" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES"/>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headimageurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="province" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scope" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="DataObject" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="User" positionX="-54" positionY="0" width="128" height="45"/>
+        <element name="User" positionX="-54" positionY="0" width="128" height="180"/>
     </elements>
 </model>

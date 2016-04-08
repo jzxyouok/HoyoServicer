@@ -1,83 +1,81 @@
 //
-//  MyCenterTableViewController.swift
+//  MyEvaluatTableViewController.swift
 //  HoyoServicer
 //
-//  Created by 赵兵 on 16/3/28.
+//  Created by 赵兵 on 16/4/8.
 //  Copyright © 2016年 com.ozner.net. All rights reserved.
 //
 
 import UIKit
 
-class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDelegate {
-
+class MyEvaluatTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var tableView:UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title="我的"
-        self.automaticallyAdjustsScrollViewInsets=false
-        tableView.registerNib(UINib(nibName: "MyCenterTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyCenterTableViewCell")
-        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
+        self.title="我的评价"
+        tableView=UITableView()
+        tableView!.frame=CGRectMake(0, 0, WIDTH_SCREEN,HEIGHT_SCREEN)
+        self.view.addSubview(tableView!)
+        
+        
+        tableView?.delegate=self
+        tableView?.dataSource=self
+        tableView!.registerNib(UINib(nibName: "MyEvaluatCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyEvaluatCell")
+        tableView!.registerNib(UINib(nibName: "MyEvaluatHeadCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyEvaluatHeadCell")
+        tableView!.separatorStyle=UITableViewCellSeparatorStyle.None
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden=false
-        self.tabBarController?.tabBar.hidden=false
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    convenience  init() {
+        
+        var nibNameOrNil = String?("MyEvaluatTableViewController")
+        if NSBundle.mainBundle().pathForResource(nibNameOrNil, ofType: "xib") == nil
+        {
+            nibNameOrNil = nil
+        }
+        self.init(nibName: nibNameOrNil, bundle: nil)
+        
+    }
+    required init(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden=false
+        self.tabBarController?.tabBar.hidden=true
+    }
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 15
     }
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        return HEIGHT_SCREEN-HEIGHT_NavBar-HEIGHT_TabBar
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return indexPath.row==0 ? 164:135
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyCenterTableViewCell", forIndexPath: indexPath) as! MyCenterTableViewCell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(indexPath.row==0 ? "MyEvaluatHeadCell":"MyEvaluatCell", forIndexPath: indexPath)
         cell.selectionStyle=UITableViewCellSelectionStyle.None
-        cell.delegate=self
+        // Configure the cell...
 
         return cell
     }
-    /**
-     MyCenterTableViewCellDelegate 方法
-     
-     - parameter Whitch: 1...6,从上到下
-     */
-    func ToDetailController(Whitch: Int) {
-        switch Whitch {
-        case 1:
-            self.navigationController?.pushViewController(UserInfoViewController(), animated: true)
-            print("查看资料")
-        case 2:
-            presentViewController(AuthenticationController(dissCall: nil), animated: true, completion: nil)
-        case 3:
-            print("我的考试")
-        case 4:
-            print("我的网点")
-        case 5:
-            self.navigationController?.pushViewController(MyEvaluatTableViewController(), animated: true)
-            print("我的评价")
-        case 6:
-            
-            self.navigationController?.pushViewController(SettingViewController(), animated: true)
-            print("设置")
-        default:
-            break
-        }
-    }
+    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

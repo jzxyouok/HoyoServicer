@@ -15,7 +15,7 @@ let UserDefaultsUserIDKey = "OznerServer_DefaultUserID"
 /// 网络访问基类
 class NetworkManager: NSObject {
     required init?(NetworkConfig: NSDictionary) {
-        print(NetworkConfig)
+       
         self.NetworkConfig = NetworkConfig
         super.init()
         
@@ -157,7 +157,7 @@ class NetworkManager: NSObject {
     }
     private lazy var manager: AFHTTPRequestOperationManager = {
         [weak self] in
-        print(self?.website)
+        
         assert(self?.website != nil, "website不能为nil")
         let manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: (self?.website)!))
         manager.responseSerializer = AFHTTPResponseSerializer()

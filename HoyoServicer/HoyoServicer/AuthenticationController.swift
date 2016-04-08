@@ -19,7 +19,7 @@ class AuthenticationController: UIViewController {
     @IBAction func verifyClick(sender: AnyObject) {
         
         secondViewContainer?.hidden = !((secondViewContainer?.hidden)!)
-        verifyButton.titleLabel?.text = ((secondViewContainer?.hidden)!)==true ? "身份验证":"提交"
+        verifyButton.setTitle(((secondViewContainer?.hidden)!)==true ? "身份验证":"提交", forState: .Normal)
         if dissCallBack != nil {
             leftButton.hidden = ((secondViewContainer?.hidden)!)
         }
@@ -43,7 +43,7 @@ class AuthenticationController: UIViewController {
     {
         if secondViewContainer?.hidden==false&&button.tag==1 {
             secondViewContainer?.hidden = !(secondViewContainer?.hidden)!
-            verifyButton.titleLabel?.text = !(secondViewContainer?.hidden)!==true ? "身份验证":"提交"
+            verifyButton.setTitle("身份验证", forState: .Normal)
             if dissCallBack != nil {
                 leftButton.hidden = ((secondViewContainer?.hidden)!)
             }

@@ -130,6 +130,7 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         super.viewDidAppear(animated)
         if firstAppear {
             firstAppear = false
+            
             NetworkManager.defaultManager?.POST("AppLogin", parameters: ["phone":"15026981614","password":"123456"], success: { (dataDic) in
                 print(dataDic)
                 }, failure: { (error) in

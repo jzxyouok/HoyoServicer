@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1D19931CB3ADA40037E2B2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */; };
+		8D1D19941CB3ADA40037E2B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D19921CB3ADA40037E2B2 /* User.swift */; };
 		8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */; };
 		8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681EA1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld */; };
 		8D2681EE1CA8DB37009E7BAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2681ED1CA8DB37009E7BAC /* Assets.xcassets */; };
@@ -81,6 +83,10 @@
 		8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */; };
 		8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */; };
 		8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D821CA9841C00407F30 /* CALayer+extension.swift */; };
+		8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */; };
+		8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */; };
+		8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */; };
+		8DB9EA961CB7ADFC005E6E83 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */; };
 		8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2268E1CAA4D9D00E8DA5B /* NewsTableViewCell.swift */; };
 		8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2268F1CAA4D9D00E8DA5B /* NewsTableViewCell.xib */; };
 		8DD226941CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD226921CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift */; };
@@ -89,6 +95,11 @@
 		8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */; };
 		8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */; };
 		8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */; };
+		8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */; };
+		8DEED0321CB7FF5500C887C4 /* MyEvaluatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */; };
+		8DEED0331CB7FF5500C887C4 /* MyEvaluatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */; };
+		8DEED0361CB800C900C887C4 /* MyEvaluatHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED0341CB800C900C887C4 /* MyEvaluatHeadCell.swift */; };
+		8DEED0371CB800C900C887C4 /* MyEvaluatHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEED0351CB800C900C887C4 /* MyEvaluatHeadCell.xib */; };
 		8DF2A6E01CAAD33C00A0883D /* LoginFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6DF1CAAD33C00A0883D /* LoginFooterView.swift */; };
 		8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E11CAAD34A00A0883D /* LoginFooterView.xib */; };
 		8DF2A6E41CAAD39400A0883D /* RegistFooterView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E31CAAD39400A0883D /* RegistFooterView1.xib */; };
@@ -117,6 +128,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8D1D19921CB3ADA40037E2B2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8D2681E01CA8DB37009E7BAC /* HoyoServicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoyoServicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D2681EB1CA8DB37009E7BAC /* HoyoServicer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoyoServicer.xcdatamodel; sourceTree = "<group>"; };
@@ -233,6 +246,10 @@
 		8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		8D340D821CA9841C00407F30 /* CALayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
+		8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		8DD2268E1CAA4D9D00E8DA5B /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8DD2268F1CAA4D9D00E8DA5B /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		8DD226921CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOfNewsViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +258,11 @@
 		8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCenterTableViewCell.xib; sourceTree = "<group>"; };
 		8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageTableViewCell.xib; sourceTree = "<group>"; };
+		8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatTableViewController.swift; sourceTree = "<group>"; };
+		8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatCell.swift; sourceTree = "<group>"; };
+		8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluatCell.xib; sourceTree = "<group>"; };
+		8DEED0341CB800C900C887C4 /* MyEvaluatHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatHeadCell.swift; sourceTree = "<group>"; };
+		8DEED0351CB800C900C887C4 /* MyEvaluatHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluatHeadCell.xib; sourceTree = "<group>"; };
 		8DF2A6DF1CAAD33C00A0883D /* LoginFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFooterView.swift; sourceTree = "<group>"; };
 		8DF2A6E11CAAD34A00A0883D /* LoginFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFooterView.xib; sourceTree = "<group>"; };
 		8DF2A6E31CAAD39400A0883D /* RegistFooterView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistFooterView1.xib; sourceTree = "<group>"; };
@@ -279,6 +301,8 @@
 		8D2681D71CA8DB37009E7BAC = {
 			isa = PBXGroup;
 			children = (
+				8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */,
+				8D1D19921CB3ADA40037E2B2 /* User.swift */,
 				8D2681E21CA8DB37009E7BAC /* HoyoServicer */,
 				8D340CB01CA8E24600407F30 /* ModelCenter */,
 				8D340CAF1CA8E20E00407F30 /* Frameworks */,
@@ -657,6 +681,11 @@
 			children = (
 				8D28F4821CABB10C00C7E99B /* AuthenticationController.swift */,
 				8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */,
+				8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */,
+				8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */,
+				8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */,
+				8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */,
+				8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -668,6 +697,10 @@
 				8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */,
 				8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */,
 				8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */,
+				8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */,
+				8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */,
+				8DEED0341CB800C900C887C4 /* MyEvaluatHeadCell.swift */,
+				8DEED0351CB800C900C887C4 /* MyEvaluatHeadCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -798,15 +831,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEED0371CB800C900C887C4 /* MyEvaluatHeadCell.xib in Resources */,
 				8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */,
+				8DB9EA961CB7ADFC005E6E83 /* SettingViewController.xib in Resources */,
 				8D340CD41CA8FBC300407F30 /* NetworkConfig.plist in Resources */,
 				8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */,
 				8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */,
 				8DF2A6E41CAAD39400A0883D /* RegistFooterView1.xib in Resources */,
 				8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */,
 				8D2681EE1CA8DB37009E7BAC /* Assets.xcassets in Resources */,
+				8DEED0331CB7FF5500C887C4 /* MyEvaluatCell.xib in Resources */,
 				8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */,
 				8DD226951CAA5ABB00E8DA5B /* DetailOfNewsViewController.xib in Resources */,
+				8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */,
 				8DF2A6EC1CAAD3CC00A0883D /* RegistFooterView2.xib in Resources */,
 				8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */,
 				8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */,
@@ -839,11 +876,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */,
+				8D1D19931CB3ADA40037E2B2 /* User+CoreDataProperties.swift in Sources */,
 				8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */,
 				8D340D391CA904B900407F30 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				8D340D531CA904C200407F30 /* SnapKit.swift in Sources */,
 				8D340D2D1CA904A900407F30 /* UIButton+WebCache.m in Sources */,
 				8D340D2B1CA904A900407F30 /* SDWebImageManager.m in Sources */,
+				8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */,
+				8DEED0361CB800C900C887C4 /* MyEvaluatHeadCell.swift in Sources */,
 				8D340CD61CA8FBC300407F30 /* SettingsManager.swift in Sources */,
 				8D340CD51CA8FBC300407F30 /* DataManager.swift in Sources */,
 				8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */,
@@ -866,13 +906,16 @@
 				8D340CFF1CA9049B00407F30 /* AFURLConnectionOperation.m in Sources */,
 				8D340D021CA9049B00407F30 /* AFURLSessionManager.m in Sources */,
 				8D340D321CA904A900407F30 /* UIImageView+WebCache.m in Sources */,
+				8DEED0321CB7FF5500C887C4 /* MyEvaluatCell.swift in Sources */,
 				8D340D301CA904A900407F30 /* UIImage+WebP.m in Sources */,
 				8D340D261CA904A900407F30 /* SDImageCache.m in Sources */,
 				8D340D4C1CA904C200407F30 /* ConstraintItem.swift in Sources */,
 				8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */,
 				8D340D2F1CA904A900407F30 /* UIImage+MultiFormat.m in Sources */,
+				8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */,
 				8D340D4E1CA904C200407F30 /* ConstraintRelation.swift in Sources */,
 				8D340D2A1CA904A900407F30 /* SDWebImageDownloaderOperation.m in Sources */,
+				8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */,
 				8D340CC01CA8F09700407F30 /* GlobalDefinit.swift in Sources */,
 				8D340D4D1CA904C200407F30 /* ConstraintMaker.swift in Sources */,
 				8D340D311CA904A900407F30 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -897,6 +940,7 @@
 				8D340D5C1CA904D900407F30 /* Appirater.m in Sources */,
 				8D340D541CA904C200407F30 /* View+SnapKit.swift in Sources */,
 				8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */,
+				8D1D19941CB3ADA40037E2B2 /* User.swift in Sources */,
 				8DD2269C1CAA628F00E8DA5B /* MyCenterTableViewCell.swift in Sources */,
 				8D340CC71CA8F62F00407F30 /* DataObject+CoreDataProperties.swift in Sources */,
 				8D340D2C1CA904A900407F30 /* SDWebImagePrefetcher.m in Sources */,

@@ -21,5 +21,10 @@ extension UINavigationBar{
         self.shadowImage =  UIImage(named: "blackImgOfNavBg")
        self.titleTextAttributes=[NSForegroundColorAttributeName:UIColor.whiteColor()]
     }
+    // 按钮和标题
+//    func addBackAndTitle()
+//    {
+//        
+//    }
     //
 }
