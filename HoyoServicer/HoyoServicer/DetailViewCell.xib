@@ -466,7 +466,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="back" width="26" height="42"/>
+        <image name="back" width="13" height="21"/>
         <image name="backView" width="599" height="415"/>
         <image name="head" width="198" height="191"/>
         <image name="position" width="21" height="31"/>
