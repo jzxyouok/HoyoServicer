@@ -57,7 +57,39 @@ class ManageTableViewController: UITableViewController,ManageTableViewCellDelega
      - parameter Tag: button的tag
      */
     func ButtonOfManageCell(Tag: Int) {
-        print(Tag)
+        switch Tag {
+        case 1:
+            break
+        case 2:
+            break
+        case 3:
+            let boundBank = BoundBankCardViewController()
+            self.navigationController?.pushViewController(boundBank, animated: true)
+            
+            break
+        case 4:
+            
+            let achievement = AchievementControllerViewController()
+            achievement.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(achievement, animated: true)
+            break
+        case 5:
+            let financialManager = FinancialViewController()
+            financialManager.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(financialManager, animated: true)
+            
+            break
+        case 6:
+            let newMember = RecruitNewMemberViewController()
+            
+            self.navigationController?.pushViewController(newMember, animated: true)
+            break
+            
+        default:
+            break
+            
+        }
+
     }
     /*
     // Override to support conditional editing of the table view.

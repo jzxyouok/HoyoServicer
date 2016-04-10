@@ -100,7 +100,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_asset" translatesAutoresizingMaskIntoConstraints="NO" id="wks-E0-Knu">
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="manage_asset" translatesAutoresizingMaskIntoConstraints="NO" id="wks-E0-Knu">
                                                                 <rect key="frame" x="0.0" y="2" width="20" height="23"/>
                                                             </imageView>
                                                         </subviews>
@@ -539,10 +539,10 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="OXb-0c-8k0"/>
                                                         <exclude reference="4dV-UT-QKp"/>
-                                                        <exclude reference="K0K-46-0lO"/>
+                                                        <exclude reference="OXb-0c-8k0"/>
                                                         <exclude reference="6Qh-lu-0bk"/>
+                                                        <exclude reference="K0K-46-0lO"/>
                                                     </mask>
                                                 </variation>
                                             </view>

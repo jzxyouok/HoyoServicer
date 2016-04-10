@@ -1,30 +1,30 @@
 //
-//  HomeTableViewController.swift
+//  TableViewController.swift
 //  HoyoServicer
 //
-//  Created by 赵兵 on 16/3/28.
+//  Created by 杨龙洲 on 6/4/16.
 //  Copyright © 2016年 com.ozner.net. All rights reserved.
 //
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.automaticallyAdjustsScrollViewInsets=false
-        tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "HomeTableViewCell")
-        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
+tableView.backgroundColor = UIColor.redColor()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden=true
-    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,68 +34,19 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 10
     }
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return HEIGHT_SCREEN-HEIGHT_TabBar
-    }
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeTableViewCell", forIndexPath: indexPath) as! HomeTableViewCell
-        cell.selectionStyle=UITableViewCellSelectionStyle.None
-        cell.buttonClickCallBack={ [weak self] buttonTag in
-            if let strongSelf = self {
-                strongSelf.buttonClick(buttonTag)
-            }
-            
-        }
-        cell.imageArray=[UIImage(named: "banner1"),UIImage(named: "banner2"),UIImage(named: "banner3")]
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
 
         return cell
     }
-    
-    /**
-     点击菜单的哪个按钮
-     
-     - parameter Tag: 从左到右，从上到下，1、2....8
-     */
-    private func buttonClick(Tag:Int)
-    {
-        print(Tag)
-        switch Tag {
-        case 1:
-            
-            let robOneCon = RobListMianViewController()
-            robOneCon.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(robOneCon, animated: true)
-            break
-        case 2:
-            break
-        case 3:
-            
-            
-            break
-        case 4:
-            
-            break
-        case 5:
-            
-            break
-        case 6:
-            
-            break
-        case  7:
-            break
-        case  8:
-            break
-            
-        default:
-            break
-            
-        }
+    */
 
-    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
