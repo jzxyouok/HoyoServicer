@@ -83,6 +83,8 @@
 		8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */; };
 		8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */; };
 		8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D821CA9841C00407F30 /* CALayer+extension.swift */; };
+		8D977D9F1CBA07790049514E /* MyExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977D9D1CBA07790049514E /* MyExamViewController.swift */; };
+		8D977DA01CBA07790049514E /* MyExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D977D9E1CBA07790049514E /* MyExamViewController.xib */; };
 		8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */; };
 		8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */; };
 		8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */; };
@@ -108,6 +110,11 @@
 		8DF2A6EA1CAAD3C000A0883D /* RegistFooterView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6E91CAAD3C000A0883D /* RegistFooterView3.swift */; };
 		8DF2A6EC1CAAD3CC00A0883D /* RegistFooterView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6EB1CAAD3CC00A0883D /* RegistFooterView2.xib */; };
 		8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF2A6ED1CAAD3D900A0883D /* RegistFooterView3.xib */; };
+		8DF9D4751CBA2ED5006EB3A7 /* SelectIDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */; };
+		8DF9D47D1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9D47B1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift */; };
+		8DF9D47E1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */; };
+		8DF9D4811CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */; };
+		8DF9D4821CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +253,8 @@
 		8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		8D340D821CA9841C00407F30 /* CALayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
+		8D977D9D1CBA07790049514E /* MyExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExamViewController.swift; sourceTree = "<group>"; };
+		8D977D9E1CBA07790049514E /* MyExamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyExamViewController.xib; sourceTree = "<group>"; };
 		8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +280,11 @@
 		8DF2A6E91CAAD3C000A0883D /* RegistFooterView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistFooterView3.swift; sourceTree = "<group>"; };
 		8DF2A6EB1CAAD3CC00A0883D /* RegistFooterView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistFooterView2.xib; sourceTree = "<group>"; };
 		8DF2A6ED1CAAD3D900A0883D /* RegistFooterView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistFooterView3.xib; sourceTree = "<group>"; };
+		8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectIDTableViewController.swift; sourceTree = "<group>"; };
+		8DF9D47B1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChiefOfSelectIDCell.swift; sourceTree = "<group>"; };
+		8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChiefOfSelectIDCell.xib; sourceTree = "<group>"; };
+		8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralOfSelectIDCell.swift; sourceTree = "<group>"; };
+		8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralOfSelectIDCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,8 +315,6 @@
 		8D2681D71CA8DB37009E7BAC = {
 			isa = PBXGroup;
 			children = (
-				8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */,
-				8D1D19921CB3ADA40037E2B2 /* User.swift */,
 				8D2681E21CA8DB37009E7BAC /* HoyoServicer */,
 				8D340CB01CA8E24600407F30 /* ModelCenter */,
 				8D340CAF1CA8E20E00407F30 /* Frameworks */,
@@ -478,6 +490,8 @@
 			children = (
 				8D340CC51CA8F62F00407F30 /* DataObject+CoreDataProperties.swift */,
 				8D340CC61CA8F62F00407F30 /* DataObject.swift */,
+				8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */,
+				8D1D19921CB3ADA40037E2B2 /* User.swift */,
 			);
 			name = DataObject;
 			sourceTree = "<group>";
@@ -686,6 +700,9 @@
 				8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */,
 				8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */,
 				8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */,
+				8D977D9D1CBA07790049514E /* MyExamViewController.swift */,
+				8D977D9E1CBA07790049514E /* MyExamViewController.xib */,
+				8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -693,6 +710,7 @@
 		8D340D671CA9074200407F30 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8DF9D4761CBA2F69006EB3A7 /* SelectIDCell */,
 				8DD2269A1CAA628F00E8DA5B /* MyCenterTableViewCell.swift */,
 				8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */,
 				8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */,
@@ -725,6 +743,17 @@
 				8DF2A6ED1CAAD3D900A0883D /* RegistFooterView3.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		8DF9D4761CBA2F69006EB3A7 /* SelectIDCell */ = {
+			isa = PBXGroup;
+			children = (
+				8DF9D47B1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift */,
+				8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */,
+				8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */,
+				8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */,
+			);
+			name = SelectIDCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -795,6 +824,7 @@
 				TargetAttributes = {
 					8D2681DF1CA8DB37009E7BAC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UZZG6NM74T;
 					};
 					8D2681F61CA8DB37009E7BAC = {
 						CreatedOnToolsVersion = 7.3;
@@ -831,6 +861,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D977DA01CBA07790049514E /* MyExamViewController.xib in Resources */,
 				8DEED0371CB800C900C887C4 /* MyEvaluatHeadCell.xib in Resources */,
 				8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */,
 				8DB9EA961CB7ADFC005E6E83 /* SettingViewController.xib in Resources */,
@@ -843,7 +874,9 @@
 				8DEED0331CB7FF5500C887C4 /* MyEvaluatCell.xib in Resources */,
 				8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */,
 				8DD226951CAA5ABB00E8DA5B /* DetailOfNewsViewController.xib in Resources */,
+				8DF9D47E1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib in Resources */,
 				8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */,
+				8DF9D4821CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib in Resources */,
 				8DF2A6EC1CAAD3CC00A0883D /* RegistFooterView2.xib in Resources */,
 				8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */,
 				8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */,
@@ -885,6 +918,7 @@
 				8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */,
 				8DEED0361CB800C900C887C4 /* MyEvaluatHeadCell.swift in Sources */,
 				8D340CD61CA8FBC300407F30 /* SettingsManager.swift in Sources */,
+				8DF9D4751CBA2ED5006EB3A7 /* SelectIDTableViewController.swift in Sources */,
 				8D340CD51CA8FBC300407F30 /* DataManager.swift in Sources */,
 				8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */,
 				8D340CFC1CA9049B00407F30 /* AFHTTPSessionManager.m in Sources */,
@@ -921,6 +955,7 @@
 				8D340D311CA904A900407F30 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8D340CBB1CA8EA2F00407F30 /* Other+Expand.swift in Sources */,
 				8D340CD31CA8FBC300407F30 /* NetworkManager.swift in Sources */,
+				8DF9D4811CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift in Sources */,
 				8D340CD91CA8FCCD00407F30 /* MainViewController.swift in Sources */,
 				8D340CC81CA8F62F00407F30 /* DataObject.swift in Sources */,
 				8DF2A6E81CAAD3B200A0883D /* RegistFooterView2.swift in Sources */,
@@ -928,10 +963,12 @@
 				8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */,
 				8D340D581CA904CD00407F30 /* MBProgressHUD.m in Sources */,
 				8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */,
+				8D977D9F1CBA07790049514E /* MyExamViewController.swift in Sources */,
 				8D340D491CA904C200407F30 /* Constraint.swift in Sources */,
 				8DF2A6EA1CAAD3C000A0883D /* RegistFooterView3.swift in Sources */,
 				8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */,
 				8D340D281CA904A900407F30 /* SDWebImageDecoder.m in Sources */,
+				8DF9D47D1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift in Sources */,
 				8D340CFE1CA9049B00407F30 /* AFSecurityPolicy.m in Sources */,
 				8D340D6E1CA9146600407F30 /* NewsTableViewController.swift in Sources */,
 				8D340CC11CA8F09700407F30 /* UIColor+Expand.swift in Sources */,
@@ -1089,11 +1126,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HoyoServicer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozner.HoyoServicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HoyoServicer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1104,11 +1144,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HoyoServicer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozner.HoyoServicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HoyoServicer-Bridging-Header.h";
 			};
 			name = Release;

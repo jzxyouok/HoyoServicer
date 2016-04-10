@@ -1,70 +1,68 @@
 //
-//  MyEvaluatTableViewController.swift
+//  SelectIDTableViewController.swift
 //  HoyoServicer
 //
-//  Created by 赵兵 on 16/4/8.
+//  Created by 赵兵 on 16/4/10.
 //  Copyright © 2016年 com.ozner.net. All rights reserved.
 //
 
 import UIKit
 
-class MyEvaluatTableViewController: UITableViewController {
-    //var tableView:UITableView?
+class SelectIDTableViewController: UITableViewController {
+
+    //1 首席合伙人,2一般合伙人,3联系工程师
+    private var whitchCell = 2{
+        didSet{
+            if whitchCell==oldValue {
+                return
+            }
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title="我的评价"
+        self.title="选择身份"
+        self.automaticallyAdjustsScrollViewInsets=false
         tableView.separatorStyle=UITableViewCellSeparatorStyle.None
-        tableView!.registerNib(UINib(nibName: "MyEvaluatCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyEvaluatCell")
-        tableView!.registerNib(UINib(nibName: "MyEvaluatHeadCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyEvaluatHeadCell")
-        tableView!.separatorStyle=UITableViewCellSeparatorStyle.None
+        tableView.registerNib(UINib(nibName: "ChiefOfSelectIDCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "ChiefOfSelectIDCell")
+        tableView.registerNib(UINib(nibName: "GeneralOfSelectIDCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "GeneralOfSelectIDCell")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    convenience  init() {
-        
-        var nibNameOrNil = String?("MyEvaluatTableViewController")
-        if NSBundle.mainBundle().pathForResource(nibNameOrNil, ofType: "xib") == nil
-        {
-            nibNameOrNil = nil
-        }
-        self.init(nibName: nibNameOrNil, bundle: nil)
-        
-    }
-    required init(coder aDecoder: NSCoder) {
-        
-        fatalError("init(coder:) has not been implemented")
-        
-    }
+
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden=false
         self.tabBarController?.tabBar.hidden=true
     }
     // MARK: - Table view data source
 
-     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 1
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return indexPath.row==0 ? 164:135
+        let tmpHeight = whitchCell==1 ? (HEIGHT_SCREEN-HEIGHT_NavBar):603
+        
+        return max(tmpHeight, (HEIGHT_SCREEN-HEIGHT_NavBar))
     }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(indexPath.row==0 ? "MyEvaluatHeadCell":"MyEvaluatCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(whitchCell==1 ? "ChiefOfSelectIDCell":"GeneralOfSelectIDCell", forIndexPath: indexPath)
         cell.selectionStyle=UITableViewCellSelectionStyle.None
-        // Configure the cell...
+        if whitchCell != 1 {
+            //2,3不一样的地方设置下
+        }
 
         return cell
     }

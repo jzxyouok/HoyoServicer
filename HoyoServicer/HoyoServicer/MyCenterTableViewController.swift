@@ -64,8 +64,11 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         case 2:
             presentViewController(AuthenticationController(dissCall: nil), animated: true, completion: nil)
         case 3:
+            self.navigationController?.pushViewController(MyExamViewController(), animated: true)
             print("我的考试")
         case 4:
+            self.navigationController?.pushViewController(SelectIDTableViewController(), animated: true)
+            
             print("我的网点")
         case 5:
             self.navigationController?.pushViewController(MyEvaluatTableViewController(), animated: true)
