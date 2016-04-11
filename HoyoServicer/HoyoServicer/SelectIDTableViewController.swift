@@ -11,7 +11,7 @@ import UIKit
 class SelectIDTableViewController: UITableViewController {
 
     //1 首席合伙人,2一般合伙人,3联系工程师
-    private var whitchCell = 2{
+    private var whitchCell = 1{
         didSet{
             if whitchCell==oldValue {
                 return
@@ -52,7 +52,7 @@ class SelectIDTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let tmpHeight = whitchCell==1 ? (HEIGHT_SCREEN-HEIGHT_NavBar):603
+        let tmpHeight:CGFloat = whitchCell==1 ? 650:603
         
         return max(tmpHeight, (HEIGHT_SCREEN-HEIGHT_NavBar))
     }

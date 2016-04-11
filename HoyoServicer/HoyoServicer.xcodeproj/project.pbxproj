@@ -82,14 +82,14 @@
 		8D340D741CA9353D00407F30 /* LoginAndRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */; };
 		8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */; };
 		8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */; };
-		8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D821CA9841C00407F30 /* CALayer+extension.swift */; };
+		8D340D831CA9841C00407F30 /* CALayer+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D821CA9841C00407F30 /* CALayer+Expand.swift */; };
 		8D977D9F1CBA07790049514E /* MyExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977D9D1CBA07790049514E /* MyExamViewController.swift */; };
 		8D977DA01CBA07790049514E /* MyExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D977D9E1CBA07790049514E /* MyExamViewController.xib */; };
 		8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */; };
 		8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */; };
 		8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */; };
 		8DB9EA961CB7ADFC005E6E83 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */; };
-		8DC5F9181CBA8E6400AE5223 /* UIViewController+extense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9171CBA8E6400AE5223 /* UIViewController+extense.swift */; };
+		8DC5F9181CBA8E6400AE5223 /* UIViewController+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9171CBA8E6400AE5223 /* UIViewController+Expand.swift */; };
 		8DC5F91D1CBA8ED400AE5223 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9191CBA8ED400AE5223 /* DetailViewCell.swift */; };
 		8DC5F91E1CBA8ED400AE5223 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F91A1CBA8ED400AE5223 /* DetailViewCell.xib */; };
 		8DC5F91F1CBA8ED400AE5223 /* RobListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F91B1CBA8ED400AE5223 /* RobListViewCell.xib */; };
@@ -282,14 +282,14 @@
 		8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginAndRegisterViewController.xib; sourceTree = "<group>"; };
 		8D340D781CA94B1100407F30 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		8D340D791CA94B1100407F30 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
-		8D340D821CA9841C00407F30 /* CALayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
+		8D340D821CA9841C00407F30 /* CALayer+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Expand.swift"; sourceTree = "<group>"; };
 		8D977D9D1CBA07790049514E /* MyExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExamViewController.swift; sourceTree = "<group>"; };
 		8D977D9E1CBA07790049514E /* MyExamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyExamViewController.xib; sourceTree = "<group>"; };
 		8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
-		8DC5F9171CBA8E6400AE5223 /* UIViewController+extense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extense.swift"; sourceTree = "<group>"; };
+		8DC5F9171CBA8E6400AE5223 /* UIViewController+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Expand.swift"; path = "HoyoServicer/UIViewController+Expand.swift"; sourceTree = "<group>"; };
 		8DC5F9191CBA8ED400AE5223 /* DetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		8DC5F91A1CBA8ED400AE5223 /* DetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
 		8DC5F91B1CBA8ED400AE5223 /* RobListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RobListViewCell.xib; sourceTree = "<group>"; };
@@ -401,7 +401,6 @@
 		8D2681E21CA8DB37009E7BAC /* HoyoServicer */ = {
 			isa = PBXGroup;
 			children = (
-				8DC5F9171CBA8E6400AE5223 /* UIViewController+extense.swift */,
 				8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */,
 				8D340CD81CA8FCCD00407F30 /* MainViewController.swift */,
 				8D340D681CA90AD200407F30 /* Common */,
@@ -467,8 +466,9 @@
 		8D340CAE1CA8E20700407F30 /* ToolBox */ = {
 			isa = PBXGroup;
 			children = (
-				8D340D821CA9841C00407F30 /* CALayer+extension.swift */,
 				8D340CBE1CA8F09700407F30 /* GlobalDefinit.swift */,
+				8DC5F9171CBA8E6400AE5223 /* UIViewController+Expand.swift */,
+				8D340D821CA9841C00407F30 /* CALayer+Expand.swift */,
 				8D340CBF1CA8F09700407F30 /* UIColor+Expand.swift */,
 				8D340CB41CA8EA2F00407F30 /* String+Expand.swift */,
 				8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */,
@@ -499,9 +499,9 @@
 		8D340CB11CA8E26A00407F30 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
-				8DF2A6DE1CAAD24A00A0883D /* View */,
 				8D340D711CA9353D00407F30 /* LoginAndRegisterViewController.swift */,
 				8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */,
+				8DF2A6DE1CAAD24A00A0883D /* View */,
 			);
 			name = LoginAndRegister;
 			sourceTree = "<group>";
@@ -1038,7 +1038,7 @@
 				8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */,
 				8D1D19931CB3ADA40037E2B2 /* User+CoreDataProperties.swift in Sources */,
 				8DC5F9331CBA8FB500AE5223 /* DetailfFinancialViewCell.swift in Sources */,
-				8D340D831CA9841C00407F30 /* CALayer+extension.swift in Sources */,
+				8D340D831CA9841C00407F30 /* CALayer+Expand.swift in Sources */,
 				8D340D391CA904B900407F30 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				8D340D531CA904C200407F30 /* SnapKit.swift in Sources */,
 				8DC5F93A1CBA900B00AE5223 /* AchievementControllerViewController.swift in Sources */,
@@ -1082,7 +1082,7 @@
 				8D340D261CA904A900407F30 /* SDImageCache.m in Sources */,
 				8D340D4C1CA904C200407F30 /* ConstraintItem.swift in Sources */,
 				8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */,
-				8DC5F9181CBA8E6400AE5223 /* UIViewController+extense.swift in Sources */,
+				8DC5F9181CBA8E6400AE5223 /* UIViewController+Expand.swift in Sources */,
 				8D340D2F1CA904A900407F30 /* UIImage+MultiFormat.m in Sources */,
 				8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */,
 				8DC5F92A1CBA8EEB00AE5223 /* TableViewController.swift in Sources */,
