@@ -7,9 +7,13 @@
 //
 
 import UIKit
+//protocol RobListViewCellDelegate {
+//    func isShowMessage()
+//}
+   
 
-class RobListViewCell: UITableViewCell {
-
+class RobListViewCell : UITableViewCell {
+    var  tableView : RobListOneController?
     //用户地址
     @IBOutlet weak var address: UILabel!
     //用户反馈信息
@@ -18,15 +22,38 @@ class RobListViewCell: UITableViewCell {
     @IBOutlet weak var headImage: UIImageView!
     //背景
     @IBOutlet weak var backView: UIView!
+    var IsShow = true{
+        didSet{
+            message.hidden = !IsShow
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         backView.layer.cornerRadius = 10
         backView.layer.masksToBounds = true
-        
+//
+//        if  isShow  {
+//            
+//            print("显示")
+//            message.snp_makeConstraints(closure: { (make) in
+//                make.size.equalTo(CGSizeMake(50,21))
+//            })
+//        }
+//        else
+//        {
+//            print("隐藏")
+//       message.snp_makeConstraints(closure: { (make) in
+//                make.size.equalTo(CGSizeMake(50,0))
+//            })
+//            
+//        }
+
  
       
     }
+
 
     
     override func setSelected(selected: Bool, animated: Bool) {

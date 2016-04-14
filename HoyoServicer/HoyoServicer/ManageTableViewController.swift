@@ -59,11 +59,19 @@ class ManageTableViewController: UITableViewController,ManageTableViewCellDelega
     func ButtonOfManageCell(Tag: Int) {
         switch Tag {
         case 1:
+            
+            let  financialManager = FinancialViewController()
+            financialManager.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(financialManager, animated: true)
             break
         case 2:
+            let getMoney = GetMoneyTableViewController()
+            getMoney.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(getMoney, animated: true)
             break
         case 3:
             let boundBank = BoundBankCardViewController()
+            boundBank.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(boundBank, animated: true)
             
             break
@@ -81,12 +89,13 @@ class ManageTableViewController: UITableViewController,ManageTableViewCellDelega
             break
         case 6:
             let newMember = RecruitNewMemberViewController()
-            
+            newMember.hidesBottomBarWhenPushed  = true
             self.navigationController?.pushViewController(newMember, animated: true)
             break
             
         default:
             break
+
             
         }
 

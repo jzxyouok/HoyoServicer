@@ -1,48 +1,30 @@
 //
-//  RobListOneController.swift
+//  GetMoneyTableViewController.swift
 //  HoyoServicer
 //
-//  Created by 杨龙洲 on 30/3/16.
+//  Created by 杨龙洲 on 12/4/16.
 //  Copyright © 2016年 com.ozner.net. All rights reserved.
 //
 
 import UIKit
 
-class RobListOneController: UITableViewController {
- 
-    
+class GetMoneyTableViewController: UITableViewController,GetMoneyCellDelegate{
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.estimatedRowHeight = 400
+        tableView.registerNib(UINib(nibName: "GetMoneyCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "GetMoneyCell")
+        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
+    setNavigationItem("back.png", selector: Selector("doBack"), isRight: false)
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        
-         tableView.registerNib(UINib(nibName: "RobListViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "RobListViewCell")
-        
-        
-        setNavigationItem("back.png", selector: Selector("doBack"), isRight: false)
-
-    setNavigationItem("上海", selector: Selector("doRight"), isRight: true)
-   
+    self.title = "提现"
     }
 
-    required init(title :String)
-    {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        super.init(style: .Plain)
-            self.title = title
-        
-    
+         self.navigationController?.navigationBarHidden=false
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
- 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,44 +39,30 @@ class RobListOneController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 1
     }
 
-  
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return HEIGHT_SCREEN-HEIGHT_NavBar
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     //   let cell = tableView.dequeueReusableCellWithIdentifier("RobListViewCell") as! RobListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("GetMoneyCell") as! GetMoneyCell
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("RobListViewCell") as! RobListViewCell
-      
-        //设置点击颜色不变
-        cell.selectionStyle = .None
-       
-        
-        
+        // Configure the cell...
+    cell.selectionStyle = .None
+        cell.delegate = self
         return cell
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden=false
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-     let detail = ListsDetailViewController()
+ 
+    func pushToDetailView() {
+    let getMoneyDetail = GetMoneyDetailTableViewController()
         
-    detail.hidesBottomBarWhenPushed = true
-         self.navigationController?.pushViewController(detail, animated: true)
-        
+        self.navigationController?.pushViewController(getMoneyDetail, animated: true)
     }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        super.prefersStatusBarHidden()
-     return   false
-    }
-   
-    func isShowMessage(cell : UITableViewCell)
-    {
-           }
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

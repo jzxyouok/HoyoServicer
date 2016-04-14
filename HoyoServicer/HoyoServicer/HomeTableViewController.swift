@@ -71,6 +71,12 @@ class HomeTableViewController: UITableViewController {
             self.navigationController?.pushViewController(robOneCon, animated: true)
             break
         case 2:
+            
+            let pendingDoing = RobListOneController(title: "待处理")
+            
+            pendingDoing.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(pendingDoing, animated: true)
+            
             break
         case 3:
             

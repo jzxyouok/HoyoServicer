@@ -64,7 +64,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海市上海浦东新区贵桥路60号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-O1-qy8">
-                                        <rect key="frame" x="46" y="13" width="329" height="21"/>
+                                        <rect key="frame" x="46" y="18" width="329" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="xOd-ea-WvW"/>
                                         </constraints>
@@ -76,7 +76,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Dn1-2M-Py8"/>
-                                    <constraint firstItem="Cfz-O1-qy8" firstAttribute="centerY" secondItem="gsa-EY-sPu" secondAttribute="centerY" id="JFv-JQ-Mli"/>
+                                    <constraint firstItem="Cfz-O1-qy8" firstAttribute="centerY" secondItem="gsa-EY-sPu" secondAttribute="centerY" constant="5" id="JFv-JQ-Mli"/>
                                     <constraint firstItem="Cfz-O1-qy8" firstAttribute="leading" secondItem="gsa-EY-sPu" secondAttribute="trailing" constant="10" id="ZVX-rS-EFO"/>
                                     <constraint firstAttribute="trailing" secondItem="Cfz-O1-qy8" secondAttribute="trailing" id="bXi-GD-1Jr"/>
                                     <constraint firstItem="gsa-EY-sPu" firstAttribute="top" secondItem="lEG-hA-R6G" secondAttribute="top" constant="8" id="l9T-VM-P7C"/>

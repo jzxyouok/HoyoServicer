@@ -64,5 +64,8 @@ class RecruitNewMemberViewController: UIViewController {
     @IBAction func back() {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.contanct.resignFirstResponder()
+    }
 
 }

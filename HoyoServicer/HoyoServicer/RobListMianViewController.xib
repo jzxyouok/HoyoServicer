@@ -1,55 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RobListMianViewController" customModule="HoyoServicer" customModuleProvider="target">
             <connections>
-                <outlet property="segCon" destination="Jjl-St-euH" id="XbW-8N-2Cj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jjl-St-euH">
-                    <rect key="frame" x="57" y="20" width="260" height="31"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2m-n0-acO">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzz-eQ-kgs">
+                            <rect key="frame" x="0.0" y="20" width="50" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="6Yp-JE-RLF"/>
+                                <constraint firstAttribute="width" constant="50" id="fdl-Hd-VAb"/>
+                            </constraints>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="back" destination="-1" eventType="touchUpInside" id="bzf-h6-kRn"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抢单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWg-2i-jmd">
+                            <rect key="frame" x="283" y="25" width="34" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="8zc-hv-STi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="Jjl-St-euH" secondAttribute="height" multiplier="26:3" id="1LH-yO-KVa"/>
-                        <constraint firstAttribute="width" constant="260" id="baP-bD-ZEz"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hFH-pV-Pi3"/>
-                        <constraint firstAttribute="height" constant="30" id="p8e-3u-cTJ"/>
-                        <constraint firstAttribute="width" secondItem="Jjl-St-euH" secondAttribute="height" multiplier="26:3" id="zkd-vc-Y2B"/>
+                        <constraint firstItem="yzz-eQ-kgs" firstAttribute="top" secondItem="l2m-n0-acO" secondAttribute="top" constant="20" id="1CC-n0-BgC"/>
+                        <constraint firstItem="uWg-2i-jmd" firstAttribute="top" secondItem="l2m-n0-acO" secondAttribute="top" constant="25" id="RMK-96-Vf4"/>
+                        <constraint firstItem="uWg-2i-jmd" firstAttribute="leading" secondItem="yzz-eQ-kgs" secondAttribute="trailing" id="auv-Y3-z2m"/>
+                        <constraint firstItem="uWg-2i-jmd" firstAttribute="centerX" secondItem="l2m-n0-acO" secondAttribute="centerX" id="baj-2a-sdk"/>
+                        <constraint firstAttribute="height" constant="64" id="nUP-Wm-XSx"/>
+                        <constraint firstItem="yzz-eQ-kgs" firstAttribute="leading" secondItem="l2m-n0-acO" secondAttribute="leading" id="pfu-FT-kzd"/>
                     </constraints>
-                    <segments>
-                        <segment title="按时间排序"/>
-                        <segment title="按距离排序"/>
-                    </segments>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="1LH-yO-KVa"/>
-                            <exclude reference="p8e-3u-cTJ"/>
+                            <exclude reference="auv-Y3-z2m"/>
                         </mask>
                     </variation>
-                    <connections>
-                        <action selector="change:" destination="-1" eventType="valueChanged" id="RG3-Vq-MtV"/>
-                    </connections>
-                </segmentedControl>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Jjl-St-euH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="260:375" priority="998" id="EUS-cN-Uwa"/>
-                <constraint firstItem="Jjl-St-euH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Vk7-cb-6Zo"/>
-                <constraint firstItem="Jjl-St-euH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zp1-Xl-fjM"/>
+                <constraint firstItem="l2m-n0-acO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ee9-Lo-305"/>
+                <constraint firstAttribute="trailing" secondItem="l2m-n0-acO" secondAttribute="trailing" id="MlO-09-d9e"/>
+                <constraint firstItem="l2m-n0-acO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uha-u7-kjC"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
+    <resources>
+        <image name="back" width="13" height="21"/>
+    </resources>
 </document>

@@ -1,47 +1,23 @@
 //
-//  RobListOneController.swift
+//  GetMoneyDetailTableViewController.swift
 //  HoyoServicer
 //
-//  Created by 杨龙洲 on 30/3/16.
+//  Created by 杨龙洲 on 12/4/16.
 //  Copyright © 2016年 com.ozner.net. All rights reserved.
 //
 
 import UIKit
 
-class RobListOneController: UITableViewController {
- 
-    
+class GetMoneyDetailTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.estimatedRowHeight = 400
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
-        
-         tableView.registerNib(UINib(nibName: "RobListViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "RobListViewCell")
-        
-        
+        tableView.registerNib(UINib(nibName: "getMoneyDetailCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "getMoneyDetailCell")
+        tableView.separatorStyle=UITableViewCellSeparatorStyle.None
         setNavigationItem("back.png", selector: Selector("doBack"), isRight: false)
-
-    setNavigationItem("上海", selector: Selector("doRight"), isRight: true)
-   
+        self.title = "提现详情"
     }
-
-    required init(title :String)
-    {
-        
-        super.init(style: .Plain)
-            self.title = title
-        
-    
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
- 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,44 +33,22 @@ class RobListOneController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 1
     }
 
-  
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     //   let cell = tableView.dequeueReusableCellWithIdentifier("RobListViewCell") as! RobListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("getMoneyDetailCell") as! getMoneyDetailCell
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("RobListViewCell") as! RobListViewCell
-      
-        //设置点击颜色不变
-        cell.selectionStyle = .None
-       
-        
-        
+     cell.selectionStyle = .None
+
         return cell
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden=false
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-     let detail = ListsDetailViewController()
+ 
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-    detail.hidesBottomBarWhenPushed = true
-         self.navigationController?.pushViewController(detail, animated: true)
-        
+        return HEIGHT_SCREEN-HEIGHT_NavBar
     }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        super.prefersStatusBarHidden()
-     return   false
-    }
-   
-    func isShowMessage(cell : UITableViewCell)
-    {
-           }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
