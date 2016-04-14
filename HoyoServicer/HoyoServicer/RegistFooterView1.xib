@@ -39,7 +39,7 @@
                                         <constraint firstAttribute="width" constant="40" id="qHA-cP-FT2"/>
                                     </constraints>
                                 </view>
-                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="k3z-M2-O8w">
+                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13756553995" placeholder="请输入手机号码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="k3z-M2-O8w">
                                     <rect key="frame" x="40" y="0.0" width="275" height="44"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -101,7 +101,7 @@
                                 <constraint firstAttribute="height" constant="25" id="2F5-KN-hGW"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                            <state key="normal" title="同意浩优服务家协议">
+                            <state key="normal" title="同意《浩优服务家协议》">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>

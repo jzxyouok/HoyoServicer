@@ -7,8 +7,12 @@
 //
 
 import UIKit
-
-class SelectIDTableViewController: UITableViewController {
+protocol SelectIDTableViewControllerDelegate {
+    func selectButtonChange(index:Int)
+    func ToSelectAdressController()
+    func SelectAdressFinished(adress:String)
+}
+class SelectIDTableViewController: UITableViewController,SelectIDTableViewControllerDelegate,UITextFieldDelegate {
 
     //1 首席合伙人,2一般合伙人,3联系工程师
     private var whitchCell = 1{
@@ -19,16 +23,65 @@ class SelectIDTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-    
+    var chiefOfSelectIDCell:ChiefOfSelectIDCell?
+    var generalOfSelectIDCell:GeneralOfSelectIDCell?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="选择身份"
         self.automaticallyAdjustsScrollViewInsets=false
         tableView.separatorStyle=UITableViewCellSeparatorStyle.None
-        tableView.registerNib(UINib(nibName: "ChiefOfSelectIDCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "ChiefOfSelectIDCell")
-        tableView.registerNib(UINib(nibName: "GeneralOfSelectIDCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "GeneralOfSelectIDCell")
+        chiefOfSelectIDCell=NSBundle.mainBundle().loadNibNamed("ChiefOfSelectIDCell", owner: self, options: nil).last as? ChiefOfSelectIDCell
+        chiefOfSelectIDCell?.delegate=self
+        generalOfSelectIDCell=NSBundle.mainBundle().loadNibNamed("GeneralOfSelectIDCell", owner: self, options: nil).last as? GeneralOfSelectIDCell
+        chiefOfSelectIDCell?.webSiteNameTextField.delegate=self
+        chiefOfSelectIDCell?.detailAdressTextField.delegate=self
+        generalOfSelectIDCell?.delegate=self
+        generalOfSelectIDCell?.inputNumberTextField.delegate=self
+        generalOfSelectIDCell?.commitbutton.addTarget(self, action: #selector(commitClick), forControlEvents: .TouchUpInside)
+        chiefOfSelectIDCell?.commitbutton.addTarget(self, action: #selector(commitClick), forControlEvents: .TouchUpInside)
+        chiefOfSelectIDCell?.selectionStyle=UITableViewCellSelectionStyle.None
+        generalOfSelectIDCell?.selectionStyle=UITableViewCellSelectionStyle.None
     }
+    func commitClick(button:UIButton) {
+        let tmpStr:String?
+        if button.tag==1 {
+            tmpStr="首席工程师"
+        }
+        else
+        {
+            tmpStr=generalOfSelectIDCell?.selectIndex==22 ? "一般工程师":"联系工程师"
+        }
+        print(tmpStr)
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    /**
+     SelectIDTableViewControllerDelegate回掉方法
+     */
+    func selectButtonChange(index: Int) {
+        whitchCell=index==21 ?1:index
+    }
+    //选择地址
+    func ToSelectAdressController(){
+        let jsonPath = NSBundle.mainBundle().pathForResource("china_citys", ofType: "json")
+        let jsonData = NSData(contentsOfFile: jsonPath!)! as NSData
+        let tmpObject: AnyObject?
+        do{
+            tmpObject = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
+        }
+        let adressDic = tmpObject as! NSMutableArray
+        let adressControll = SelectAdressTableViewController(adressData: adressDic, firstSelectRow: -1)
+        adressControll.delegate=self
+        self.navigationController?.pushViewController(adressControll, animated: true)
 
+    }
+    func SelectAdressFinished(adress:String)
+    {
+        chiefOfSelectIDCell?.cityLabel.text=adress
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,22 +105,21 @@ class SelectIDTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let tmpHeight:CGFloat = whitchCell==1 ? 650:603
+        let tmpHeight:CGFloat = whitchCell==1 ? 650:560
         
         return max(tmpHeight, (HEIGHT_SCREEN-HEIGHT_NavBar))
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(whitchCell==1 ? "ChiefOfSelectIDCell":"GeneralOfSelectIDCell", forIndexPath: indexPath)
-        cell.selectionStyle=UITableViewCellSelectionStyle.None
+        
         if whitchCell != 1 {
-            //2,3不一样的地方设置下
+            generalOfSelectIDCell?.selectIndex=whitchCell==2 ? 22:23
         }
 
-        return cell
+        return whitchCell==1 ? chiefOfSelectIDCell!:generalOfSelectIDCell!
     }
     
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

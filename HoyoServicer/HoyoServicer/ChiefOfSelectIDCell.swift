@@ -10,6 +10,18 @@ import UIKit
 
 class ChiefOfSelectIDCell: UITableViewCell {
 
+    var delegate:SelectIDTableViewControllerDelegate?
+    
+    @IBOutlet weak var webSiteNameTextField: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var detailAdressTextField: UITextField!
+    @IBOutlet weak var commitbutton: UIButton!
+    @IBAction func selectWhitchButton(sender: UIButton) {
+        delegate?.selectButtonChange(sender.tag)
+    }
+    @IBAction func selectAdress(sender: AnyObject) {
+        delegate?.ToSelectAdressController()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

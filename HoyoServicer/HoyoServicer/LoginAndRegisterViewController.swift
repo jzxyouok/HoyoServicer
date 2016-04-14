@@ -95,32 +95,102 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         })
         currentLoginState = .Login
     }
-
+    
+    private var TmpToken:String?//注册时会用到
     func buttonClick(button:UIButton){
-        print(button.tag)
         switch button.tag {
         case 1://登录页面：忘记密码
             print("忘记密码")
         case 2://登录页面：登录
-            presentMainViewController()
+            if checkTel((registFooterView1?.phoneTextField.text!)!) {
+                MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                User.loginWithPhone((loginFooterView?.phoneTextField.text)!, password: (loginFooterView?.passWordTextField.text)!, success: {
+                    [weak self](user) in
+                    
+                    User.currentUser = user
+                    if let strongSelf=self{
+                        MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
+                        strongSelf.presentMainViewController()
+                    }
+                    
+                    }, failure: { [weak self](error) in
+                        MBProgressHUD.hideHUDForView(self!.view, animated: true)
+                        let alertView=UNAlertView(title: "", message: error.localizedDescription)
+                        alertView.addButton("确定", action:{})
+                        alertView.show()
+                })
+            }else
+            {
+                let alertView=UNAlertView(title: "", message: "您输入手机号有误，请重新输入")
+                alertView.addButton("确定", action: {})
+                alertView.show()
+            }
+            
         case 3://注册页面一：下一步
-            currentLoginState = .Register2
+            if checkTel((registFooterView1?.phoneTextField.text!)!) {
+                MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                User.SendPhoneCode((registFooterView1?.phoneTextField.text!)!, success: { [weak self] in
+                    if let strongSelf=self{
+                        MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
+                        strongSelf.currentLoginState = .Register2
+                        strongSelf.registFooterView2?.phoneTextField.text=strongSelf.registFooterView1?.phoneTextField.text
+                    }
+                    }, failure: { [weak self](error) in
+                        print(error)
+                        MBProgressHUD.hideHUDForView(self!.view, animated: true)
+                        let alertView=UNAlertView(title: "", message: error.localizedDescription)
+                        alertView.addButton("确定", action: {})
+                        alertView.show()
+                })
+            }else
+            {
+                let alertView=UNAlertView(title: "", message: "手机号格式不正确，请重新输入")
+                alertView.addButton("确定", action: {
+                })
+                alertView.show()
+            }
+            
         case 4://注册页面一：小对号图标
             print("小对号图标")
         case 5://注册页面一：同意浩优服务家协议
             print("同意浩优服务家协议")
         case 6://注册页面二：下一步
-            currentLoginState = .Register3
-        case 7://注册页面三：下一步
-            let authController = AuthenticationController(dissCall: {
-                [weak self] in
-                if let StrongSelf=self
-                {
-                    StrongSelf.presentMainViewController()
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            User.AppChenkPhone((registFooterView2?.phoneTextField.text!)!, code: (registFooterView2?.codeTextField.text!)!, success: { [weak self](tmpToken) in
+                if let strongSelf=self{
+                    MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
+                    strongSelf.currentLoginState = .Register3
+                    strongSelf.TmpToken=tmpToken
                 }
+                }, failure: { [weak self](error) in
+                    MBProgressHUD.hideHUDForView(self!.view, animated: true)
+                    let alertView=UNAlertView(title: "", message: error.localizedDescription)
+                    alertView.addButton("确定", action: {
+                    })
+                    alertView.show()
             })
             
-            presentViewController(authController, animated: true, completion: nil)
+        case 7://注册页面三：下一步
+            
+            let tmpName = registFooterView3?.nameTextField.text!
+            let tmpIDCard = registFooterView3?.IDCardTextField.text!
+            let tmppassWord = registFooterView3?.passWordTextField.text!
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            User.AppRegister(tmpName!, cardid: tmpIDCard!, password: tmppassWord!, success: { [weak self](user) in
+                MBProgressHUD.hideHUDForView(self!.view, animated: true)
+                User.currentUser = user
+                let authController = AuthenticationController(dissCall: {
+                    [weak self] in
+                        self!.presentMainViewController()
+                    })
+                self!.presentViewController(authController, animated: true, completion: nil)
+                }, failure: { [weak self](error) in
+                    MBProgressHUD.hideHUDForView(self!.view, animated: true)
+                    let alertView=UNAlertView(title: "", message: error.localizedDescription)
+                    alertView.addButton("确定", action: {})
+                    alertView.show()
+            })
+            
         default:
             break
         }
@@ -130,31 +200,31 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         super.viewDidAppear(animated)
         if firstAppear {
             firstAppear = false
-            
-            NetworkManager.defaultManager?.POST("AppLogin", parameters: ["phone":"15026981614","password":"123456"], success: { (dataDic) in
-                print(dataDic)
-                }, failure: { (error) in
-                    print(error)
-            })
-            //            User.loginWithCookiesAndCacheInStorage(
-            //                success: {
-            //                    [weak self] user in
-            //                    User.currentUser = user
-            //self.presentMainViewController()
-            //                },
-            //                failure: nil)
+            User.loginWithLocalUserInfo(
+                success: {
+                    [weak self] user in
+                    User.currentUser = user
+                    self?.presentMainViewController()
+                },
+                failure: nil)
         }
     }
-    /**
-     呈现主视图
-     
-     - parameter isPresentAuth: 是否弹出身份验证视图
-     */
+    //获取用户信息，然后呈现主视图
     func presentMainViewController() {
-        appDelegate.mainViewController = MainViewController()
-        appDelegate.mainViewController.modalTransitionStyle = .CrossDissolve
-        presentViewController(appDelegate.mainViewController, animated: true, completion: nil)
-        
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        User.GetCurrentUserInfo({ [weak self](user) in
+            MBProgressHUD.hideHUDForView(self!.view, animated: true)
+            User.currentUser=user
+            appDelegate.mainViewController = MainViewController()
+            appDelegate.mainViewController.modalTransitionStyle = .CrossDissolve
+            self!.presentViewController(appDelegate.mainViewController, animated: true, completion: nil)
+        }) { [weak self](error) in
+            MBProgressHUD.hideHUDForView(self!.view, animated: true)
+            let alertView=UNAlertView(title: "", message: error.localizedDescription)
+            alertView.addButton("确定", action: {
+            })
+            alertView.show()
+        }
     }
 
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -180,9 +250,7 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         
     }
     required init(coder aDecoder: NSCoder) {
-        
         fatalError("init(coder:) has not been implemented")
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

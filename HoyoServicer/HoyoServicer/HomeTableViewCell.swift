@@ -24,6 +24,7 @@ class HomeTableViewCell: UITableViewCell,UIScrollViewDelegate {
         buttonClickCallBack!(whichButton: sender.tag)
     }
     @IBOutlet weak var personImg: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     
     //banner

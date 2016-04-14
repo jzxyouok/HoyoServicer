@@ -9,8 +9,6 @@
 
 import Foundation
 
-let UserDefaultsCookiesKey = "OznerServer_DefaultCookies"
-let UserDefaultsUserIDKey = "OznerServer_DefaultUserID"
 
 /// 网络访问基类
 class NetworkManager: NSObject {
@@ -50,23 +48,29 @@ class NetworkManager: NSObject {
         constructingBodyWithBlock block: ((AFMultipartFormData?) -> Void)?,
         success: ((AnyObject) -> Void)?,
         failure: ((NSError) -> Void)?) -> AFHTTPRequestOperation? {
-            var error: NSError? = nil
-            let URLString = manager.requestSerializer.requestWithMethod("GET", URLString: paths[key]!, parameters: GETParameters, error: &error).URL?.absoluteString
-            if error != nil || URLString == nil {
-                failure?(error!) // Needs specification
-                return nil
-            }
-            return manager.POST(URLString!,
-                parameters: POSTParameters,
-                constructingBodyWithBlock: block,
-                success: {
-                    [weak self] operation, data in
-                    self?.handleSuccess(operation: operation, data: data as! NSData, success: success, failure: failure)
-                },
-                failure: {
-                    operation, error in
-                    failure?(error)
-            })
+        
+        var error: NSError? = nil
+        let URLString = manager.requestSerializer.requestWithMethod("GET", URLString: paths[key]!, parameters: GETParameters, error: &error).URL?.absoluteString
+        if error != nil || URLString == nil {
+            failure?(error!) // Needs specification
+            return nil
+        }
+        // 添加token
+        let tmpParameters = NSMutableDictionary(dictionary: POSTParameters!) 
+        tmpParameters.setObject(userToken, forKey: UserDefaultsUserTokenKey)
+        print(tmpParameters)
+        return manager.POST(URLString!,
+                            parameters: tmpParameters,
+                            constructingBodyWithBlock: block,
+                            success: {
+                                [weak self] operation, data in
+                                self?.handleSuccess(operation: operation, data: data as! NSData, success: success, failure: failure)
+            },
+                            failure: {
+                                operation, error in
+                                //检查网络状态
+                                failure?(error)
+        })
     }
     private func handleSuccess(operation operation: AFHTTPRequestOperation, data: NSData, success: ((AnyObject) -> Void)?, failure: ((NSError) -> Void)?) {
         let error: NSError? = nil
@@ -95,7 +99,7 @@ class NetworkManager: NSObject {
         let state=data["state"] as! Int
         if state > successCode {
             success?(data)
-            //DataManager.defaultManager!.saveChanges()
+            DataManager.defaultManager!.saveChanges()
         } else if(state==tokenFailCode){
             appDelegate.LoginOut()
             //token失效，返回到登录界面重新登录
@@ -104,6 +108,7 @@ class NetworkManager: NSObject {
             var userInfo = [
                 NSLocalizedDescriptionKey: getErrorState(state),
                 NSURLErrorKey: operation.response!.URL!
+                
             ]
             if operation.error != nil {
                 userInfo[NSUnderlyingErrorKey] = operation.error
@@ -112,7 +117,6 @@ class NetworkManager: NSObject {
                 domain: website,
                 code: state,
                 userInfo: userInfo)
-            NSLog("\(error)")
             failure?(error)
         }
     }
@@ -133,14 +137,14 @@ class NetworkManager: NSObject {
         return errorState
     }
     /**
-     清理cookies
+     清理cookies和当前用户信息
      */
     class func clearCookies() {
         let storage = NSHTTPCookieStorage.sharedHTTPCookieStorage()//as! [NSHTTPCookie]
         for cookie in (storage.cookies)! {
             storage.deleteCookie(cookie)
         }
-        NSUserDefaults.standardUserDefaults().removeObjectForKey(UserDefaultsCookiesKey)
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(UserDefaultsUserTokenKey)
         NSUserDefaults.standardUserDefaults().removeObjectForKey(UserDefaultsUserIDKey)
         NSUserDefaults.standardUserDefaults().synchronize()
         NSURLCache.sharedURLCache().removeAllCachedResponses()
@@ -155,6 +159,7 @@ class NetworkManager: NSObject {
     var paths: [String: String] {
         return NetworkConfig["Path"] as! [String: String]
     }
+    
     private lazy var manager: AFHTTPRequestOperationManager = {
         [weak self] in
         
@@ -163,6 +168,17 @@ class NetworkManager: NSObject {
         manager.responseSerializer = AFHTTPResponseSerializer()
         return manager
         }()
+    //用户的usertoken
+    var userToken:String{
+        if let tmptoken=NSUserDefaults.standardUserDefaults().objectForKey(UserDefaultsUserTokenKey)
+        {
+            return (tmptoken as! String)
+        }
+        else{
+            return ""
+        }
+        
+    }
 
     /// 成功编码
     var successCode: Int {

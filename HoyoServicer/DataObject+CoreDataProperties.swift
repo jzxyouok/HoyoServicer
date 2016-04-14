@@ -14,6 +14,6 @@ import CoreData
 
 extension DataObject {
 
-    @NSManaged var id: NSNumber?
+   
 
 }

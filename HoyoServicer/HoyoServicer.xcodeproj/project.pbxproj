@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D1D19931CB3ADA40037E2B2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */; };
 		8D1D19941CB3ADA40037E2B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D19921CB3ADA40037E2B2 /* User.swift */; };
 		8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */; };
 		8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681EA1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld */; };
@@ -19,6 +18,7 @@
 		8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */; };
 		8D28F4871CABCA6E00C7E99B /* AuthDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */; };
 		8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */; };
+		8D29568A1CBC065100F88698 /* SelectAdressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */; };
 		8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB41CA8EA2F00407F30 /* String+Expand.swift */; };
 		8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */; };
 		8D340CBB1CA8EA2F00407F30 /* Other+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB61CA8EA2F00407F30 /* Other+Expand.swift */; };
@@ -127,6 +127,8 @@
 		8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */; };
 		8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */; };
 		8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */; };
+		8DEEB69A1CBC996B00B93292 /* china_citys.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEEB6991CBC996B00B93292 /* china_citys.json */; };
+		8DEEB6A51CBCFE4700B93292 /* UNAlertView+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEB6A41CBCFE4700B93292 /* UNAlertView+Expand.swift */; };
 		8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */; };
 		8DEED0321CB7FF5500C887C4 /* MyEvaluatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */; };
 		8DEED0331CB7FF5500C887C4 /* MyEvaluatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */; };
@@ -145,6 +147,7 @@
 		8DF9D47E1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */; };
 		8DF9D4811CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */; };
 		8DF9D4821CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */; };
+		8DFDD21E1CBFC4D30039E2F1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFDD21D1CBFC4D30039E2F1 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,7 +168,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8D1D19921CB3ADA40037E2B2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8D2681E01CA8DB37009E7BAC /* HoyoServicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoyoServicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticationController.xib; sourceTree = "<group>"; };
 		8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDetailView.swift; sourceTree = "<group>"; };
 		8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthDetailView.xib; sourceTree = "<group>"; };
+		8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAdressTableViewController.swift; sourceTree = "<group>"; };
 		8D340CB41CA8EA2F00407F30 /* String+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Expand.swift"; sourceTree = "<group>"; };
 		8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Expand.swift"; sourceTree = "<group>"; };
 		8D340CB61CA8EA2F00407F30 /* Other+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Other+Expand.swift"; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 		8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCenterTableViewCell.xib; sourceTree = "<group>"; };
 		8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageTableViewCell.xib; sourceTree = "<group>"; };
+		8DEEB6991CBC996B00B93292 /* china_citys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = china_citys.json; sourceTree = "<group>"; };
+		8DEEB6A41CBCFE4700B93292 /* UNAlertView+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNAlertView+Expand.swift"; sourceTree = "<group>"; };
 		8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatTableViewController.swift; sourceTree = "<group>"; };
 		8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatCell.swift; sourceTree = "<group>"; };
 		8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluatCell.xib; sourceTree = "<group>"; };
@@ -345,6 +350,7 @@
 		8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChiefOfSelectIDCell.xib; sourceTree = "<group>"; };
 		8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralOfSelectIDCell.swift; sourceTree = "<group>"; };
 		8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralOfSelectIDCell.xib; sourceTree = "<group>"; };
+		8DFDD21D1CBFC4D30039E2F1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +472,7 @@
 		8D340CAE1CA8E20700407F30 /* ToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				8DEEB6A41CBCFE4700B93292 /* UNAlertView+Expand.swift */,
 				8D340CBE1CA8F09700407F30 /* GlobalDefinit.swift */,
 				8DC5F9171CBA8E6400AE5223 /* UIViewController+Expand.swift */,
 				8D340D821CA9841C00407F30 /* CALayer+Expand.swift */,
@@ -549,10 +556,10 @@
 		8D340CCD1CA8FA6E00407F30 /* DataObject */ = {
 			isa = PBXGroup;
 			children = (
-				8D340CC51CA8F62F00407F30 /* DataObject+CoreDataProperties.swift */,
-				8D340CC61CA8F62F00407F30 /* DataObject.swift */,
-				8D1D19911CB3ADA40037E2B2 /* User+CoreDataProperties.swift */,
 				8D1D19921CB3ADA40037E2B2 /* User.swift */,
+				8DFDD21D1CBFC4D30039E2F1 /* User+CoreDataProperties.swift */,
+				8D340CC61CA8F62F00407F30 /* DataObject.swift */,
+				8D340CC51CA8F62F00407F30 /* DataObject+CoreDataProperties.swift */,
 			);
 			name = DataObject;
 			sourceTree = "<group>";
@@ -784,6 +791,7 @@
 				8D977D9D1CBA07790049514E /* MyExamViewController.swift */,
 				8D977D9E1CBA07790049514E /* MyExamViewController.xib */,
 				8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */,
+				8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -866,6 +874,7 @@
 				8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */,
 				8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */,
 				8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */,
+				8DEEB6991CBC996B00B93292 /* china_citys.json */,
 			);
 			name = SelectIDCell;
 			sourceTree = "<group>";
@@ -1008,6 +1017,7 @@
 				8DC5F9341CBA8FB500AE5223 /* DetailfFinancialViewCell.xib in Resources */,
 				8DC5F9281CBA8EEB00AE5223 /* RobListMianViewController.xib in Resources */,
 				8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */,
+				8DEEB69A1CBC996B00B93292 /* china_citys.json in Resources */,
 				8DC5F91F1CBA8ED400AE5223 /* RobListViewCell.xib in Resources */,
 				8D340D511CA904C200407F30 /* Info.plist in Resources */,
 				8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */,
@@ -1036,7 +1046,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */,
-				8D1D19931CB3ADA40037E2B2 /* User+CoreDataProperties.swift in Sources */,
 				8DC5F9331CBA8FB500AE5223 /* DetailfFinancialViewCell.swift in Sources */,
 				8D340D831CA9841C00407F30 /* CALayer+Expand.swift in Sources */,
 				8D340D391CA904B900407F30 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
@@ -1053,6 +1062,7 @@
 				8D340CD51CA8FBC300407F30 /* DataManager.swift in Sources */,
 				8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */,
 				8D340CFC1CA9049B00407F30 /* AFHTTPSessionManager.m in Sources */,
+				8DEEB6A51CBCFE4700B93292 /* UNAlertView+Expand.swift in Sources */,
 				8D340D291CA904A900407F30 /* SDWebImageDownloader.m in Sources */,
 				8D340D5F1CA904E200407F30 /* Reachability.m in Sources */,
 				8D340D271CA904A900407F30 /* SDWebImageCompat.m in Sources */,
@@ -1102,6 +1112,7 @@
 				8DF2A6E81CAAD3B200A0883D /* RegistFooterView2.swift in Sources */,
 				8D340D251CA904A900407F30 /* NSData+ImageContentType.m in Sources */,
 				8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */,
+				8D29568A1CBC065100F88698 /* SelectAdressTableViewController.swift in Sources */,
 				8D340D581CA904CD00407F30 /* MBProgressHUD.m in Sources */,
 				8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */,
 				8D977D9F1CBA07790049514E /* MyExamViewController.swift in Sources */,
@@ -1132,6 +1143,7 @@
 				8D340D2E1CA904A900407F30 /* UIImage+GIF.m in Sources */,
 				8D340D011CA9049B00407F30 /* AFURLResponseSerialization.m in Sources */,
 				8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */,
+				8DFDD21E1CBFC4D30039E2F1 /* User+CoreDataProperties.swift in Sources */,
 				8DD226941CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift in Sources */,
 				8D340D4B1CA904C200407F30 /* ConstraintDescription.swift in Sources */,
 				8D28F4871CABCA6E00C7E99B /* AuthDetailView.swift in Sources */,

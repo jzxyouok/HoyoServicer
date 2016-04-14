@@ -685,6 +685,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="footerScrollView" destination="Xsk-ya-4kz" id="TSt-H4-Vmu"/>
+                <outlet property="nameLabel" destination="fYZ-Xr-n4a" id="nuH-fd-Ehg"/>
                 <outlet property="pageControll" destination="uD0-gU-IJg" id="7BP-5P-ghf"/>
                 <outlet property="personImg" destination="pmh-U1-Vr0" id="gSS-6H-Yfy"/>
             </connections>

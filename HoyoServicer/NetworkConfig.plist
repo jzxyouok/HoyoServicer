@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Website</key>
-	<string>http://wechat.hoyofuwu.com/Interface</string>
+	<string>http://wechat.hoyofuwu.com</string>
 	<key>TokenFailCode</key>
 	<string>-10006</string>
 	<key>SuccessCode</key>
