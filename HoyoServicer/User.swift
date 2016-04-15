@@ -276,20 +276,166 @@ class User: DataObject {
                                             failure: failure)
     }
     //  /AppInterface/GetOrderDetails获取订单详细信息
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
+    class func GetOrderDetails(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetOrderDetails",
+                                            parameters:[
+                                                "orderid":orderid
+            ],
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    
+  
+    //GetPost/Command/NewVersion获取版本更新
+    class func NewVersion(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("NewVersion",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/RefreshIndexAPP刷新首页获取数据
+    class func RefreshIndexAPP(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("RefreshIndexAPP",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/AppInterface/SubmitTime提交上门时间
+    class func SubmitTime(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("SubmitTime",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/GetHomeTimeList获取历史提交的上门时间
+    class func GetHomeTimeList(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetHomeTimeList",
+                                            parameters:[
+                                                "orderid":orderid
+            ],
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/PartnerCommand组(合伙人)成员操作
+    class func PartnerCommand(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("PartnerCommand",
+                                            parameters:[
+                                                "orderid":orderid
+            ],
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/UpgradeAuthority升级权限
+    class func UpgradeAuthority(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("UpgradeAuthority",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/AppInterface/GetNowAuthorityDetail获取当前权限的信息或者审核进度，获取团队成员信息
+    class func GetNowAuthorityDetail
+        (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetNowAuthorityDetail",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    
+    //GetPost/AppInterface/GetMyScoreDetails获取个人的所有评价
+    class func GetMyScoreDetails (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetMyScoreDetails",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/Command/GetOwenBindBlankCard获取所有我的绑定银行卡列表
+    class func GetOwenBindBlankCard (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+    NetworkManager.defaultManager!.POST("GetMyScoreDetails",
+    parameters:nil,
+    success: {
+    data in
+    print(data)
+    success!()
+    },
+    failure: failure)
+    }
+
+    //GetPost/Command/BindNewBlankCard绑定银行卡
+    class func BindNewBlankCard(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("BindNewBlankCard",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/AppInterface/GetOwenMoney获取我的账户余额
+
+    class func GetOwenMoney (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetOwenMoney",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    
+    //GetPost/AppInterface/GetOwenMoneyDetails分页获取我的账户明细
+    class func GetOwenMoneyDetails (index : Int,pagesize : Int,success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager?.POST("GetOwenMoneyDetails", parameters: ["index":index ,"pagesize" :pagesize],
+                                            success: { (data) in
+            print(data)
+            success!()
+            }, failure: failure)
+    }
+                                            
+    
     //
     //
     //

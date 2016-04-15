@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinancialViewController" customModule="HoyoServicer" customModuleProvider="target">
             <connections>
-                <outlet property="seg" destination="hVr-6N-bDx" id="aqp-7s-6Ac"/>
+                <outlet property="backView" destination="rzc-U7-hN8" id="hP3-C6-NKD"/>
                 <outlet property="selectTimeBtn" destination="dp2-Ib-Sbt" id="Psw-gj-IZd"/>
+                <outlet property="selectTimeView" destination="EaY-aI-sVK" id="3qk-s3-dVD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,17 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-6N-bDx">
-                    <rect key="frame" x="10" y="138" width="355" height="31"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="b9l-IO-eza"/>
-                    </constraints>
-                    <segments>
-                        <segment title="明细"/>
-                        <segment title="收入"/>
-                        <segment title="支出"/>
-                    </segments>
-                </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jje-2d-1Pb">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                     <subviews>
@@ -46,19 +37,19 @@
                             <rect key="frame" x="0.0" y="64" width="375" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfN-4d-hYL">
-                                    <rect key="frame" x="20" y="0.0" width="118.5" height="14.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <rect key="frame" x="20" y="0.0" width="118.5" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收入(元)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-ec-vnD">
-                                    <rect key="frame" x="257" y="-1" width="118" height="16"/>
+                                    <rect key="frame" x="257" y="0.0" width="118" height="16"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支出（元）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-04-Lvu">
-                                    <rect key="frame" x="138" y="0.0" width="118.5" height="14.5"/>
+                                    <rect key="frame" x="138" y="1" width="118.5" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -154,21 +145,50 @@
                         </mask>
                     </variation>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzc-U7-hN8">
+                    <rect key="frame" x="20" y="222" width="335" height="223"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EaY-aI-sVK">
+                            <rect key="frame" x="5" y="0.0" width="325" height="183"/>
+                            <date key="date" timeIntervalSinceReferenceDate="482417306.87172699">
+                                <!--2016-04-15 12:48:26 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.33873640980000003" blue="0.45990538040000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="EaY-aI-sVK" firstAttribute="top" secondItem="rzc-U7-hN8" secondAttribute="top" id="AR2-Zm-d5j"/>
+                        <constraint firstItem="EaY-aI-sVK" firstAttribute="top" secondItem="rzc-U7-hN8" secondAttribute="top" id="F67-g2-niD"/>
+                        <constraint firstAttribute="width" secondItem="rzc-U7-hN8" secondAttribute="height" multiplier="15:10" id="R4s-Wq-DIB"/>
+                        <constraint firstItem="EaY-aI-sVK" firstAttribute="leading" secondItem="rzc-U7-hN8" secondAttribute="leading" constant="5" id="aXH-o6-50Z"/>
+                        <constraint firstAttribute="bottom" secondItem="EaY-aI-sVK" secondAttribute="bottom" constant="40" id="gMJ-11-T1s"/>
+                        <constraint firstAttribute="trailing" secondItem="EaY-aI-sVK" secondAttribute="trailing" constant="5" id="vEH-DB-3EI"/>
+                        <constraint firstAttribute="trailing" secondItem="EaY-aI-sVK" secondAttribute="trailing" constant="5" id="wU1-vR-zAU"/>
+                        <constraint firstItem="EaY-aI-sVK" firstAttribute="top" secondItem="rzc-U7-hN8" secondAttribute="top" id="wpu-4V-fl8"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="AR2-Zm-d5j"/>
+                            <exclude reference="wU1-vR-zAU"/>
+                            <exclude reference="wpu-4V-fl8"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="hVr-6N-bDx" secondAttribute="trailing" constant="10" id="Q11-cS-O2J"/>
-                <constraint firstItem="hVr-6N-bDx" firstAttribute="top" secondItem="Jje-2d-1Pb" secondAttribute="bottom" constant="10" id="TDw-0i-MOg"/>
-                <constraint firstItem="hVr-6N-bDx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="j3C-jA-E6S"/>
+                <constraint firstItem="rzc-U7-hN8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6s9-NY-5jt"/>
                 <constraint firstItem="Jje-2d-1Pb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jjA-dc-cNB"/>
                 <constraint firstItem="Jje-2d-1Pb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k6H-Em-a2m"/>
+                <constraint firstItem="rzc-U7-hN8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="mEG-fc-YkB"/>
                 <constraint firstAttribute="trailing" secondItem="Jje-2d-1Pb" secondAttribute="trailing" id="xaY-Hp-Ih0"/>
+                <constraint firstItem="rzc-U7-hN8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zXR-db-T2V"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
     <resources>
-        <image name="back" width="26" height="42"/>
+        <image name="back" width="13" height="21"/>
         <image name="drop_down" width="32" height="32"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,7 +9,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementControllerViewController" customModule="HoyoServicer" customModuleProvider="target">
             <connections>
                 <outlet property="rollStrip" destination="v0W-5p-sWv" id="DjZ-JG-X6Z"/>
-                <outlet property="scrollView" destination="8Xq-Ro-Z5o" id="xWN-KF-BKm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -96,10 +95,6 @@
                         </mask>
                     </variation>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xq-Ro-Z5o">
-                    <rect key="frame" x="0.0" y="133" width="600" height="467"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0W-5p-sWv">
                     <rect key="frame" x="0.0" y="130" width="200" height="2"/>
                     <color key="backgroundColor" red="0.3454771157" green="0.79730248319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,19 +106,15 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="v0W-5p-sWv" firstAttribute="top" secondItem="qJC-wA-TpV" secondAttribute="bottom" constant="2" id="VWq-u8-TBe"/>
-                <constraint firstItem="8Xq-Ro-Z5o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YSJ-7t-O7y"/>
                 <constraint firstItem="qJC-wA-TpV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bNz-fM-49Q"/>
                 <constraint firstAttribute="trailing" secondItem="qJC-wA-TpV" secondAttribute="trailing" id="cEY-Xb-88p"/>
                 <constraint firstItem="qJC-wA-TpV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cLX-eT-hM6"/>
-                <constraint firstItem="8Xq-Ro-Z5o" firstAttribute="top" secondItem="qJC-wA-TpV" secondAttribute="bottom" constant="5" id="evZ-a0-Kn8"/>
-                <constraint firstAttribute="bottom" secondItem="8Xq-Ro-Z5o" secondAttribute="bottom" id="fbD-Ro-7wb"/>
                 <constraint firstItem="v0W-5p-sWv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oWA-zO-1Pa"/>
-                <constraint firstAttribute="trailing" secondItem="8Xq-Ro-Z5o" secondAttribute="trailing" id="wkZ-e6-oha"/>
                 <constraint firstItem="v0W-5p-sWv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:3" id="yF8-Sg-IKx"/>
             </constraints>
         </view>
     </objects>
     <resources>
-        <image name="back" width="26" height="42"/>
+        <image name="back" width="13" height="21"/>
     </resources>
 </document>

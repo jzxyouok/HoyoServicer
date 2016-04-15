@@ -52,6 +52,20 @@
 		<string>/AppInterface/GetNowAuthorityDetail</string>
 		<key>GetMyScoreDetails</key>
 		<string>/AppInterface/GetMyScoreDetails</string>
+		<key>GetOwenBindBlankCard</key>
+		<string>/Command/GetOwenBindBlankCard
+Get
+Post
+/Command/GetOwenBindBlankCard</string>
+		<key>BindNewBlankCard</key>
+		<string>/Command/BindNewBlankCard</string>
+		<key>GetOwenMoney</key>
+		<string>/AppInterface/GetOwenMoney
+Get
+Post
+/AppInterface/GetOwenMoney</string>
+		<key>GetOwenMoneyDetails</key>
+		<string>/AppInterface/GetOwenMoneyDetails</string>
 	</dict>
 	<key>ErrorCode</key>
 	<dict>
@@ -135,6 +149,18 @@
 		<string>已经加入到了其他组，推出后再加入</string>
 		<key>-10037</key>
 		<string>你不是当前组的成员</string>
+		<key>-10038</key>
+		<string>银行卡已经被自己绑定过了</string>
+		<key>-10039</key>
+		<string>该工程师没有加入任何团队</string>
+		<key>70000</key>
+		<string>审核中</string>
+		<key>70002</key>
+		<string>审核失败</string>
+		<key>70003</key>
+		<string>被封号了</string>
+		<key>-10040</key>
+		<string>未经过实名认证</string>
 	</dict>
 </dict>
 </plist>

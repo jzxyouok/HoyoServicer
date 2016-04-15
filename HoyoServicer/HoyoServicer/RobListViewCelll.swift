@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+//protocol RobListViewCellDelegate {
+//    func isShowMessage()
+//}
    
 
 class RobListViewCell : UITableViewCell {
