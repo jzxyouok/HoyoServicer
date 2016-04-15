@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */; };
 		8D1D19941CB3ADA40037E2B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D19921CB3ADA40037E2B2 /* User.swift */; };
 		8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */; };
 		8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681EA1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld */; };
@@ -111,7 +112,6 @@
 		8DC5F9341CBA8FB500AE5223 /* DetailfFinancialViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F92E1CBA8FB500AE5223 /* DetailfFinancialViewCell.xib */; };
 		8DC5F9351CBA8FB500AE5223 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F92F1CBA8FB500AE5223 /* AchievementCell.swift */; };
 		8DC5F9361CBA8FB500AE5223 /* AchievementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9301CBA8FB500AE5223 /* AchievementCell.xib */; };
-		8DC5F93A1CBA900B00AE5223 /* AchievementControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9381CBA900B00AE5223 /* AchievementControllerViewController.swift */; };
 		8DC5F93B1CBA900B00AE5223 /* AchievementControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9391CBA900B00AE5223 /* AchievementControllerViewController.xib */; };
 		8DC5F9431CBA902D00AE5223 /* BoundBankCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F93D1CBA902D00AE5223 /* BoundBankCardViewController.swift */; };
 		8DC5F9441CBA902D00AE5223 /* BoundBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F93E1CBA902D00AE5223 /* BoundBankCardViewController.xib */; };
@@ -174,6 +174,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementControllerViewController.swift; sourceTree = "<group>"; };
 		8D1D19921CB3ADA40037E2B2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8D2681E01CA8DB37009E7BAC /* HoyoServicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoyoServicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -320,7 +321,6 @@
 		8DC5F92E1CBA8FB500AE5223 /* DetailfFinancialViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailfFinancialViewCell.xib; sourceTree = "<group>"; };
 		8DC5F92F1CBA8FB500AE5223 /* AchievementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
 		8DC5F9301CBA8FB500AE5223 /* AchievementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementCell.xib; sourceTree = "<group>"; };
-		8DC5F9381CBA900B00AE5223 /* AchievementControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementControllerViewController.swift; sourceTree = "<group>"; };
 		8DC5F9391CBA900B00AE5223 /* AchievementControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementControllerViewController.xib; sourceTree = "<group>"; };
 		8DC5F93D1CBA902D00AE5223 /* BoundBankCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundBankCardViewController.swift; sourceTree = "<group>"; };
 		8DC5F93E1CBA902D00AE5223 /* BoundBankCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoundBankCardViewController.xib; sourceTree = "<group>"; };
@@ -840,7 +840,7 @@
 		8DC5F9371CBA8FFC00AE5223 /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
-				8DC5F9381CBA900B00AE5223 /* AchievementControllerViewController.swift */,
+				3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */,
 				8DC5F9391CBA900B00AE5223 /* AchievementControllerViewController.xib */,
 			);
 			name = Achievement;
@@ -1070,7 +1070,6 @@
 				8D340D831CA9841C00407F30 /* CALayer+Expand.swift in Sources */,
 				8D340D391CA904B900407F30 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				8D340D531CA904C200407F30 /* SnapKit.swift in Sources */,
-				8DC5F93A1CBA900B00AE5223 /* AchievementControllerViewController.swift in Sources */,
 				8DBED2031CBFE16E00A77EC9 /* GetMoneyCell.swift in Sources */,
 				8D340D2D1CA904A900407F30 /* UIButton+WebCache.m in Sources */,
 				8D340D2B1CA904A900407F30 /* SDWebImageManager.m in Sources */,
@@ -1120,6 +1119,7 @@
 				8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */,
 				8DC5F9451CBA902D00AE5223 /* AddCarViewController.swift in Sources */,
 				8D340CC01CA8F09700407F30 /* GlobalDefinit.swift in Sources */,
+				3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */,
 				8D340D4D1CA904C200407F30 /* ConstraintMaker.swift in Sources */,
 				8D340D311CA904A900407F30 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8DBED20A1CBFE19100A77EC9 /* GetMoneyTableViewController.swift in Sources */,
