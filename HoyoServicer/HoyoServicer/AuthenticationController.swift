@@ -59,20 +59,23 @@ class AuthenticationController: UIViewController {
     func cameraClick(button:UIButton) {
         let alert = SCLAlertView()
         alert.addButton("相册") {
-            let libraryViewController = CameraViewController.imagePickerViewController(true) { image, asset in
+            [weak self] in
+            let libraryViewController = CameraViewController.imagePickerViewController(true) { [weak self] image, asset in
                 button.setImage(image, forState: .Normal)// = image
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self!.dismissViewControllerAnimated(true, completion: nil)
             }
             
-            self.presentViewController(libraryViewController, animated: true, completion: nil)
+            self!.presentViewController(libraryViewController, animated: true, completion: nil)
         }
         alert.addButton("拍摄") {
-            let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { image, asset in
+            [weak self] in
+            let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { [weak self] image, asset in
                 button.setImage(image, forState: .Normal)
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self!.dismissViewControllerAnimated(true, completion: nil)
             }
-            self.presentViewController(cameraViewController, animated: true, completion: nil)
+            self!.presentViewController(cameraViewController, animated: true, completion: nil)
         }
+        alert.addButton("取消", action: {})
         alert.showInfo("", subTitle: "请选择")
         
         

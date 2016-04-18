@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -30,8 +31,11 @@
                             </variation>
                         </label>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-he-cgN">
-                            <rect key="frame" x="30" y="50" width="315" height="186"/>
+                            <rect key="frame" x="84.5" y="50" width="206" height="206"/>
                             <color key="backgroundColor" red="0.81568627449999997" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dhY-he-cgN" secondAttribute="height" id="k5M-GG-DYA"/>
+                            </constraints>
                             <state key="normal" image="auth_camera"/>
                         </button>
                     </subviews>
@@ -40,11 +44,20 @@
                         <constraint firstAttribute="trailing" secondItem="dhY-he-cgN" secondAttribute="trailing" constant="30" id="0VV-2f-vOv"/>
                         <constraint firstItem="czO-sO-vfJ" firstAttribute="leading" secondItem="kBv-01-OZd" secondAttribute="leading" constant="15" id="53E-vH-Rwx"/>
                         <constraint firstAttribute="trailing" secondItem="czO-sO-vfJ" secondAttribute="trailing" constant="15" id="B3T-9Z-UhI"/>
+                        <constraint firstItem="dhY-he-cgN" firstAttribute="centerX" secondItem="kBv-01-OZd" secondAttribute="centerX" id="KMT-XW-7oM"/>
                         <constraint firstItem="dhY-he-cgN" firstAttribute="top" secondItem="czO-sO-vfJ" secondAttribute="bottom" id="Ldk-6D-xFO"/>
                         <constraint firstItem="czO-sO-vfJ" firstAttribute="top" secondItem="kBv-01-OZd" secondAttribute="top" id="Oqu-Yg-yvB"/>
                         <constraint firstItem="dhY-he-cgN" firstAttribute="leading" secondItem="kBv-01-OZd" secondAttribute="leading" constant="30" id="asf-JS-RN8"/>
                         <constraint firstAttribute="bottom" secondItem="dhY-he-cgN" secondAttribute="bottom" constant="20" id="jAj-Fj-a0y"/>
+                        <constraint firstAttribute="bottom" secondItem="dhY-he-cgN" secondAttribute="bottom" id="kze-oe-1Je"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0VV-2f-vOv"/>
+                            <exclude reference="asf-JS-RN8"/>
+                            <exclude reference="jAj-Fj-a0y"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-qA-JL1">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
@@ -59,8 +72,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of6-q5-Arz">
-                            <rect key="frame" x="30" y="50" width="315" height="206"/>
+                            <rect key="frame" x="84.5" y="50" width="206" height="206"/>
                             <color key="backgroundColor" red="0.81568627450980391" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="of6-q5-Arz" secondAttribute="height" id="3nk-NV-ucm"/>
+                            </constraints>
                             <state key="normal" image="auth_camera"/>
                         </button>
                     </subviews>
@@ -72,8 +88,15 @@
                         <constraint firstItem="of6-q5-Arz" firstAttribute="leading" secondItem="bqU-qA-JL1" secondAttribute="leading" constant="30" id="PKF-V6-Cul"/>
                         <constraint firstAttribute="bottom" secondItem="of6-q5-Arz" secondAttribute="bottom" id="UwA-Ty-e3d"/>
                         <constraint firstItem="ek2-rK-A3E" firstAttribute="top" secondItem="bqU-qA-JL1" secondAttribute="top" id="VI7-5l-5qA"/>
+                        <constraint firstItem="of6-q5-Arz" firstAttribute="centerX" secondItem="bqU-qA-JL1" secondAttribute="centerX" id="bgc-ZV-lUl"/>
                         <constraint firstItem="ek2-rK-A3E" firstAttribute="leading" secondItem="bqU-qA-JL1" secondAttribute="leading" constant="15" id="uKP-rj-GZC"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Dfb-XM-bWJ"/>
+                            <exclude reference="PKF-V6-Cul"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>

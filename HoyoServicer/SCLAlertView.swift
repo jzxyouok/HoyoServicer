@@ -500,11 +500,11 @@ public class SCLAlertView: UIViewController {
             }
         }
         
-        // Done button
-        if showCloseButton {
-            let txt = completeText != nil ? completeText! : "Done"
-            addButton(txt, target:self, selector:#selector(SCLAlertView.hideView))
-        }
+//        // Done button
+//        if showCloseButton {
+//            let txt = completeText != nil ? completeText! : "Done"
+//            addButton(txt, target:self, selector:#selector(SCLAlertView.hideView))
+//        }
         
         //hidden/show circular view based on the ui option
         circleView.hidden = !showCircularIcon
