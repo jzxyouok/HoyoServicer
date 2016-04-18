@@ -36,6 +36,7 @@ class DataObject: NSManagedObject {
 //    }
     
     class var entityName: String {
+        
         let s:String = NSStringFromClass(self)
         return s.componentsSeparatedByString(".").last ?? s
     }

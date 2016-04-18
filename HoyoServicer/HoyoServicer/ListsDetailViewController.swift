@@ -20,6 +20,11 @@ class ListsDetailViewController: UITableViewController {
         tableView.estimatedRowHeight = 667
         tableView.rowHeight = UITableViewAutomaticDimension
 // self.navigationController?.navigationBar.setBackgroundImage(UIImage color, forBarMetrics: <#T##UIBarMetrics#>)
+        User.UploadImages("", success: {
+            print("")
+            }) { (error) in
+                print(error)
+        }
      
     }
 

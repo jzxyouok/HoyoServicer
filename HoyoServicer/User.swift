@@ -275,7 +275,19 @@ class User: DataObject {
             },
                                             failure: failure)
     }
-    //  /AppInterface/GetOrderDetails获取订单详细信息
+    //  /AppInterface/GetOrderDetails    获取订单详细信息
+    class func GetOrderDetails(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetOrderDetails",
+                                            parameters:[
+                                                "orderid":orderid
+            ],
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
     //
     //
     //
