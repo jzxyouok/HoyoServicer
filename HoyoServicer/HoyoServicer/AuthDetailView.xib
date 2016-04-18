@@ -29,7 +29,7 @@
                                 </mask>
                             </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-he-cgN">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-he-cgN">
                             <rect key="frame" x="30" y="50" width="315" height="186"/>
                             <color key="backgroundColor" red="0.81568627449999997" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" image="auth_camera"/>
@@ -58,7 +58,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of6-q5-Arz">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of6-q5-Arz">
                             <rect key="frame" x="30" y="50" width="315" height="206"/>
                             <color key="backgroundColor" red="0.81568627450980391" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" image="auth_camera"/>
@@ -91,6 +91,10 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageButton1" destination="of6-q5-Arz" id="7hF-IM-fw5"/>
+                <outlet property="imageButton2" destination="dhY-he-cgN" id="d8I-OT-IIc"/>
+            </connections>
             <point key="canvasLocation" x="343.5" y="351"/>
         </view>
     </objects>

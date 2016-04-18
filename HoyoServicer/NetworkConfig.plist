@@ -153,14 +153,14 @@ Post
 		<string>银行卡已经被自己绑定过了</string>
 		<key>-10039</key>
 		<string>该工程师没有加入任何团队</string>
+		<key>-10040</key>
+		<string>未经过实名认证</string>
 		<key>70000</key>
 		<string>审核中</string>
 		<key>70002</key>
 		<string>审核失败</string>
 		<key>70003</key>
 		<string>被封号了</string>
-		<key>-10040</key>
-		<string>未经过实名认证</string>
 	</dict>
 </dict>
 </plist>

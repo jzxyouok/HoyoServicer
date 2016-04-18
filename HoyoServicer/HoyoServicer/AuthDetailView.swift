@@ -10,6 +10,8 @@ import UIKit
 
 class AuthDetailView: UIView {
 
+    @IBOutlet weak var imageButton1: UIButton!
+    @IBOutlet weak var imageButton2: UIButton!
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

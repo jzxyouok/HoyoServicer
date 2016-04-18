@@ -115,15 +115,17 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
                     
                     }, failure: { [weak self](error) in
                         MBProgressHUD.hideHUDForView(self!.view, animated: true)
-                        let alertView=UNAlertView(title: "", message: error.localizedDescription)
-                        alertView.addButton("确定", action:{})
-                        alertView.show()
+                        let alertView=SCLAlertView()// UNAlertView(title: "", message: error.localizedDescription)
+                        alertView.addButton("", action: {
+                            
+                        })
+                        alertView.showError("", subTitle: "")
                 })
             }else
             {
-                let alertView=UNAlertView(title: "", message: "您输入手机号有误，请重新输入")
-                alertView.addButton("确定", action: {})
-                alertView.show()
+//                let alertView=UNAlertView(title: "", message: "您输入手机号有误，请重新输入")
+//                alertView.addButton("确定", action: {})
+//                alertView.show()
             }
             
         case 3://注册页面一：下一步
@@ -138,16 +140,16 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
                     }, failure: { [weak self](error) in
                         print(error)
                         MBProgressHUD.hideHUDForView(self!.view, animated: true)
-                        let alertView=UNAlertView(title: "", message: error.localizedDescription)
-                        alertView.addButton("确定", action: {})
-                        alertView.show()
+//                        let alertView=UNAlertView(title: "", message: error.localizedDescription)
+//                        alertView.addButton("确定", action: {})
+//                        alertView.show()
                 })
             }else
             {
-                let alertView=UNAlertView(title: "", message: "手机号格式不正确，请重新输入")
-                alertView.addButton("确定", action: {
-                })
-                alertView.show()
+//                let alertView=UNAlertView(title: "", message: "手机号格式不正确，请重新输入")
+//                alertView.addButton("确定", action: {
+//                })
+//                alertView.show()
             }
             
         case 4://注册页面一：小对号图标
@@ -164,10 +166,10 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
                 }
                 }, failure: { [weak self](error) in
                     MBProgressHUD.hideHUDForView(self!.view, animated: true)
-                    let alertView=UNAlertView(title: "", message: error.localizedDescription)
-                    alertView.addButton("确定", action: {
-                    })
-                    alertView.show()
+//                    let alertView=UNAlertView(title: "", message: error.localizedDescription)
+//                    alertView.addButton("确定", action: {
+//                    })
+//                    alertView.show()
             })
             
         case 7://注册页面三：下一步
@@ -186,9 +188,9 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
                 self!.presentViewController(authController, animated: true, completion: nil)
                 }, failure: { [weak self](error) in
                     MBProgressHUD.hideHUDForView(self!.view, animated: true)
-                    let alertView=UNAlertView(title: "", message: error.localizedDescription)
-                    alertView.addButton("确定", action: {})
-                    alertView.show()
+//                    let alertView=UNAlertView(title: "", message: error.localizedDescription)
+//                    alertView.addButton("确定", action: {})
+//                    alertView.show()
             })
             
         default:
@@ -220,10 +222,10 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
             self!.presentViewController(appDelegate.mainViewController, animated: true, completion: nil)
         }) { [weak self](error) in
             MBProgressHUD.hideHUDForView(self!.view, animated: true)
-            let alertView=UNAlertView(title: "", message: error.localizedDescription)
-            alertView.addButton("确定", action: {
-            })
-            alertView.show()
+//            let alertView=UNAlertView(title: "", message: error.localizedDescription)
+//            alertView.addButton("确定", action: {
+//            })
+//            alertView.show()
         }
     }
 

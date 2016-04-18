@@ -35,6 +35,8 @@ class AuthenticationController: UIViewController {
         secondViewContainer?.hidden=true
         leftButton.addTarget(self, action: #selector(barButtonClick), forControlEvents: .TouchUpInside)
         rightButton.addTarget(self, action: #selector(barButtonClick), forControlEvents: .TouchUpInside)
+        secondViewContainer?.imageButton1.addTarget(self, action: #selector(cameraClick), forControlEvents: .TouchUpInside)
+        secondViewContainer?.imageButton2.addTarget(self, action: #selector(cameraClick), forControlEvents: .TouchUpInside)
         leftButton.hidden = !(dissCallBack == nil)
         rightButton.hidden = (dissCallBack == nil)
         // Do any additional setup after loading the view.
@@ -51,6 +53,28 @@ class AuthenticationController: UIViewController {
         else{
             self.dismissViewControllerAnimated(dissCallBack==nil, completion: dissCallBack)
         }
+        
+        
+    }
+    func cameraClick(button:UIButton) {
+        let alert = SCLAlertView()
+        alert.addButton("相册") {
+            let libraryViewController = CameraViewController.imagePickerViewController(true) { image, asset in
+                button.setImage(image, forState: .Normal)// = image
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            self.presentViewController(libraryViewController, animated: true, completion: nil)
+        }
+        alert.addButton("拍摄") {
+            let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { image, asset in
+                button.setImage(image, forState: .Normal)
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            self.presentViewController(cameraViewController, animated: true, completion: nil)
+        }
+        alert.showInfo("", subTitle: "请选择")
+        
         
         
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -233,6 +233,12 @@
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_menu_sys" translatesAutoresizingMaskIntoConstraints="NO" id="ayn-rY-ZNp">
                                                         <rect key="frame" x="30" y="0.0" width="33" height="27"/>
                                                     </imageView>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VL-mm-wEy">
+                                                        <rect key="frame" x="0.0" y="-21" width="93" height="93"/>
+                                                        <connections>
+                                                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Bbs-FK-OqC"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -244,22 +250,12 @@
                                                     <constraint firstAttribute="bottom" secondItem="RS5-ab-Fha" secondAttribute="bottom" id="mrF-cm-5Eb"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VL-mm-wEy">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Bbs-FK-OqC"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="0VL-mm-wEy" firstAttribute="top" secondItem="7nO-zj-YqH" secondAttribute="top" id="9oy-Th-Geb"/>
-                                            <constraint firstItem="0VL-mm-wEy" firstAttribute="leading" secondItem="7nO-zj-YqH" secondAttribute="leading" id="Hpu-A8-URW"/>
-                                            <constraint firstAttribute="bottom" secondItem="0VL-mm-wEy" secondAttribute="bottom" id="aGt-OH-RXk"/>
                                             <constraint firstItem="YII-sk-6ov" firstAttribute="centerY" secondItem="7nO-zj-YqH" secondAttribute="centerY" id="dd9-p4-XRO"/>
                                             <constraint firstAttribute="trailing" secondItem="YII-sk-6ov" secondAttribute="trailing" id="gQB-Pu-R8b"/>
                                             <constraint firstItem="YII-sk-6ov" firstAttribute="leading" secondItem="7nO-zj-YqH" secondAttribute="leading" id="q4I-8i-gKF"/>
-                                            <constraint firstAttribute="trailing" secondItem="0VL-mm-wEy" secondAttribute="trailing" id="qNF-5c-Ozc"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCn-qp-mr2">

@@ -2,4 +2,102 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HoyoServicer/AuthenticationController.swift"
+            timestampString = "482680728.085218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "cameraClick(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HoyoServicer.AuthenticationController.(cameraClick (__ObjC.UIButton) -&gt; ()).(closure #1)"
+                  moduleName = "HoyoServicer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhaobing/Desktop/HoyoServicer/HoyoServicer/HoyoServicer/AuthenticationController.swift"
+                  timestampString = "482682231.297679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HoyoServicer.AuthenticationController.(cameraClick (__ObjC.UIButton) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "HoyoServicer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhaobing/Desktop/HoyoServicer/HoyoServicer/HoyoServicer/AuthenticationController.swift"
+                  timestampString = "482682231.297911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HoyoServicer/AuthenticationController.swift"
+            timestampString = "482680730.141386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "cameraClick(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HoyoServicer.AuthenticationController.(cameraClick (__ObjC.UIButton) -&gt; ()).(closure #2)"
+                  moduleName = "HoyoServicer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhaobing/Desktop/HoyoServicer/HoyoServicer/HoyoServicer/AuthenticationController.swift"
+                  timestampString = "482682231.299071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HoyoServicer.AuthenticationController.(cameraClick (__ObjC.UIButton) -&gt; ()).(closure #2).(closure #1)"
+                  moduleName = "HoyoServicer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhaobing/Desktop/HoyoServicer/HoyoServicer/HoyoServicer/AuthenticationController.swift"
+                  timestampString = "482682231.299269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

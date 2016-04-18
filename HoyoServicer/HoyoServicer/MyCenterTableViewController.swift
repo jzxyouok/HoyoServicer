@@ -16,6 +16,7 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         self.automaticallyAdjustsScrollViewInsets=false
         tableView.registerNib(UINib(nibName: "MyCenterTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyCenterTableViewCell")
         tableView.separatorStyle=UITableViewCellSeparatorStyle.None
+
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -48,7 +49,13 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCenterTableViewCell", forIndexPath: indexPath) as! MyCenterTableViewCell
         cell.selectionStyle=UITableViewCellSelectionStyle.None
         cell.delegate=self
-
+        if User.currentUser?.headimageurl != ""
+        {
+            cell.headImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: cell.headImg.image)
+        }
+        cell.phone.text=User.currentUser?.mobile
+        cell.jobNo.text="(工号:"+(User.currentUser?.userid)!+")"
+        cell.name.text=User.currentUser?.name
         return cell
     }
     /**

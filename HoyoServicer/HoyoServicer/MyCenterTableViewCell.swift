@@ -20,6 +20,10 @@ class MyCenterTableViewCell: UITableViewCell {
         }
         
     }
+    @IBOutlet weak var headImg: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var jobNo: UILabel!
+    @IBOutlet weak var phone: UILabel!
     
     
     override func awakeFromNib() {

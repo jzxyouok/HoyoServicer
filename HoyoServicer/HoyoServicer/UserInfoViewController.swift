@@ -13,6 +13,12 @@ class UserInfoViewController: UIViewController {
     @IBAction func toDetailController(sender: UIButton) {
         print(sender.tag)
     }
+    @IBOutlet weak var headImg: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var sex: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var level: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="个人信息"
@@ -24,6 +30,15 @@ class UserInfoViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden=false
         self.tabBarController?.tabBar.hidden=true
+        if User.currentUser?.headimageurl != ""
+        {
+            headImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: headImg.image)
+        }
+        name.text=User.currentUser?.name
+        phone.text=User.currentUser?.mobile
+        sex.text=User.currentUser?.sex
+        address.text=(User.currentUser?.province)!+"  "+(User.currentUser?.city)!
+        level.text=User.currentUser?.score//mei
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

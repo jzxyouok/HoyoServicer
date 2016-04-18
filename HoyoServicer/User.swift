@@ -13,9 +13,9 @@ let UserDefaultsUserTokenKey = "usertoken"
 let UserDefaultsUserIDKey = "userid"
 
 class User: DataObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+    
+    // Insert code here to add functionality to your managed object subclass
+    
     static var currentUser: User? = nil {
         didSet {
             //NSNotificationCenter.defaultCenter().postNotificationName(CurrentUserDidChangeNotificationName, object: nil)
@@ -165,7 +165,7 @@ class User: DataObject {
                                                 user.province=(tmpData!.objectForKey("province") as? String) ?? ""
                                                 user.scope=(tmpData!.objectForKey("scope") as? String) ?? ""
                                                 user.sex=(tmpData!.objectForKey("sex") as? String) ?? ""
-                                        
+                                                
                                                 let tmpDic=tmpData!.objectForKey("GroupDetails")
                                                 let object:NSData?
                                                 do{
@@ -239,13 +239,21 @@ class User: DataObject {
                                             failure: failure)
     }
     //  /AppInterface/GetOrderList       分页获取可抢订单列表
-    class func GetOrderList(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+    class func GetOrderList(paramDic: NSDictionary, success: (([Order]) -> Void)?, failure: ((NSError) -> Void)?) {
         NetworkManager.defaultManager!.POST("GetOrderList",
                                             parameters:paramDic,
                                             success: {
                                                 data in
                                                 print(data)
-                                                success!()
+                                                var orderArr=[Order]()
+//                                                for i in data
+//                                                {
+//                                                    let tmporder=Order()
+//                                                    tmporder.orderId=""
+//                                                    tmporder.userId=""
+//                                                    orderArr.append(tmporder)
+//                                                }
+                                                success!(orderArr)
             },
                                             failure: failure)
     }
@@ -288,20 +296,177 @@ class User: DataObject {
             },
                                             failure: failure)
     }
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
+    
+    
+    
+    //GetPost/Command/NewVersion获取版本更新
+    class func NewVersion(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("NewVersion",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/RefreshIndex   APP刷新首页获取数据
+    class func RefreshIndex(success: ((User) -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("RefreshIndex",
+                                            parameters:NSDictionary(),
+                                            success: {
+                                                data in
+                                                
+                                                print(data)
+                                                let tmpData=data.objectForKey("data")
+                                                let tmpUser=tmpData!.objectForKey("user")
+                                                let user = User.cachedObjectWithID((tmpUser!.objectForKey("userid") as! NSNumber).stringValue)
+                                                user.city=(tmpUser!.objectForKey("city") as? String) ?? ""
+                                                user.country=(tmpUser!.objectForKey("country") as? String) ?? ""
+                                                user.headimageurl=(tmpUser!.objectForKey("headimageurl") as? String) ?? ""
+                                                user.language=(tmpUser!.objectForKey("language") as? String) ?? ""
+                                                user.mobile=(tmpUser!.objectForKey("mobile") as? String) ?? ""
+                                                user.name=(tmpUser!.objectForKey("nickname") as? String) ?? ""
+                                                user.openid=(tmpUser!.objectForKey("openid") as? String) ?? ""
+                                                user.province=(tmpUser!.objectForKey("province") as? String) ?? ""
+                                                user.scope=(tmpUser!.objectForKey("scope") as? String) ?? ""
+                                                user.sex=(tmpUser!.objectForKey("sex") as? String) ?? ""
+                                                user.score=(tmpData!.objectForKey("score") as? String) ?? ""
+                                                user.bdimgs=(tmpData!.objectForKey("bdimgs") as? String) ?? ""
+                                                user.bannerimgs=(tmpData!.objectForKey("bannerimgs") as? String) ?? ""
+                                                
+                                                do{
+                                                    user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpData!.objectForKey("realname")!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpData!.objectForKey("orderabout")!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpUser!.objectForKey("GroupDetails")!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                }
+                                                success!(user)
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/AppInterface/SubmitTime提交上门时间
+    class func SubmitTime(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("SubmitTime",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/GetHomeTimeList获取历史提交的上门时间
+    class func GetHomeTimeList(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetHomeTimeList",
+                                            parameters:[
+                                                "orderid":orderid
+            ],
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/PartnerCommand组(合伙人)成员操作
+    class func PartnerCommand(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("PartnerCommand",
+                                            parameters:[
+                                                "orderid":orderid
+            ],
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/AppInterface/UpgradeAuthority升级权限
+    class func UpgradeAuthority(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("UpgradeAuthority",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/AppInterface/GetNowAuthorityDetail获取当前权限的信息或者审核进度，获取团队成员信息
+    class func GetNowAuthorityDetail
+        (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetNowAuthorityDetail",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    
+    //GetPost/AppInterface/GetMyScoreDetails获取个人的所有评价
+    class func GetMyScoreDetails (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetMyScoreDetails",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    //GetPost/Command/GetOwenBindBlankCard获取所有我的绑定银行卡列表
+    class func GetOwenBindBlankCard (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetMyScoreDetails",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/Command/BindNewBlankCard绑定银行卡
+    class func BindNewBlankCard(paramDic: NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("BindNewBlankCard",
+                                            parameters:paramDic,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    //GetPost/AppInterface/GetOwenMoney获取我的账户余额
+    
+    class func GetOwenMoney (success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager!.POST("GetOwenMoney",
+                                            parameters:nil,
+                                            success: {
+                                                data in
+                                                print(data)
+                                                success!()
+            },
+                                            failure: failure)
+    }
+    
+    
+    //GetPost/AppInterface/GetOwenMoneyDetails分页获取我的账户明细
+    class func GetOwenMoneyDetails (index : Int,pagesize : Int,success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        NetworkManager.defaultManager?.POST("GetOwenMoneyDetails", parameters: ["index":index ,"pagesize" :pagesize],
+                                            success: { (data) in
+                                                print(data)
+                                                success!()
+            }, failure: failure)
+    }
+    
+    
     //
     //
     //

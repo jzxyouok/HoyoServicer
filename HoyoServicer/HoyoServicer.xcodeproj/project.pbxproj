@@ -10,7 +10,6 @@
 		3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */; };
 		3BB9002E1CC1151100399456 /* RobListOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB900291CC1151100399456 /* RobListOneController.swift */; };
 		3BB9002F1CC1151100399456 /* ListsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */; };
-		3BB900301CC1151100399456 /* ListsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BB9002B1CC1151100399456 /* ListsDetailViewController.xib */; };
 		3BB900311CC1151100399456 /* RobListMianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9002C1CC1151100399456 /* RobListMianViewController.swift */; };
 		3BB900321CC1151100399456 /* RobListMianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BB9002D1CC1151100399456 /* RobListMianViewController.xib */; };
 		3BB900371CC1153C00399456 /* RobListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BB900331CC1153C00399456 /* RobListViewCell.xib */; };
@@ -41,6 +40,26 @@
 		8D28F4871CABCA6E00C7E99B /* AuthDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */; };
 		8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */; };
 		8D29568A1CBC065100F88698 /* SelectAdressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */; };
+		8D2CA1021CC4FBF500A7B917 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1011CC4FBF500A7B917 /* User+CoreDataProperties.swift */; };
+		8D2CA10D1CC50F9900A7B917 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1041CC50F9900A7B917 /* ImageFetcher.swift */; };
+		8D2CA10E1CC50F9900A7B917 /* SingleImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1051CC50F9900A7B917 /* SingleImageSaver.swift */; };
+		8D2CA10F1CC50F9900A7B917 /* SingleImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1061CC50F9900A7B917 /* SingleImageFetcher.swift */; };
+		8D2CA1101CC50F9900A7B917 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1071CC50F9900A7B917 /* Utilities.swift */; };
+		8D2CA1111CC50F9900A7B917 /* CameraShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1081CC50F9900A7B917 /* CameraShot.swift */; };
+		8D2CA1121CC50F9900A7B917 /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1091CC50F9900A7B917 /* CameraGlobals.swift */; };
+		8D2CA1131CC50F9900A7B917 /* VolumeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA10A1CC50F9900A7B917 /* VolumeControl.swift */; };
+		8D2CA1141CC50F9900A7B917 /* PhotoLibraryAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA10B1CC50F9900A7B917 /* PhotoLibraryAuthorizer.swift */; };
+		8D2CA1151CC50F9900A7B917 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA10C1CC50F9900A7B917 /* UIButtonExtensions.swift */; };
+		8D2CA11A1CC50FA400A7B917 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1161CC50FA400A7B917 /* PhotoLibraryViewController.swift */; };
+		8D2CA11B1CC50FA400A7B917 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1171CC50FA400A7B917 /* CameraViewController.swift */; };
+		8D2CA11C1CC50FA400A7B917 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1181CC50FA400A7B917 /* ConfirmViewController.swift */; };
+		8D2CA11D1CC50FA400A7B917 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CA1191CC50FA400A7B917 /* ConfirmViewController.xib */; };
+		8D2CA1241CC50FB000A7B917 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA11E1CC50FB000A7B917 /* ImageCell.swift */; };
+		8D2CA1251CC50FB000A7B917 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA11F1CC50FB000A7B917 /* PermissionsView.swift */; };
+		8D2CA1261CC50FB000A7B917 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1201CC50FB000A7B917 /* CameraView.swift */; };
+		8D2CA1271CC50FB000A7B917 /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA1211CC50FB000A7B917 /* CropOverlay.swift */; };
+		8D2CA1281CC50FB000A7B917 /* CameraView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CA1221CC50FB000A7B917 /* CameraView.strings */; };
+		8D2CA1291CC50FB000A7B917 /* CameraViewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CA1231CC50FB000A7B917 /* CameraViewAssets.xcassets */; };
 		8D340CB91CA8EA2F00407F30 /* String+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB41CA8EA2F00407F30 /* String+Expand.swift */; };
 		8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */; };
 		8D340CBB1CA8EA2F00407F30 /* Other+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340CB61CA8EA2F00407F30 /* Other+Expand.swift */; };
@@ -106,6 +125,7 @@
 		8D340D831CA9841C00407F30 /* CALayer+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D340D821CA9841C00407F30 /* CALayer+Expand.swift */; };
 		8D977D9F1CBA07790049514E /* MyExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977D9D1CBA07790049514E /* MyExamViewController.swift */; };
 		8D977DA01CBA07790049514E /* MyExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D977D9E1CBA07790049514E /* MyExamViewController.xib */; };
+		8DA16A171CC51CCC00F97619 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA16A161CC51CCC00F97619 /* SCLAlertView.swift */; };
 		8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */; };
 		8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */; };
 		8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */; };
@@ -133,8 +153,10 @@
 		8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */; };
 		8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */; };
 		8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */; };
+		8DD588621CC48B410098A4ED /* ListsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD588611CC48B410098A4ED /* ListsDetailViewController.xib */; };
+		8DD588691CC4DB810098A4ED /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD588671CC4DB810098A4ED /* Order.swift */; };
+		8DD5886B1CC4DBE20098A4ED /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5886A1CC4DBE20098A4ED /* Order+CoreDataProperties.swift */; };
 		8DEEB69A1CBC996B00B93292 /* china_citys.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEEB6991CBC996B00B93292 /* china_citys.json */; };
-		8DEEB6A51CBCFE4700B93292 /* UNAlertView+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEB6A41CBCFE4700B93292 /* UNAlertView+Expand.swift */; };
 		8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */; };
 		8DEED0321CB7FF5500C887C4 /* MyEvaluatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */; };
 		8DEED0331CB7FF5500C887C4 /* MyEvaluatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */; };
@@ -153,7 +175,6 @@
 		8DF9D47E1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */; };
 		8DF9D4811CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */; };
 		8DF9D4821CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */; };
-		8DFDD21E1CBFC4D30039E2F1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFDD21D1CBFC4D30039E2F1 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +198,6 @@
 		3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementControllerViewController.swift; sourceTree = "<group>"; };
 		3BB900291CC1151100399456 /* RobListOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobListOneController.swift; sourceTree = "<group>"; };
 		3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsDetailViewController.swift; sourceTree = "<group>"; };
-		3BB9002B1CC1151100399456 /* ListsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsDetailViewController.xib; sourceTree = "<group>"; };
 		3BB9002C1CC1151100399456 /* RobListMianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobListMianViewController.swift; sourceTree = "<group>"; };
 		3BB9002D1CC1151100399456 /* RobListMianViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RobListMianViewController.xib; sourceTree = "<group>"; };
 		3BB900331CC1153C00399456 /* RobListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RobListViewCell.xib; sourceTree = "<group>"; };
@@ -214,6 +234,26 @@
 		8D28F4861CABCA6E00C7E99B /* AuthDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDetailView.swift; sourceTree = "<group>"; };
 		8D28F4881CABCA7900C7E99B /* AuthDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthDetailView.xib; sourceTree = "<group>"; };
 		8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAdressTableViewController.swift; sourceTree = "<group>"; };
+		8D2CA1011CC4FBF500A7B917 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8D2CA1041CC50F9900A7B917 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		8D2CA1051CC50F9900A7B917 /* SingleImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageSaver.swift; sourceTree = "<group>"; };
+		8D2CA1061CC50F9900A7B917 /* SingleImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageFetcher.swift; sourceTree = "<group>"; };
+		8D2CA1071CC50F9900A7B917 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8D2CA1081CC50F9900A7B917 /* CameraShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraShot.swift; sourceTree = "<group>"; };
+		8D2CA1091CC50F9900A7B917 /* CameraGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraGlobals.swift; sourceTree = "<group>"; };
+		8D2CA10A1CC50F9900A7B917 /* VolumeControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeControl.swift; sourceTree = "<group>"; };
+		8D2CA10B1CC50F9900A7B917 /* PhotoLibraryAuthorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryAuthorizer.swift; sourceTree = "<group>"; };
+		8D2CA10C1CC50F9900A7B917 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		8D2CA1161CC50FA400A7B917 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
+		8D2CA1171CC50FA400A7B917 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8D2CA1181CC50FA400A7B917 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		8D2CA1191CC50FA400A7B917 /* ConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
+		8D2CA11E1CC50FB000A7B917 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		8D2CA11F1CC50FB000A7B917 /* PermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
+		8D2CA1201CC50FB000A7B917 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		8D2CA1211CC50FB000A7B917 /* CropOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropOverlay.swift; sourceTree = "<group>"; };
+		8D2CA1221CC50FB000A7B917 /* CameraView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = CameraView.strings; sourceTree = "<group>"; };
+		8D2CA1231CC50FB000A7B917 /* CameraViewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CameraViewAssets.xcassets; sourceTree = "<group>"; };
 		8D340CB41CA8EA2F00407F30 /* String+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Expand.swift"; sourceTree = "<group>"; };
 		8D340CB51CA8EA2F00407F30 /* NSDate+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Expand.swift"; sourceTree = "<group>"; };
 		8D340CB61CA8EA2F00407F30 /* Other+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Other+Expand.swift"; sourceTree = "<group>"; };
@@ -315,6 +355,7 @@
 		8D340D821CA9841C00407F30 /* CALayer+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Expand.swift"; sourceTree = "<group>"; };
 		8D977D9D1CBA07790049514E /* MyExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExamViewController.swift; sourceTree = "<group>"; };
 		8D977D9E1CBA07790049514E /* MyExamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyExamViewController.xib; sourceTree = "<group>"; };
+		8DA16A161CC51CCC00F97619 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -342,8 +383,10 @@
 		8DD2269B1CAA628F00E8DA5B /* MyCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCenterTableViewCell.xib; sourceTree = "<group>"; };
 		8DD2269E1CAA7E8700E8DA5B /* ManageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		8DD2269F1CAA7E8700E8DA5B /* ManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageTableViewCell.xib; sourceTree = "<group>"; };
+		8DD588611CC48B410098A4ED /* ListsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsDetailViewController.xib; sourceTree = "<group>"; };
+		8DD588671CC4DB810098A4ED /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		8DD5886A1CC4DBE20098A4ED /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8DEEB6991CBC996B00B93292 /* china_citys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = china_citys.json; sourceTree = "<group>"; };
-		8DEEB6A41CBCFE4700B93292 /* UNAlertView+Expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNAlertView+Expand.swift"; sourceTree = "<group>"; };
 		8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatTableViewController.swift; sourceTree = "<group>"; };
 		8DEED0301CB7FF5500C887C4 /* MyEvaluatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEvaluatCell.swift; sourceTree = "<group>"; };
 		8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluatCell.xib; sourceTree = "<group>"; };
@@ -362,7 +405,6 @@
 		8DF9D47C1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChiefOfSelectIDCell.xib; sourceTree = "<group>"; };
 		8DF9D47F1CBA84B8006EB3A7 /* GeneralOfSelectIDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralOfSelectIDCell.swift; sourceTree = "<group>"; };
 		8DF9D4801CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralOfSelectIDCell.xib; sourceTree = "<group>"; };
-		8DFDD21D1CBFC4D30039E2F1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +491,32 @@
 			path = HoyoServicerUITests;
 			sourceTree = "<group>";
 		};
+		8D2CA1031CC50F7500A7B917 /* ALCameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D2CA11E1CC50FB000A7B917 /* ImageCell.swift */,
+				8D2CA11F1CC50FB000A7B917 /* PermissionsView.swift */,
+				8D2CA1201CC50FB000A7B917 /* CameraView.swift */,
+				8D2CA1211CC50FB000A7B917 /* CropOverlay.swift */,
+				8D2CA1221CC50FB000A7B917 /* CameraView.strings */,
+				8D2CA1231CC50FB000A7B917 /* CameraViewAssets.xcassets */,
+				8D2CA1161CC50FA400A7B917 /* PhotoLibraryViewController.swift */,
+				8D2CA1171CC50FA400A7B917 /* CameraViewController.swift */,
+				8D2CA1181CC50FA400A7B917 /* ConfirmViewController.swift */,
+				8D2CA1191CC50FA400A7B917 /* ConfirmViewController.xib */,
+				8D2CA1041CC50F9900A7B917 /* ImageFetcher.swift */,
+				8D2CA1051CC50F9900A7B917 /* SingleImageSaver.swift */,
+				8D2CA1061CC50F9900A7B917 /* SingleImageFetcher.swift */,
+				8D2CA1071CC50F9900A7B917 /* Utilities.swift */,
+				8D2CA1081CC50F9900A7B917 /* CameraShot.swift */,
+				8D2CA1091CC50F9900A7B917 /* CameraGlobals.swift */,
+				8D2CA10A1CC50F9900A7B917 /* VolumeControl.swift */,
+				8D2CA10B1CC50F9900A7B917 /* PhotoLibraryAuthorizer.swift */,
+				8D2CA10C1CC50F9900A7B917 /* UIButtonExtensions.swift */,
+			);
+			name = ALCameraViewController;
+			sourceTree = "<group>";
+		};
 		8D340CAB1CA8E1B100407F30 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				8D340CDC1CA8FD3000407F30 /* HoyoServicer-Bridging-Header.h */,
+				8D2CA1031CC50F7500A7B917 /* ALCameraViewController */,
 				8D340CE61CA9043600407F30 /* AFNetworking */,
 				8D340CE51CA9043400407F30 /* SDWebImage */,
 				8D340CE41CA9043300407F30 /* SVPullToRefresh */,
@@ -484,7 +553,7 @@
 		8D340CAE1CA8E20700407F30 /* ToolBox */ = {
 			isa = PBXGroup;
 			children = (
-				8DEEB6A41CBCFE4700B93292 /* UNAlertView+Expand.swift */,
+				8DA16A161CC51CCC00F97619 /* SCLAlertView.swift */,
 				8D340CBE1CA8F09700407F30 /* GlobalDefinit.swift */,
 				8DC5F9171CBA8E6400AE5223 /* UIViewController+Expand.swift */,
 				8D340D821CA9841C00407F30 /* CALayer+Expand.swift */,
@@ -569,9 +638,11 @@
 			isa = PBXGroup;
 			children = (
 				8D1D19921CB3ADA40037E2B2 /* User.swift */,
-				8DFDD21D1CBFC4D30039E2F1 /* User+CoreDataProperties.swift */,
+				8D2CA1011CC4FBF500A7B917 /* User+CoreDataProperties.swift */,
 				8D340CC61CA8F62F00407F30 /* DataObject.swift */,
 				8D340CC51CA8F62F00407F30 /* DataObject+CoreDataProperties.swift */,
+				8DD588671CC4DB810098A4ED /* Order.swift */,
+				8DD5886A1CC4DBE20098A4ED /* Order+CoreDataProperties.swift */,
 			);
 			name = DataObject;
 			sourceTree = "<group>";
@@ -738,7 +809,7 @@
 			children = (
 				3BB900291CC1151100399456 /* RobListOneController.swift */,
 				3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */,
-				3BB9002B1CC1151100399456 /* ListsDetailViewController.xib */,
+				8DD588611CC48B410098A4ED /* ListsDetailViewController.xib */,
 				3BB9002C1CC1151100399456 /* RobListMianViewController.swift */,
 				3BB9002D1CC1151100399456 /* RobListMianViewController.xib */,
 			);
@@ -1010,6 +1081,7 @@
 				8D340CD41CA8FBC300407F30 /* NetworkConfig.plist in Resources */,
 				8DC5F9461CBA902D00AE5223 /* AddCarViewController.xib in Resources */,
 				3BB900321CC1151100399456 /* RobListMianViewController.xib in Resources */,
+				8D2CA1281CC50FB000A7B917 /* CameraView.strings in Resources */,
 				8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */,
 				8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */,
 				3BB9004A1CC1172C00399456 /* BoundCarViewCell.xib in Resources */,
@@ -1026,7 +1098,7 @@
 				8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */,
 				8DC5F9511CBA905F00AE5223 /* DetailFinancialTableViewController.xib in Resources */,
 				8DF9D4821CBA84B8006EB3A7 /* GeneralOfSelectIDCell.xib in Resources */,
-				3BB900301CC1151100399456 /* ListsDetailViewController.xib in Resources */,
+				8D2CA11D1CC50FA400A7B917 /* ConfirmViewController.xib in Resources */,
 				8DF2A6EC1CAAD3CC00A0883D /* RegistFooterView2.xib in Resources */,
 				8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */,
 				8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */,
@@ -1036,12 +1108,14 @@
 				3BB9003A1CC1153C00399456 /* DetailViewCell.xib in Resources */,
 				8D340D7B1CA94B1100407F30 /* HomeTableViewCell.xib in Resources */,
 				3BB900371CC1153C00399456 /* RobListViewCell.xib in Resources */,
+				8D2CA1291CC50FB000A7B917 /* CameraViewAssets.xcassets in Resources */,
 				3BB900521CC1172C00399456 /* getMoneyDetailCell.xib in Resources */,
 				8DEEB69A1CBC996B00B93292 /* china_citys.json in Resources */,
 				3BB9004E1CC1172C00399456 /* AchievementCell.xib in Resources */,
 				8D340D511CA904C200407F30 /* Info.plist in Resources */,
 				3BB900501CC1172C00399456 /* GetMoneyCell.xib in Resources */,
 				8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */,
+				8DD588621CC48B410098A4ED /* ListsDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,6 +1148,8 @@
 				8D340D2B1CA904A900407F30 /* SDWebImageManager.m in Sources */,
 				8DB9EA8E1CB788A2005E6E83 /* UserInfoViewController.swift in Sources */,
 				8DEED0361CB800C900C887C4 /* MyEvaluatHeadCell.swift in Sources */,
+				8D2CA1121CC50F9900A7B917 /* CameraGlobals.swift in Sources */,
+				8D2CA1271CC50FB000A7B917 /* CropOverlay.swift in Sources */,
 				8D340CD61CA8FBC300407F30 /* SettingsManager.swift in Sources */,
 				8DBED1F81CBFE0AB00A77EC9 /* HomeTableViewController.swift in Sources */,
 				8DF9D4751CBA2ED5006EB3A7 /* SelectIDTableViewController.swift in Sources */,
@@ -1081,45 +1157,55 @@
 				8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */,
 				3BB900381CC1153C00399456 /* RobListViewCelll.swift in Sources */,
 				8D340CFC1CA9049B00407F30 /* AFHTTPSessionManager.m in Sources */,
-				8DEEB6A51CBCFE4700B93292 /* UNAlertView+Expand.swift in Sources */,
 				8D340D291CA904A900407F30 /* SDWebImageDownloader.m in Sources */,
 				8D340D5F1CA904E200407F30 /* Reachability.m in Sources */,
 				8D340D271CA904A900407F30 /* SDWebImageCompat.m in Sources */,
+				8DD588691CC4DB810098A4ED /* Order.swift in Sources */,
 				8D340CFD1CA9049B00407F30 /* AFNetworkReachabilityManager.m in Sources */,
+				8D2CA10D1CC50F9900A7B917 /* ImageFetcher.swift in Sources */,
 				8D340CFA1CA9049B00407F30 /* AFHTTPRequestOperation.m in Sources */,
 				8DF2A6E61CAAD3A300A0883D /* RegistFooterView1.swift in Sources */,
 				8D340D551CA904C200407F30 /* ViewController+SnapKit.swift in Sources */,
 				8D28F4841CABB10C00C7E99B /* AuthenticationController.swift in Sources */,
 				8D340D501CA904C200407F30 /* EdgeInsets.swift in Sources */,
 				8D340D001CA9049B00407F30 /* AFURLRequestSerialization.m in Sources */,
+				8D2CA1241CC50FB000A7B917 /* ImageCell.swift in Sources */,
 				8D340D521CA904C200407F30 /* LayoutConstraint.swift in Sources */,
 				8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */,
 				8DC5F9501CBA905F00AE5223 /* DetailFinancialTableViewController.swift in Sources */,
 				8DC5F9471CBA902D00AE5223 /* FillBankCardMessageController.swift in Sources */,
 				8D340D331CA904A900407F30 /* UIView+WebCacheOperation.m in Sources */,
 				3BB9002F1CC1151100399456 /* ListsDetailViewController.swift in Sources */,
+				8D2CA1251CC50FB000A7B917 /* PermissionsView.swift in Sources */,
 				8DF2A6E01CAAD33C00A0883D /* LoginFooterView.swift in Sources */,
 				8D340CFF1CA9049B00407F30 /* AFURLConnectionOperation.m in Sources */,
 				8D340D021CA9049B00407F30 /* AFURLSessionManager.m in Sources */,
+				8D2CA11A1CC50FA400A7B917 /* PhotoLibraryViewController.swift in Sources */,
 				8D340D321CA904A900407F30 /* UIImageView+WebCache.m in Sources */,
 				3BB900491CC1172C00399456 /* BoundCarViewCell.swift in Sources */,
 				8DEED0321CB7FF5500C887C4 /* MyEvaluatCell.swift in Sources */,
+				8D2CA1131CC50F9900A7B917 /* VolumeControl.swift in Sources */,
+				8D2CA1261CC50FB000A7B917 /* CameraView.swift in Sources */,
 				8D340D301CA904A900407F30 /* UIImage+WebP.m in Sources */,
 				8D340D261CA904A900407F30 /* SDImageCache.m in Sources */,
 				8D340D4C1CA904C200407F30 /* ConstraintItem.swift in Sources */,
 				8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */,
 				8DC5F9181CBA8E6400AE5223 /* UIViewController+Expand.swift in Sources */,
+				8D2CA10F1CC50F9900A7B917 /* SingleImageFetcher.swift in Sources */,
 				8D340D2F1CA904A900407F30 /* UIImage+MultiFormat.m in Sources */,
 				3BB900511CC1172C00399456 /* getMoneyDetailCell.swift in Sources */,
 				8DB9EA951CB7ADFC005E6E83 /* SettingViewController.swift in Sources */,
 				3BB9004F1CC1172C00399456 /* GetMoneyCell.swift in Sources */,
+				8D2CA10E1CC50F9900A7B917 /* SingleImageSaver.swift in Sources */,
 				8D340D4E1CA904C200407F30 /* ConstraintRelation.swift in Sources */,
 				8D340D2A1CA904A900407F30 /* SDWebImageDownloaderOperation.m in Sources */,
 				8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */,
 				8DC5F9451CBA902D00AE5223 /* AddCarViewController.swift in Sources */,
+				8DA16A171CC51CCC00F97619 /* SCLAlertView.swift in Sources */,
 				8D340CC01CA8F09700407F30 /* GlobalDefinit.swift in Sources */,
 				3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */,
 				8D340D4D1CA904C200407F30 /* ConstraintMaker.swift in Sources */,
+				8D2CA1141CC50F9900A7B917 /* PhotoLibraryAuthorizer.swift in Sources */,
 				8D340D311CA904A900407F30 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8DBED20A1CBFE19100A77EC9 /* GetMoneyTableViewController.swift in Sources */,
 				8DC5F9431CBA902D00AE5223 /* BoundBankCardViewController.swift in Sources */,
@@ -1144,13 +1230,17 @@
 				8DF9D47D1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift in Sources */,
 				8DBED2091CBFE19100A77EC9 /* GetMoneyDetailTableViewController.swift in Sources */,
 				8D340CFE1CA9049B00407F30 /* AFSecurityPolicy.m in Sources */,
+				8D2CA1111CC50F9900A7B917 /* CameraShot.swift in Sources */,
 				8D340D6E1CA9146600407F30 /* NewsTableViewController.swift in Sources */,
 				8D340CC11CA8F09700407F30 /* UIColor+Expand.swift in Sources */,
+				8D2CA11C1CC50FA400A7B917 /* ConfirmViewController.swift in Sources */,
 				8D340CFB1CA9049B00407F30 /* AFHTTPRequestOperationManager.m in Sources */,
+				8D2CA1021CC4FBF500A7B917 /* User+CoreDataProperties.swift in Sources */,
 				3BB9002E1CC1151100399456 /* RobListOneController.swift in Sources */,
 				8D340D4A1CA904C200407F30 /* ConstraintAttributes.swift in Sources */,
 				8D340D5C1CA904D900407F30 /* Appirater.m in Sources */,
 				8D340D541CA904C200407F30 /* View+SnapKit.swift in Sources */,
+				8D2CA1101CC50F9900A7B917 /* Utilities.swift in Sources */,
 				8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */,
 				8D1D19941CB3ADA40037E2B2 /* User.swift in Sources */,
 				8DD2269C1CAA628F00E8DA5B /* MyCenterTableViewCell.swift in Sources */,
@@ -1164,11 +1254,13 @@
 				8D340D731CA9353D00407F30 /* LoginAndRegisterViewController.swift in Sources */,
 				8D340D2E1CA904A900407F30 /* UIImage+GIF.m in Sources */,
 				3BB9004D1CC1172C00399456 /* AchievementCell.swift in Sources */,
+				8DD5886B1CC4DBE20098A4ED /* Order+CoreDataProperties.swift in Sources */,
 				8D340D011CA9049B00407F30 /* AFURLResponseSerialization.m in Sources */,
 				8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */,
-				8DFDD21E1CBFC4D30039E2F1 /* User+CoreDataProperties.swift in Sources */,
 				3BB9003D1CC115F900399456 /* FinancialViewController.swift in Sources */,
+				8D2CA11B1CC50FA400A7B917 /* CameraViewController.swift in Sources */,
 				8DD226941CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift in Sources */,
+				8D2CA1151CC50F9900A7B917 /* UIButtonExtensions.swift in Sources */,
 				8D340D4B1CA904C200407F30 /* ConstraintDescription.swift in Sources */,
 				8D28F4871CABCA6E00C7E99B /* AuthDetailView.swift in Sources */,
 			);

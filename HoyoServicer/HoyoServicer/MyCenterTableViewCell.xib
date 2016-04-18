@@ -29,6 +29,18 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tll-HJ-SyV" secondAttribute="height" multiplier="1:1" id="xf6-tX-AT6"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赵帅" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-W7-9SK">
                                                 <rect key="frame" x="67" y="5" width="34" height="17"/>
@@ -426,6 +438,12 @@
                     <constraint firstAttribute="trailing" secondItem="T6i-Ux-0ND" secondAttribute="trailing" id="uFN-Pa-qgH"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="headImg" destination="tll-HJ-SyV" id="9xl-bt-sOv"/>
+                <outlet property="jobNo" destination="Pb2-fR-hq4" id="kwL-WU-Nf4"/>
+                <outlet property="name" destination="tFC-W7-9SK" id="AU0-XA-7C0"/>
+                <outlet property="phone" destination="Wh3-Lo-ToK" id="4nw-9D-3B1"/>
+            </connections>
             <point key="canvasLocation" x="347.5" y="166"/>
         </tableViewCell>
     </objects>

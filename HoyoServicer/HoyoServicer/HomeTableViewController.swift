@@ -10,13 +10,41 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets=false
         tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "HomeTableViewCell")
         tableView.separatorStyle=UITableViewCellSeparatorStyle.None
+        //添加下拉加载数据事件
+        tableView.addPullToRefreshWithActionHandler {
+            [weak self] in
+            if let strongSelf=self{
+                strongSelf.refresh()
+            }
+        }
+        
+        self.refresh()
     }
+     func refresh() {
+        let success: (User) -> Void = {
+            [weak self] user in
+            if let self_ = self {
+                User.currentUser=user
+                self_.tableView.reloadData()
+                self_.tableView.pullToRefreshView.stopAnimating()
+            }
+        }
+        let failure: (NSError) -> Void = {
+            [weak self] error in
+            if let self_ = self {
+               self_.tableView.pullToRefreshView.stopAnimating()
+            }
+        }
+        User.RefreshIndex(success, failure: failure)
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,6 +76,12 @@ class HomeTableViewController: UITableViewController {
                 strongSelf.buttonClick(buttonTag)
             }
             
+        }
+        cell.nameLabel.text = User.currentUser!.name
+        if User.currentUser?.headimageurl != ""
+        {
+            
+            cell.personImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: cell.personImg.image)
         }
         cell.imageArray=[UIImage(named: "banner1"),UIImage(named: "banner2"),UIImage(named: "banner3")]
         // Configure the cell...
