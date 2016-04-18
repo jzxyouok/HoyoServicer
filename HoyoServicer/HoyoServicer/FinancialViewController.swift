@@ -8,23 +8,40 @@
 
 import UIKit
 
-class FinancialViewController: UIViewController{
+class FinancialViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
 //返回
     @IBAction func back() {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    var backControl :UIControl!
-    @IBOutlet weak var seg: UISegmentedControl!
-    lazy  var selectTimeView :UIDatePicker = {
     
-        let  picker = UIDatePicker()
-      picker.datePickerMode = UIDatePickerMode.Date
-   
-        
-      
-        return  picker
-    
+    var tableView :UITableView?
+    lazy var seg : UISegmentedControl = {
+
+        let segCon = UISegmentedControl (frame: CGRectMake(20, 10, WIDTH_SCREEN-20*2, 35))
+        segCon.insertSegmentWithTitle("明细", atIndex: 0, animated: true)
+        segCon.insertSegmentWithTitle("收入", atIndex: 1, animated: true)
+        segCon.insertSegmentWithTitle("支出", atIndex: 2, animated: true)
+        return segCon
     }()
+    
+    var backControl :UIControl!
+
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var selectTimeView: UIDatePicker!
+//    lazy  var selectTimeView :UIDatePicker = {
+//    
+//        let  picker = UIDatePicker()
+//      picker.datePickerMode = UIDatePickerMode.Date
+//   
+//        
+//      
+//        return  picker
+//    
+//    }()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        selectTimeView.hidden = true
+    }
     //选择时间
     @IBOutlet weak var selectTimeBtn: UIButton!
     //选择查看时间
@@ -35,14 +52,12 @@ class FinancialViewController: UIViewController{
 
         self.selectTimeView.backgroundColor = UIColor.whiteColor()
         
-        self.view.addSubview(self.selectTimeView)
+        
         self.backControl.frame = self.view.bounds
       self.view.bringSubviewToFront(backControl)
-        
+        self.view.bringSubviewToFront(backView)
      self.view.bringSubviewToFront(selectTimeView)
-        selectTimeView.snp_makeConstraints { (make) in
-            make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(HEIGHT_SCREEN*0.28, 20, HEIGHT_SCREEN*0.28, 20))
-        }
+    selectTimeView.hidden = false
         selectTimeView.addTarget(self, action: #selector(FinancialViewController.select as (FinancialViewController) -> () -> ()), forControlEvents: .ValueChanged)
 
         
@@ -64,46 +79,72 @@ class FinancialViewController: UIViewController{
     }
     
     
-    var  seg_Detail : DetailFinancialTableViewController!
-    
-    var seg_Income : DetailFinancialTableViewController!
-    
-    var seg_Expend :DetailFinancialTableViewController!
+ 
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
           addBackControl()
+        initTableView()
               seg.tintColor = COLORRGBA(58, g: 58, b: 58, a: 1)
         seg.addTarget(self, action: "segChange:", forControlEvents: .ValueChanged)
-        //明细
-seg_Detail = DetailFinancialTableViewController()
-        //收入
-seg_Income = DetailFinancialTableViewController()
-      //支出
-seg_Expend = DetailFinancialTableViewController()
+
         seg.selectedSegmentIndex = 0
         
       
         
-        self.addChildViewController(seg_Detail)
-       
-        self.view.addSubview(seg_Detail.tableView)
-        
-        self.addChildViewController(seg_Income)
-        
-        self.view.addSubview(seg_Income.tableView)
-        
-        self.addChildViewController(seg_Expend)
-        
-        self.view.addSubview(self.seg_Expend.tableView)
+  
           self.segChange(seg)
 
 
         
     }
-
+    func  initTableView(){
+    
+        tableView = UITableView(frame: CGRectMake(0, 128, WIDTH_SCREEN, HEIGHT_SCREEN-HEIGHT_NavBar))
+        
+        tableView!.delegate = self
+        tableView!.dataSource = self
+        tableView!.estimatedRowHeight = 400
+        
+        tableView!.rowHeight = UITableViewAutomaticDimension
+        tableView!.registerNib(UINib(nibName: "DetailfFinancialViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "DetailfFinancialViewCell")
+        self.view.addSubview(tableView!)
+        
+        
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("DetailfFinancialViewCell") as! DetailfFinancialViewCell
+ 
+        cell.selectionStyle = .None
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+      
+        let view = UIView(frame: CGRectMake(0, 0, WIDTH_SCREEN, 60))
+view.addSubview(seg)
+        tableView.addSubview(view)
+        view.backgroundColor = UIColor.whiteColor()
+        return view
+    
+    }
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -133,55 +174,53 @@ seg_Expend = DetailFinancialTableViewController()
     
 backControl.frame = CGRectZero
 
-        selectTimeView.snp_removeConstraints()
-        selectTimeView.snp_makeConstraints { (make) in
-            make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(HEIGHT_SCREEN/2, WIDTH_SCREEN, HEIGHT_SCREEN, WIDTH_SCREEN/2))
-        }
+        selectTimeView.hidden = true
     }
     
     override func  awakeFromNib() {
-        print("第一次")
+       
     }
     func segChange(segCon : UISegmentedControl)
     {
 
+        self.tableView?.reloadData()
     
         
         
-        if (segCon.selectedSegmentIndex == 0) {
-            //[self.view addSubview:self.one.tableView];
-            self.seg_Detail.tableView.hidden = false
-
-            self.seg_Detail.tableView.snp_makeConstraints(closure: { [weak self] make in
-              if let  strongSelf = self{
-                make.edges.equalTo((strongSelf.view)!).inset(UIEdgeInsetsMake(180, 0, 0, 0))
-                }
-                //make.edges.equalTo(srtrongself.view).inset(UIEdgeInsetsMake(60, 0, 0, 0))
-            })
-            
-                    self.seg_Income.tableView.hidden = true
-            self.seg_Expend.tableView.hidden = true
-            
-          
-        }
-        else if (segCon.selectedSegmentIndex == 1){
-            
-            //        [self.view addSubview:self.two.tableView];
-                      self.seg_Income.tableView.hidden = false
-            self.seg_Income.tableView.frame = CGRectMake(0, 180, WIDTH_SCREEN, HEIGHT_SCREEN - 180)
-            self.seg_Detail.tableView.hidden = true
-            self.seg_Expend.tableView.hidden = true
-            
-        }
-        else if (segCon.selectedSegmentIndex == 2){
-            //        [self.view addSubview:self.three.tableView];
-       
-            self.seg_Expend.tableView.hidden = false
-            self.seg_Expend.tableView.frame = CGRectMake(0, 180, WIDTH_SCREEN  , HEIGHT_SCREEN - 180)
-            self.seg_Detail.tableView.hidden = true
-            self.seg_Income.tableView.hidden = true
-            
-        }
+//        if (segCon.selectedSegmentIndex == 0) {
+//            //[self.view addSubview:self.one.tableView];
+//            self.seg_Detail.tableView.hidden = false
+//
+//            self.seg_Detail.tableView.snp_makeConstraints(closure: { [weak self] make in
+//              if let  strongSelf = self{
+//                make.edges.equalTo((strongSelf.view)!).inset(UIEdgeInsetsMake(180, 0, 0, 0))
+//                }
+//                //make.edges.equalTo(srtrongself.view).inset(UIEdgeInsetsMake(60, 0, 0, 0))
+//            })
+//            
+//                    self.seg_Income.tableView.hidden = true
+//            self.seg_Expend.tableView.hidden = true
+//            
+//          
+//        }
+//        else if (segCon.selectedSegmentIndex == 1){
+//            
+//            //        [self.view addSubview:self.two.tableView];
+//                      self.seg_Income.tableView.hidden = false
+//            self.seg_Income.tableView.frame = CGRectMake(0, 180, WIDTH_SCREEN, HEIGHT_SCREEN - 180)
+//            self.seg_Detail.tableView.hidden = true
+//            self.seg_Expend.tableView.hidden = true
+//            
+//        }
+//        else if (segCon.selectedSegmentIndex == 2){
+//            //        [self.view addSubview:self.three.tableView];
+//       
+//            self.seg_Expend.tableView.hidden = false
+//            self.seg_Expend.tableView.frame = CGRectMake(0, 180, WIDTH_SCREEN  , HEIGHT_SCREEN - 180)
+//            self.seg_Detail.tableView.hidden = true
+//            self.seg_Income.tableView.hidden = true
+//            
+//        }
 
         
     }

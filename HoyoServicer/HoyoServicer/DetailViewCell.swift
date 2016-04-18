@@ -4,7 +4,7 @@
 //
 //  Created by 杨龙洲 on 30/3/16.
 //  Copyright © 2016年 com.ozner.net. All rights reserved.
-//
+
 
 import UIKit
 
@@ -13,6 +13,7 @@ class DetailViewCell: UITableViewCell {
     @IBOutlet weak var headView: UIImageView!
     
  
+    @IBOutlet weak var navView: UIView!
     //抢单
     @IBOutlet weak var robBtn: UIButton!
     
@@ -33,7 +34,6 @@ class DetailViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-       
     }
     
 }

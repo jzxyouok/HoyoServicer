@@ -95,6 +95,7 @@ class ManageTableViewController: UITableViewController,ManageTableViewCellDelega
             
         default:
             break
+            
 
             
         }

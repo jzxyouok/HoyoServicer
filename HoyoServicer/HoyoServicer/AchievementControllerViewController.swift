@@ -13,14 +13,16 @@ class AchievementControllerViewController: UIViewController ,UITableViewDataSour
     @IBOutlet weak var rollStrip: UIView!
     @IBAction func back() {
         
+  
         self.navigationController?.popViewControllerAnimated(true)
     }
-    @IBOutlet weak var scrollView: UIScrollView!
+  var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-
+scrollView = UIScrollView ()
+ 
+scrollView.frame = CGRectMake(0, 135,WIDTH_SCREEN,  HEIGHT_SCREEN - 128)
         scrollView.contentSize = CGSizeMake(WIDTH_SCREEN * 3, 0)
         scrollView.pagingEnabled = true
 scrollView.clipsToBounds = true
@@ -30,6 +32,7 @@ scrollView.clipsToBounds = true
                scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 10, left: 0, bottom: scrollView.frame.height + 60 , right: 0)
         
     scrollView.bounces = true
+        self.view.addSubview(scrollView)
         initScrollViewItem()
     }
 
@@ -56,27 +59,26 @@ scrollView.clipsToBounds = true
     func   initWithScrollViewItem (X : CGFloat, scrollViewItem :UITableView)
  {
 // {
-//    userCenterView=UserCenterView()
+//   userCenterView=UserCenterView()
 //    userCenterView.view.frame=leftView.bounds
 //    self.leftView.addSubview(userCenterView.view)
 //    
     //添加日业绩
   
-    
+    scrollViewItem.estimatedRowHeight = 80
+    scrollViewItem.rowHeight = UITableViewAutomaticDimension
     scrollViewItem.delegate = self
     scrollViewItem.dataSource = self
 scrollViewItem.frame = CGRectMake(X, 0, WIDTH_SCREEN, self.scrollView.frame.size.height)
    
   
     scrollViewItem.registerNib(UINib(nibName:"AchievementCell", bundle:nil), forCellReuseIdentifier:"AchievementCell")
+
     
-    scrollViewItem.estimatedRowHeight = 80
-    
-    scrollViewItem.rowHeight = UITableViewAutomaticDimension
     
    scrollView.addSubview(scrollViewItem)
 
-    
+   
   
     
     }
@@ -117,11 +119,7 @@ scrollViewItem.frame = CGRectMake(X, 0, WIDTH_SCREEN, self.scrollView.frame.size
         
         return cell
     }
-//    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.navigationController?.navigationBarHidden=false
-//    }
+
     
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //        let detail = ListsDetailViewController()
@@ -135,14 +133,5 @@ scrollViewItem.frame = CGRectMake(X, 0, WIDTH_SCREEN, self.scrollView.frame.size
 
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
