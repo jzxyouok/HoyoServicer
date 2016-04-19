@@ -128,7 +128,8 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         case 3://注册页面一：下一步
             if checkTel((registFooterView1?.phoneTextField.text!)!) {
                 MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-                User.SendPhoneCode((registFooterView1?.phoneTextField.text!)!, success: { [weak self] in
+               
+                User.SendPhoneCode((registFooterView1?.phoneTextField.text!)!,order:"register",success: { [weak self] in
                     if let strongSelf=self{
                         MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
                         strongSelf.currentLoginState = .Register2

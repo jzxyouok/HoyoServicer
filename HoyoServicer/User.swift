@@ -71,11 +71,11 @@ class User: DataObject {
                                             failure: failure)
     }
     //获取验证码
-    class func SendPhoneCode(mobile: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+    class func SendPhoneCode(mobile: String,order: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
         NetworkManager.defaultManager!.POST("SendPhoneCode",
                                             parameters: [
                                                 "mobile": mobile,
-                                                "order": "register",
+                                                "order": order,
                                                 "scope":"engineer"
             ],
                                             success: {
