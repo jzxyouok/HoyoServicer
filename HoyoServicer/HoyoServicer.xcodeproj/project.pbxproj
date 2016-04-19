@@ -145,6 +145,9 @@
 		8DC5F9511CBA905F00AE5223 /* DetailFinancialTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F94D1CBA905F00AE5223 /* DetailFinancialTableViewController.xib */; };
 		8DC5F9541CBA906E00AE5223 /* RecruitNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9521CBA906E00AE5223 /* RecruitNewMemberViewController.swift */; };
 		8DC5F9551CBA906E00AE5223 /* RecruitNewMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9531CBA906E00AE5223 /* RecruitNewMemberViewController.xib */; };
+		8DCAF0331CC6703F009921FE /* MyTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */; };
+		8DCAF0361CC67077009921FE /* MyTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF0341CC67077009921FE /* MyTeamCell.swift */; };
+		8DCAF0371CC67077009921FE /* MyTeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCAF0351CC67077009921FE /* MyTeamCell.xib */; };
 		8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2268E1CAA4D9D00E8DA5B /* NewsTableViewCell.swift */; };
 		8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD2268F1CAA4D9D00E8DA5B /* NewsTableViewCell.xib */; };
 		8DD226941CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD226921CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift */; };
@@ -375,6 +378,9 @@
 		8DC5F94D1CBA905F00AE5223 /* DetailFinancialTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFinancialTableViewController.xib; sourceTree = "<group>"; };
 		8DC5F9521CBA906E00AE5223 /* RecruitNewMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitNewMemberViewController.swift; sourceTree = "<group>"; };
 		8DC5F9531CBA906E00AE5223 /* RecruitNewMemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecruitNewMemberViewController.xib; sourceTree = "<group>"; };
+		8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
+		8DCAF0341CC67077009921FE /* MyTeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamCell.swift; sourceTree = "<group>"; };
+		8DCAF0351CC67077009921FE /* MyTeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTeamCell.xib; sourceTree = "<group>"; };
 		8DD2268E1CAA4D9D00E8DA5B /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8DD2268F1CAA4D9D00E8DA5B /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		8DD226921CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOfNewsViewController.swift; sourceTree = "<group>"; };
@@ -881,6 +887,7 @@
 				8D977D9E1CBA07790049514E /* MyExamViewController.xib */,
 				8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */,
 				8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */,
+				8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -897,6 +904,8 @@
 				8DEED0311CB7FF5500C887C4 /* MyEvaluatCell.xib */,
 				8DEED0341CB800C900C887C4 /* MyEvaluatHeadCell.swift */,
 				8DEED0351CB800C900C887C4 /* MyEvaluatHeadCell.xib */,
+				8DCAF0341CC67077009921FE /* MyTeamCell.swift */,
+				8DCAF0351CC67077009921FE /* MyTeamCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1085,6 +1094,7 @@
 				8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */,
 				8D28F4891CABCA7900C7E99B /* AuthDetailView.xib in Resources */,
 				3BB9004A1CC1172C00399456 /* BoundCarViewCell.xib in Resources */,
+				8DCAF0371CC67077009921FE /* MyTeamCell.xib in Resources */,
 				8DF2A6E41CAAD39400A0883D /* RegistFooterView1.xib in Resources */,
 				8DD226A11CAA7E8700E8DA5B /* ManageTableViewCell.xib in Resources */,
 				8D2681EE1CA8DB37009E7BAC /* Assets.xcassets in Resources */,
@@ -1169,6 +1179,7 @@
 				8D28F4841CABB10C00C7E99B /* AuthenticationController.swift in Sources */,
 				8D340D501CA904C200407F30 /* EdgeInsets.swift in Sources */,
 				8D340D001CA9049B00407F30 /* AFURLRequestSerialization.m in Sources */,
+				8DCAF0361CC67077009921FE /* MyTeamCell.swift in Sources */,
 				8D2CA1241CC50FB000A7B917 /* ImageCell.swift in Sources */,
 				8D340D521CA904C200407F30 /* LayoutConstraint.swift in Sources */,
 				8DD226A01CAA7E8700E8DA5B /* ManageTableViewCell.swift in Sources */,
@@ -1230,6 +1241,7 @@
 				8DF9D47D1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift in Sources */,
 				8DBED2091CBFE19100A77EC9 /* GetMoneyDetailTableViewController.swift in Sources */,
 				8D340CFE1CA9049B00407F30 /* AFSecurityPolicy.m in Sources */,
+				8DCAF0331CC6703F009921FE /* MyTeamTableViewController.swift in Sources */,
 				8D2CA1111CC50F9900A7B917 /* CameraShot.swift in Sources */,
 				8D340D6E1CA9146600407F30 /* NewsTableViewController.swift in Sources */,
 				8D340CC11CA8F09700407F30 /* UIColor+Expand.swift in Sources */,

@@ -165,14 +165,17 @@ class User: DataObject {
                                                 user.province=(tmpData!.objectForKey("province") as? String) ?? ""
                                                 user.scope=(tmpData!.objectForKey("scope") as? String) ?? ""
                                                 user.sex=(tmpData!.objectForKey("sex") as? String) ?? ""
-                                                
                                                 let tmpDic=tmpData!.objectForKey("GroupDetails")
-                                                let object:NSData?
-                                                do{
-                                                    object = try? NSJSONSerialization.dataWithJSONObject(tmpDic!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                if ((tmpDic?.isKindOfClass(NSDictionary.classForCoder())) == true)
+                                                {
+                                                    print(tmpDic)
+                                                    let object:NSData?
+                                                    do{
+                                                        object = try? NSJSONSerialization.dataWithJSONObject(tmpDic!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    }
+                                                    user.groupdetails=object
                                                 }
                                                 
-                                                user.groupdetails=object
                                                 
                                                 success!(user)
             },
@@ -336,9 +339,14 @@ class User: DataObject {
                                                 user.bannerimgs=(tmpData!.objectForKey("bannerimgs") as? String) ?? ""
                                                 
                                                 do{
-                                                    user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpData!.objectForKey("realname")!, options: NSJSONWritingOptions.PrettyPrinted)
-                                                    user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpData!.objectForKey("orderabout")!, options: NSJSONWritingOptions.PrettyPrinted)
-                                                    user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpUser!.objectForKey("GroupDetails")!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    user.realname = try? NSJSONSerialization.dataWithJSONObject(tmpData!.objectForKey("realname")!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    user.orderabout = try? NSJSONSerialization.dataWithJSONObject(tmpData!.objectForKey("orderabout")!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    let tmpDic=tmpUser!.objectForKey("GroupDetails")
+                                                    if ((tmpDic?.isKindOfClass(NSDictionary.classForCoder())) == true)
+                                                    {
+                                                        user.groupdetails = try? NSJSONSerialization.dataWithJSONObject(tmpDic!, options: NSJSONWritingOptions.PrettyPrinted)
+                                                    }
+                                                    
                                                 }
                                                 success!(user)
             },
