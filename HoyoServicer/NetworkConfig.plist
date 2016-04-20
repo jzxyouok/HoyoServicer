@@ -167,5 +167,10 @@ Post
 		<key>70003</key>
 		<string>被封号了</string>
 	</dict>
+	<key>URL</key>
+	<dict>
+		<key>Agreements</key>
+		<string>http://baidu.com</string>
+	</dict>
 </dict>
 </plist>
