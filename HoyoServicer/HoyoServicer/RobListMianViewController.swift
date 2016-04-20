@@ -43,9 +43,24 @@ self.automaticallyAdjustsScrollViewInsets = true
             tableView.registerNib(UINib(nibName: "RobListViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "RobListViewCell")
        self.view.addSubview(tableView)
         segCon.selectedSegmentIndex = 0
+        tableView.addPullToRefreshWithActionHandler { 
+            self.refreshTop()
+        }
         
         
-        
+    }
+    
+    func refreshTop(){
+        let user = User.currentUser
+        print(user?.usertoken)
+    print(user?.orderabout)
+//        let dict:NSDictionary = ["pagesize":"5","pageindex":"1","action":"allaction","orderby":"time","Province":(user?.province!)!,"lat":"40.361083978494","lng":"111.31970020313"];
+//        User.GetOrderList(dict, success: { [weak self] order in
+//            
+//            }) { (error) in
+//                
+//        }
+    
     }
 
     override func didReceiveMemoryWarning() {

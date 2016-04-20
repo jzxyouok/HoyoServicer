@@ -100,12 +100,16 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
     func buttonClick(button:UIButton){
         switch button.tag {
         case 1://登录页面：忘记密码
+            
             let forGetPassword = ForGetPassowViewController()
             
             let forGetPasswordNav = UINavigationController(rootViewController: forGetPassword)
             forGetPasswordNav.setNavigationBarHidden(true, animated: false)
             self.presentViewController(forGetPasswordNav, animated: true, completion: nil);
             
+//            forGetPassword.navgaBackView.brin
+        //    self.view.bringSubviewToFront(forGetPassword.navgaBackView)
+            print("忘记密码+++")
         case 2://登录页面：登录
             if checkTel((registFooterView1?.phoneTextField.text!)!) {
                 MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -133,8 +137,7 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         case 3://注册页面一：下一步
             if checkTel((registFooterView1?.phoneTextField.text!)!) {
                 MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-               
-                User.SendPhoneCode((registFooterView1?.phoneTextField.text!)!,order:"register",success: { [weak self] in
+                User.SendPhoneCode((registFooterView1?.phoneTextField.text!)!,order: "register", success: { [weak self] in
                     if let strongSelf=self{
                         MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
                         strongSelf.currentLoginState = .Register2
@@ -157,10 +160,6 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         case 4://注册页面一：小对号图标
             print("小对号图标")
         case 5://注册页面一：同意浩优服务家协议
-            let tmpUrl = (NetworkManager.defaultManager?.URL.objectForKey("Agreements"))! as! String
-            
-            let urlContrller = WeiXinURLViewController(Url: tmpUrl, Title: "浩优服务家协议")
-            self.presentViewController(urlContrller, animated: true, completion: nil)
             print("同意浩优服务家协议")
         case 6://注册页面二：下一步
             MBProgressHUD.showHUDAddedTo(self.view, animated: true)

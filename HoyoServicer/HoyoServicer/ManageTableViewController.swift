@@ -93,11 +93,6 @@ class ManageTableViewController: UITableViewController,ManageTableViewCellDelega
             self.navigationController?.pushViewController(newMember, animated: true)
             break
             
-        case 8://我的团队
-            let myTeamController = MyTeamTableViewController()
-            myTeamController.hidesBottomBarWhenPushed  = true
-            self.navigationController?.pushViewController(myTeamController, animated: true)
-            break
         default:
             break
             

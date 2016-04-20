@@ -17,7 +17,7 @@ class ForGetPassowViewController: UIViewController {
 //手机号
     @IBOutlet weak var iphoneNumber: UITextField!
     
-//验证码
+    //验证码
     @IBOutlet weak var code: UITextField!
     //获取验证码Label
     @IBOutlet weak var getCodeLab: UILabel!
@@ -26,8 +26,9 @@ class ForGetPassowViewController: UIViewController {
     @IBOutlet weak var newPassword: UITextField!
     //确认新密码
     @IBOutlet weak var confirmNewPassword: UITextField!
-    
-   //获取验证码按钮
+
+    //获取验证码Label
+
     @IBOutlet weak var getCodeBtn: UIButton!
     @IBOutlet weak var navgaBackView: UIView!
     @IBAction func back() {
@@ -81,13 +82,17 @@ class ForGetPassowViewController: UIViewController {
             alert.show()
         
         }
-        
+      
     }
     func yanzhengfunc(){
-    User.SendPhoneCode(iphoneNumber.text!, order: "ResetPassword", success: { 
-        print("成功")
+    
+        User.SendPhoneCode(iphoneNumber.text!, order: "ResetPassword", success: {
+            
+            print("获取成功")
         }) { (error) in
-            print("失败")
+            
+            print("访问失败")
+            
         }
     }
     
@@ -95,7 +100,7 @@ class ForGetPassowViewController: UIViewController {
     {
         if shuttime==0
         {
-
+            
             self.getCodeLab.text = "获取验证码"
             self.getCodeBtn.enabled = true
             counttime.invalidate()
@@ -106,35 +111,77 @@ class ForGetPassowViewController: UIViewController {
         }
         
         shuttime--
-    
+        
     }
  
     //提交新密码
     @IBAction func submitBtn() {
-        // MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        print(self.iphoneNumber.text)
-        print(self.code.text)
-        print(self.newPassword.text)
-        User.ResetPassword(self.iphoneNumber.text!, code: self.code.text!, password: self.newPassword.text!, success: {
-//            [weak self] in
-//          let strongSelf = self
-//            MBProgressHUD.hideHUDForView(strongSelf!.view, animated: true)
-//           strongSelf?.dismissMoviePlayerViewControllerAnimated()
-            
-           })
-            //{
-              
-//                let alertView=SCLAlertView()
-//                alertView.addButton("ok", action: {})
-//                alertView.showError("错误提示", subTitle: error.localizedDescription)
-            
-    //    }
-        { (error) in
-            print("失败")
-        }
-//
+        print("进去了")
+        //        // MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//                print(self.iphoneNumber.text)
+//                print(self.code.text)
+//                print(self.newPassword.text)
+//                User.ResetPassword(self.iphoneNumber.text!, code: self.code.text!, password: self.newPassword.text!, success: {
+//                    [weak self] in
+//                  let strongSelf = self
+//                    MBProgressHUD.hideHUDForView(strongSelf!.view, animated: true)
+//                  strongSelf!.dismissViewControllerAnimated(true) {
 //        
-   }
+//            }
+//        
+//                   })
+        //            //{
+        //
+        ////                let alertView=SCLAlertView()
+        ////                alertView.addButton("ok", action: {})
+        ////                alertView.showError("错误提示", subTitle: error.localizedDescription)
+        //
+        //    //    }
+        //        { (error) in
+        //            print("失败")
+        //        }
+        ////
+        ////
+       
+        
+      MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+      
+//        
+//        User.ResetPassword(iphoneNumber.text!, code: code.text!, password: newPassword.text!,
+//                           success: {
+//            print("提交成功")
+//          [weak self] in
+//            let strongSelf = self
+//            MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
+//            strongSelf.dismissViewControllerAnimated(true) {
+//                
+//            }
+//            
+//              self.dismissViewControllerAnimated(true, completion: nil)
+//        }) { (error) in
+//            print("失败")
+//            
+//        }
+        User.ResetPassword(iphoneNumber.text!, code: self.code.text!, password: self.newPassword.text!, success: { 
+            [weak self] in
+            let strongSelf = self
+            
+            
+                        strongSelf!.dismissViewControllerAnimated(true) {
+            }
+            })
+            {[weak self] (error) in
+                let strongSelf = self
+                 MBProgressHUD.hideHUDForView(strongSelf!.view, animated: true)
+                let alertView=SCLAlertView()
+                alertView.addButton("ok", action: {})
+                alertView.showError("错误提示", subTitle: error.localizedDescription)
+                
+                
+        }
+        
+    }
+    
    
 
 }

@@ -28,7 +28,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpK-8Q-rcE">
                                     <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
                                     <subviews>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_user" translatesAutoresizingMaskIntoConstraints="NO" id="OBr-k4-xfc">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="login_user" translatesAutoresizingMaskIntoConstraints="NO" id="OBr-k4-xfc">
                                             <rect key="frame" x="12" y="12.5" width="16" height="18"/>
                                         </imageView>
                                     </subviews>
