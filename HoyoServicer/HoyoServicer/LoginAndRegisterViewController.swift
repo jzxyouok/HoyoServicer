@@ -152,6 +152,10 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
         case 4://注册页面一：小对号图标
             print("小对号图标")
         case 5://注册页面一：同意浩优服务家协议
+            let tmpUrl = (NetworkManager.defaultManager?.URL.objectForKey("Agreements"))! as! String
+            
+            let urlContrller = WeiXinURLViewController(Url: tmpUrl, Title: "浩优服务家协议")
+            self.presentViewController(urlContrller, animated: true, completion: nil)
             print("同意浩优服务家协议")
         case 6://注册页面二：下一步
             MBProgressHUD.showHUDAddedTo(self.view, animated: true)
