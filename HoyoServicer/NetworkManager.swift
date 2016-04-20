@@ -55,11 +55,10 @@ class NetworkManager: NSObject {
             failure?(error!) // Needs specification
             return nil
         }
-    
         // 添加token
         let tmpParameters = NSMutableDictionary(dictionary: POSTParameters!) 
-       tmpParameters.setObject(userToken, forKey: UserDefaultsUserTokenKey)
-       print(tmpParameters)
+        tmpParameters.setObject(userToken, forKey: UserDefaultsUserTokenKey)
+        print(tmpParameters)
         return manager.POST(URLString!,
                             parameters: tmpParameters,
                             constructingBodyWithBlock: block,
@@ -180,7 +179,7 @@ class NetworkManager: NSObject {
         }
         
     }
-
+    
     /// 成功编码
     var successCode: Int {
         return Int((NetworkConfig["SuccessCode"] as! String))!
@@ -192,5 +191,9 @@ class NetworkManager: NSObject {
     /// 其他错误编码列表
     var ErrorCode: NSDictionary {
         return NetworkConfig["ErrorCode"] as! NSDictionary
+    }
+    //URL
+    var URL: NSDictionary {
+        return NetworkConfig["URL"] as! NSDictionary
     }
 }
