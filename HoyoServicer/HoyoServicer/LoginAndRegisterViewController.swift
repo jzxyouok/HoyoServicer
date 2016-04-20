@@ -100,7 +100,12 @@ class LoginAndRegisterViewController: UIViewController,UITextFieldDelegate {
     func buttonClick(button:UIButton){
         switch button.tag {
         case 1://登录页面：忘记密码
-            print("忘记密码")
+            let forGetPassword = ForGetPassowViewController()
+            
+            let forGetPasswordNav = UINavigationController(rootViewController: forGetPassword)
+            forGetPasswordNav.setNavigationBarHidden(true, animated: false)
+            self.presentViewController(forGetPasswordNav, animated: true, completion: nil);
+            
         case 2://登录页面：登录
             if checkTel((registFooterView1?.phoneTextField.text!)!) {
                 MBProgressHUD.showHUDAddedTo(self.view, animated: true)

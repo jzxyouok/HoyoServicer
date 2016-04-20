@@ -22,7 +22,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-vN-xoF">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="tBJ-IC-mEs">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="tBJ-IC-mEs">
                             <rect key="frame" x="76.5" y="116.5" width="222" height="34"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EP-lr-mHT">

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B19D33D1CC67A00005B5F9B /* ForGetPassowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19D33B1CC67A00005B5F9B /* ForGetPassowViewController.swift */; };
+		3B19D33E1CC67A00005B5F9B /* ForGetPassowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B19D33C1CC67A00005B5F9B /* ForGetPassowViewController.xib */; };
 		3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */; };
 		3BB9002E1CC1151100399456 /* RobListOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB900291CC1151100399456 /* RobListOneController.swift */; };
 		3BB9002F1CC1151100399456 /* ListsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */; };
@@ -195,6 +197,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B19D33B1CC67A00005B5F9B /* ForGetPassowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForGetPassowViewController.swift; sourceTree = "<group>"; };
+		3B19D33C1CC67A00005B5F9B /* ForGetPassowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForGetPassowViewController.xib; sourceTree = "<group>"; };
 		3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementControllerViewController.swift; sourceTree = "<group>"; };
 		3BB900291CC1151100399456 /* RobListOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobListOneController.swift; sourceTree = "<group>"; };
 		3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsDetailViewController.swift; sourceTree = "<group>"; };
@@ -587,6 +591,8 @@
 		8D340CB11CA8E26A00407F30 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				3B19D33B1CC67A00005B5F9B /* ForGetPassowViewController.swift */,
+				3B19D33C1CC67A00005B5F9B /* ForGetPassowViewController.xib */,
 				8D340D711CA9353D00407F30 /* LoginAndRegisterViewController.swift */,
 				8D340D721CA9353D00407F30 /* LoginAndRegisterViewController.xib */,
 				8DF2A6DE1CAAD24A00A0883D /* View */,
@@ -1091,6 +1097,7 @@
 				8DEED0331CB7FF5500C887C4 /* MyEvaluatCell.xib in Resources */,
 				3BB9004C1CC1172C00399456 /* DetailfFinancialViewCell.xib in Resources */,
 				8DC5F9481CBA902D00AE5223 /* FillBankCardMessageController.xib in Resources */,
+				3B19D33E1CC67A00005B5F9B /* ForGetPassowViewController.xib in Resources */,
 				8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */,
 				8DD226951CAA5ABB00E8DA5B /* DetailOfNewsViewController.xib in Resources */,
 				8DC5F9441CBA902D00AE5223 /* BoundBankCardViewController.xib in Resources */,
@@ -1152,6 +1159,7 @@
 				8D2CA1271CC50FB000A7B917 /* CropOverlay.swift in Sources */,
 				8D340CD61CA8FBC300407F30 /* SettingsManager.swift in Sources */,
 				8DBED1F81CBFE0AB00A77EC9 /* HomeTableViewController.swift in Sources */,
+				3B19D33D1CC67A00005B5F9B /* ForGetPassowViewController.swift in Sources */,
 				8DF9D4751CBA2ED5006EB3A7 /* SelectIDTableViewController.swift in Sources */,
 				8D340CD51CA8FBC300407F30 /* DataManager.swift in Sources */,
 				8DD226901CAA4D9D00E8DA5B /* NewsTableViewCell.swift in Sources */,

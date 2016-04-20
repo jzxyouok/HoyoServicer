@@ -10,6 +10,11 @@
 	<string>0</string>
 	<key>Path</key>
 	<dict>
+		<key>ResetPassword</key>
+		<string>/FamilyAccount/ResetPassword
+Get
+Post
+/FamilyAccount/ResetPassword</string>
 		<key>SendMessage</key>
 		<string>/Command/SendMessage</string>
 		<key>BingJgNotifyId</key>

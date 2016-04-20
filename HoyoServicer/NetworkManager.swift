@@ -50,6 +50,7 @@ class NetworkManager: NSObject {
         failure: ((NSError) -> Void)?) -> AFHTTPRequestOperation? {
         
         var error: NSError? = nil
+        print(paths[key])
         let URLString = manager.requestSerializer.requestWithMethod("GET", URLString: paths[key]!, parameters: GETParameters, error: &error).URL?.absoluteString
         if error != nil || URLString == nil {
             failure?(error!) // Needs specification

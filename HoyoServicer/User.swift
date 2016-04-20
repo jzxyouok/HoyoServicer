@@ -65,7 +65,7 @@ class User: DataObject {
             ],
                                             success: {
                                                 data in
-                                                print(data)
+                                               
                                                 success!()
             },
                                             failure: failure)
@@ -80,7 +80,7 @@ class User: DataObject {
             ],
                                             success: {
                                                 data in
-                                                print(data)
+                                               print("\(data)+++")
                                                 success!()
             },
                                             failure: failure)
