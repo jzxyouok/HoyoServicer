@@ -11,6 +11,8 @@ import UIKit
 class UserInfoViewController: UIViewController {
 
     var setSexController :SetSexViewController?
+    var  editNameCon :EditNameViewController?
+  
     
     @IBAction func toDetailController(sender: UIButton) {
         switch sender.tag {
@@ -19,7 +21,9 @@ class UserInfoViewController: UIViewController {
             alert.addButton("相册") {
                 [weak self] in
                 let libraryViewController = CameraViewController.imagePickerViewController(true) { [weak self] image, asset in
-                    self!.headImg.image = image
+                    if let  strongSelf = self{
+                        strongSelf.headImg.image = image
+                    }
                     //headImg.setImage(image, forState: .Normal)// = image
                     self!.dismissViewControllerAnimated(true, completion: nil)
                 }
@@ -29,8 +33,9 @@ class UserInfoViewController: UIViewController {
             alert.addButton("拍摄") {
                 [weak self] in
                 let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { [weak self] image, asset in
-                  // headImg.setImage(image, forState: .Normal)
-                    self!.headImg.image = image
+                    if let  strongSelf = self{
+                    strongSelf.headImg.image = image
+                    }
                    // headImg.image = UIImage(CGImage: image)
                     self!.dismissViewControllerAnimated(true, completion: nil)
                 }
@@ -42,9 +47,26 @@ class UserInfoViewController: UIViewController {
         break
         case 2:
             
-            let editName = EditNameViewController()
-            
-            self.navigationController?.pushViewController(editName, animated: true)
+            editNameCon = EditNameViewController()
+            editNameCon!.tmpEditName = self.name.text!//tmpName == nil ? self.name.text : tmpName
+//            if tmpName == nil
+//            {
+//            editNameCon.editName.text = "赵兵"
+//                
+//            }
+//            else {
+//            editNameCon.editName.text = tmpName
+//            }
+//            editNameCon!.backClosure = {
+//            [weak self] editname in
+//                if let strongSelf = self{
+//                    
+//   strongSelf.name.text = editname
+//                    print("----")
+//                    print(strongSelf.name.text)
+//                }
+//            }
+            self.navigationController?.pushViewController(editNameCon!, animated: true)
           
 
             
@@ -54,13 +76,12 @@ class UserInfoViewController: UIViewController {
             
         setSexController     = SetSexViewController(nibName: "SetSexViewController", bundle: nil)
             
-            setSexController!.tmpSex = User.currentUser?.sex == "" ? "男":User.currentUser?.sex
-
+        setSexController!.tmpSex = self.sex.text //tmpSex == nil ? self.sex.text : tmpSex
          
-            setSexController!.backClosure={ (inputText:String) -> Void in
-               self.sex.text = inputText
-               
-            }
+//            setSexController!.backClosure={ (inputText:String) -> Void in
+//               self.sex.text = inputText
+//               
+//            }
             self.navigationController?.pushViewController(setSexController!, animated: true)
             
            // self.navigationController?.pushViewController(selectSexCon!, animated: true)
@@ -81,14 +102,14 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="个人信息"
-            setNavigationItem("back.pbg", selector: #selector(UIViewController.doBack), isRight: false)
+            setNavigationItem("back.png", selector: #selector(UIViewController.doBack), isRight: false)
         // Do any additional setup after loading the view.
     }
     
     //返回
     override func doBack() {
         
-        
+        self.navigationController?.popViewControllerAnimated(true)
         
     }
     
@@ -100,22 +121,32 @@ class UserInfoViewController: UIViewController {
         {
             headImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: headImg.image)
         }
-        name.text=User.currentUser?.name
+       
         phone.text=User.currentUser?.mobile
         
-        //判断程序是不是第一次进入该页面
+        //判断程序是不是第一次进入该页面,如果是则网上获取数据，如果不是则
         
-       if  setSexController?.backClosure == nil
+       if  setSexController?.tmpSex == nil && editNameCon?.tmpEditName == nil
        {
         
         print("第一次进来")
+        
+         name.text=User.currentUser?.name
         sex.text=User.currentUser?.sex == "" ? "男":User.currentUser?.sex
+    
         }
-        else
+       if setSexController?.tmpSex != nil
        {
-        print("不是第一次")
-       sex.text = setSexController?.tmpSex
-        User.currentUser?.sex = setSexController?.tmpSex
+     
+       self.sex.text = setSexController?.tmpSex
+//        self.name.text = editNameCon.editName.text
+       
+
+        }
+      if editNameCon?.tmpEditName != nil {
+       
+        
+         self.name.text = editNameCon?.tmpEditName
         }
      
         
