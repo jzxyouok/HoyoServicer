@@ -46,7 +46,7 @@ class SetSexViewController: UIViewController,UIAlertViewDelegate {
         let savebutton=UIBarButtonItem(title: "保存", style: .Plain, target: self, action: #selector(SaveClick))
         
     
-       setNavigationItem("back.pbg", selector: "doBack", isRight: false)
+       setNavigationItem("back.png", selector: #selector(UIViewController.doBack), isRight: false)
         //let leftbutton=UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 21))
        //leftbutton.setBackgroundImage(UIImage(named: "fanhui"), forState: .Normal)
         //leftbutton.addTarget(self, action: #selector(back), forControlEvents: .TouchUpInside)

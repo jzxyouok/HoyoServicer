@@ -52,7 +52,7 @@ class UserInfoViewController: UIViewController {
         case 3:
 
             
-        let    setSexOrNameController = SetSexViewController(nibName: "SetSexViewController", bundle: nil)
+        setSexController     = SetSexViewController(nibName: "SetSexViewController", bundle: nil)
             
             setSexController!.tmpSex = User.currentUser?.sex == "" ? "男":User.currentUser?.sex
 
