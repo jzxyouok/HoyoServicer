@@ -128,6 +128,10 @@ class HomeTableViewController: UITableViewController {
         case  7:
             break
         case  8:
+            let  myteam = MyTeamTableViewController()
+           // myteam.hidesBottomBarWhenPushed = true
+             self.navigationController?.pushViewController(myteam, animated: true)
+            
             break
             
         default:

@@ -71,6 +71,7 @@ class AuthenticationController: UIViewController {
             [weak self] in
             let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { [weak self] image, asset in
                 button.setImage(image, forState: .Normal)
+                
                 self!.dismissViewControllerAnimated(true, completion: nil)
             }
             self!.presentViewController(cameraViewController, animated: true, completion: nil)
@@ -79,7 +80,7 @@ class AuthenticationController: UIViewController {
         alert.showInfo("", subTitle: "请选择")
         
         
-        
+       
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0E00001CC8767C004EA5EB /* RecruitNewMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EFFFE1CC8767C004EA5EB /* RecruitNewMemberViewController.xib */; };
+		3B0E00091CC8BF4C004EA5EB /* SetSexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E00071CC8BF4C004EA5EB /* SetSexViewController.swift */; };
+		3B0E000A1CC8BF4C004EA5EB /* SetSexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0E00081CC8BF4C004EA5EB /* SetSexViewController.xib */; };
+		3B0E000D1CC8D06E004EA5EB /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E000B1CC8D06E004EA5EB /* EditNameViewController.swift */; };
+		3B0E000E1CC8D06E004EA5EB /* EditNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0E000C1CC8D06E004EA5EB /* EditNameViewController.xib */; };
+		3B0E00111CC8DA5A004EA5EB /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E000F1CC8DA5A004EA5EB /* AddCarViewController.swift */; };
+		3B0E00121CC8DA5A004EA5EB /* AddCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0E00101CC8DA5A004EA5EB /* AddCarViewController.xib */; };
+		3B0EFFFF1CC8767C004EA5EB /* RecruitNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EFFFD1CC8767C004EA5EB /* RecruitNewMemberViewController.swift */; };
 		3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */; };
+		3B8F2F581CC7B12F00787A8E /* TeamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F2F571CC7B12F00787A8E /* TeamListTableViewController.swift */; };
+		3B8F2F5B1CC7B16100787A8E /* TeamListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F2F591CC7B16100787A8E /* TeamListTableViewCell.swift */; };
+		3B8F2F5C1CC7B16100787A8E /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F2F5A1CC7B16100787A8E /* TeamListTableViewCell.xib */; };
 		3BB9002E1CC1151100399456 /* RobListOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB900291CC1151100399456 /* RobListOneController.swift */; };
 		3BB9002F1CC1151100399456 /* ListsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */; };
 		3BB900311CC1151100399456 /* RobListMianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9002C1CC1151100399456 /* RobListMianViewController.swift */; };
@@ -139,14 +150,10 @@
 		8DC5F93B1CBA900B00AE5223 /* AchievementControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9391CBA900B00AE5223 /* AchievementControllerViewController.xib */; };
 		8DC5F9431CBA902D00AE5223 /* BoundBankCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F93D1CBA902D00AE5223 /* BoundBankCardViewController.swift */; };
 		8DC5F9441CBA902D00AE5223 /* BoundBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F93E1CBA902D00AE5223 /* BoundBankCardViewController.xib */; };
-		8DC5F9451CBA902D00AE5223 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F93F1CBA902D00AE5223 /* AddCarViewController.swift */; };
-		8DC5F9461CBA902D00AE5223 /* AddCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9401CBA902D00AE5223 /* AddCarViewController.xib */; };
 		8DC5F9471CBA902D00AE5223 /* FillBankCardMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9411CBA902D00AE5223 /* FillBankCardMessageController.swift */; };
 		8DC5F9481CBA902D00AE5223 /* FillBankCardMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9421CBA902D00AE5223 /* FillBankCardMessageController.xib */; };
 		8DC5F9501CBA905F00AE5223 /* DetailFinancialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F94C1CBA905F00AE5223 /* DetailFinancialTableViewController.swift */; };
 		8DC5F9511CBA905F00AE5223 /* DetailFinancialTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F94D1CBA905F00AE5223 /* DetailFinancialTableViewController.xib */; };
-		8DC5F9541CBA906E00AE5223 /* RecruitNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5F9521CBA906E00AE5223 /* RecruitNewMemberViewController.swift */; };
-		8DC5F9551CBA906E00AE5223 /* RecruitNewMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC5F9531CBA906E00AE5223 /* RecruitNewMemberViewController.xib */; };
 		8DCAF0331CC6703F009921FE /* MyTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */; };
 		8DCAF0361CC67077009921FE /* MyTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF0341CC67077009921FE /* MyTeamCell.swift */; };
 		8DCAF0371CC67077009921FE /* MyTeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCAF0351CC67077009921FE /* MyTeamCell.xib */; };
@@ -202,7 +209,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B0E00071CC8BF4C004EA5EB /* SetSexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSexViewController.swift; sourceTree = "<group>"; };
+		3B0E00081CC8BF4C004EA5EB /* SetSexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetSexViewController.xib; sourceTree = "<group>"; };
+		3B0E000B1CC8D06E004EA5EB /* EditNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		3B0E000C1CC8D06E004EA5EB /* EditNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditNameViewController.xib; sourceTree = "<group>"; };
+		3B0E000F1CC8DA5A004EA5EB /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		3B0E00101CC8DA5A004EA5EB /* AddCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCarViewController.xib; sourceTree = "<group>"; };
+		3B0EFFFD1CC8767C004EA5EB /* RecruitNewMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitNewMemberViewController.swift; sourceTree = "<group>"; };
+		3B0EFFFE1CC8767C004EA5EB /* RecruitNewMemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecruitNewMemberViewController.xib; sourceTree = "<group>"; };
 		3B2529961CC08EBD0072B3D9 /* AchievementControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementControllerViewController.swift; sourceTree = "<group>"; };
+		3B8F2F571CC7B12F00787A8E /* TeamListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListTableViewController.swift; sourceTree = "<group>"; };
+		3B8F2F591CC7B16100787A8E /* TeamListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListTableViewCell.swift; sourceTree = "<group>"; };
+		3B8F2F5A1CC7B16100787A8E /* TeamListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamListTableViewCell.xib; sourceTree = "<group>"; };
 		3BB900291CC1151100399456 /* RobListOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobListOneController.swift; sourceTree = "<group>"; };
 		3BB9002A1CC1151100399456 /* ListsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsDetailViewController.swift; sourceTree = "<group>"; };
 		3BB9002C1CC1151100399456 /* RobListMianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobListMianViewController.swift; sourceTree = "<group>"; };
@@ -376,14 +394,10 @@
 		8DC5F9391CBA900B00AE5223 /* AchievementControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementControllerViewController.xib; sourceTree = "<group>"; };
 		8DC5F93D1CBA902D00AE5223 /* BoundBankCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundBankCardViewController.swift; sourceTree = "<group>"; };
 		8DC5F93E1CBA902D00AE5223 /* BoundBankCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoundBankCardViewController.xib; sourceTree = "<group>"; };
-		8DC5F93F1CBA902D00AE5223 /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
-		8DC5F9401CBA902D00AE5223 /* AddCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCarViewController.xib; sourceTree = "<group>"; };
 		8DC5F9411CBA902D00AE5223 /* FillBankCardMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillBankCardMessageController.swift; sourceTree = "<group>"; };
 		8DC5F9421CBA902D00AE5223 /* FillBankCardMessageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FillBankCardMessageController.xib; sourceTree = "<group>"; };
 		8DC5F94C1CBA905F00AE5223 /* DetailFinancialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFinancialTableViewController.swift; sourceTree = "<group>"; };
 		8DC5F94D1CBA905F00AE5223 /* DetailFinancialTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFinancialTableViewController.xib; sourceTree = "<group>"; };
-		8DC5F9521CBA906E00AE5223 /* RecruitNewMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitNewMemberViewController.swift; sourceTree = "<group>"; };
-		8DC5F9531CBA906E00AE5223 /* RecruitNewMemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecruitNewMemberViewController.xib; sourceTree = "<group>"; };
 		8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
 		8DCAF0341CC67077009921FE /* MyTeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamCell.swift; sourceTree = "<group>"; };
 		8DCAF0351CC67077009921FE /* MyTeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTeamCell.xib; sourceTree = "<group>"; };
@@ -835,10 +849,10 @@
 		8D340D621CA9073300407F30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3B0EFFFD1CC8767C004EA5EB /* RecruitNewMemberViewController.swift */,
+				3B0EFFFE1CC8767C004EA5EB /* RecruitNewMemberViewController.xib */,
 				8DBED2071CBFE19100A77EC9 /* GetMoneyDetailTableViewController.swift */,
 				8DBED2081CBFE19100A77EC9 /* GetMoneyTableViewController.swift */,
-				8DC5F9521CBA906E00AE5223 /* RecruitNewMemberViewController.swift */,
-				8DC5F9531CBA906E00AE5223 /* RecruitNewMemberViewController.xib */,
 				8DC5F9491CBA904500AE5223 /* FinancialManager */,
 				8DC5F93C1CBA901D00AE5223 /* BoundCard */,
 				8DC5F9371CBA8FFC00AE5223 /* Achievement */,
@@ -898,6 +912,11 @@
 				8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */,
 				8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */,
 				8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */,
+				3B8F2F571CC7B12F00787A8E /* TeamListTableViewController.swift */,
+				3B0E00071CC8BF4C004EA5EB /* SetSexViewController.swift */,
+				3B0E00081CC8BF4C004EA5EB /* SetSexViewController.xib */,
+				3B0E000B1CC8D06E004EA5EB /* EditNameViewController.swift */,
+				3B0E000C1CC8D06E004EA5EB /* EditNameViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -916,6 +935,8 @@
 				8DEED0351CB800C900C887C4 /* MyEvaluatHeadCell.xib */,
 				8DCAF0341CC67077009921FE /* MyTeamCell.swift */,
 				8DCAF0351CC67077009921FE /* MyTeamCell.xib */,
+				3B8F2F591CC7B16100787A8E /* TeamListTableViewCell.swift */,
+				3B8F2F5A1CC7B16100787A8E /* TeamListTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -941,10 +962,10 @@
 		8DC5F93C1CBA901D00AE5223 /* BoundCard */ = {
 			isa = PBXGroup;
 			children = (
+				3B0E000F1CC8DA5A004EA5EB /* AddCarViewController.swift */,
+				3B0E00101CC8DA5A004EA5EB /* AddCarViewController.xib */,
 				8DC5F93D1CBA902D00AE5223 /* BoundBankCardViewController.swift */,
 				8DC5F93E1CBA902D00AE5223 /* BoundBankCardViewController.xib */,
-				8DC5F93F1CBA902D00AE5223 /* AddCarViewController.swift */,
-				8DC5F9401CBA902D00AE5223 /* AddCarViewController.xib */,
 				8DC5F9411CBA902D00AE5223 /* FillBankCardMessageController.swift */,
 				8DC5F9421CBA902D00AE5223 /* FillBankCardMessageController.xib */,
 			);
@@ -1057,7 +1078,7 @@
 				TargetAttributes = {
 					8D2681DF1CA8DB37009E7BAC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = UZZG6NM74T;
+						DevelopmentTeam = 55B4CEK32J;
 					};
 					8D2681F61CA8DB37009E7BAC = {
 						CreatedOnToolsVersion = 7.3;
@@ -1095,13 +1116,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D977DA01CBA07790049514E /* MyExamViewController.xib in Resources */,
-				8DC5F9551CBA906E00AE5223 /* RecruitNewMemberViewController.xib in Resources */,
 				8DEED0371CB800C900C887C4 /* MyEvaluatHeadCell.xib in Resources */,
 				8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */,
 				8DB9EA961CB7ADFC005E6E83 /* SettingViewController.xib in Resources */,
 				8DCAF03B1CC67D7D009921FE /* WeiXinURLViewController.xib in Resources */,
 				8D340CD41CA8FBC300407F30 /* NetworkConfig.plist in Resources */,
-				8DC5F9461CBA902D00AE5223 /* AddCarViewController.xib in Resources */,
 				3BB900321CC1151100399456 /* RobListMianViewController.xib in Resources */,
 				8D2CA1281CC50FB000A7B917 /* CameraView.strings in Resources */,
 				8DF2A6E21CAAD34A00A0883D /* LoginFooterView.xib in Resources */,
@@ -1115,8 +1134,11 @@
 				3BB9004C1CC1172C00399456 /* DetailfFinancialViewCell.xib in Resources */,
 				8DC5F9481CBA902D00AE5223 /* FillBankCardMessageController.xib in Resources */,
 				8D28F4851CABB10C00C7E99B /* AuthenticationController.xib in Resources */,
+				3B0E000A1CC8BF4C004EA5EB /* SetSexViewController.xib in Resources */,
+				3B0E000E1CC8D06E004EA5EB /* EditNameViewController.xib in Resources */,
 				8DD226951CAA5ABB00E8DA5B /* DetailOfNewsViewController.xib in Resources */,
 				8DC5F9441CBA902D00AE5223 /* BoundBankCardViewController.xib in Resources */,
+				3B8F2F5C1CC7B16100787A8E /* TeamListTableViewCell.xib in Resources */,
 				8DF9D47E1CBA8485006EB3A7 /* ChiefOfSelectIDCell.xib in Resources */,
 				8DB9EA8F1CB788A2005E6E83 /* UserInfoViewController.xib in Resources */,
 				8DC5F9511CBA905F00AE5223 /* DetailFinancialTableViewController.xib in Resources */,
@@ -1126,6 +1148,7 @@
 				8DD226911CAA4D9D00E8DA5B /* NewsTableViewCell.xib in Resources */,
 				3BF564901CC7498300CC2E22 /* ForGetPassowViewController.xib in Resources */,
 				8DF2A6EE1CAAD3D900A0883D /* RegistFooterView3.xib in Resources */,
+				3B0E00121CC8DA5A004EA5EB /* AddCarViewController.xib in Resources */,
 				8DC5F93B1CBA900B00AE5223 /* AchievementControllerViewController.xib in Resources */,
 				8D340D741CA9353D00407F30 /* LoginAndRegisterViewController.xib in Resources */,
 				3BB9003E1CC115F900399456 /* FinancialViewController.xib in Resources */,
@@ -1138,6 +1161,7 @@
 				3BB9004E1CC1172C00399456 /* AchievementCell.xib in Resources */,
 				8D340D511CA904C200407F30 /* Info.plist in Resources */,
 				3BB900501CC1172C00399456 /* GetMoneyCell.xib in Resources */,
+				3B0E00001CC8767C004EA5EB /* RecruitNewMemberViewController.xib in Resources */,
 				8DD2269D1CAA628F00E8DA5B /* MyCenterTableViewCell.xib in Resources */,
 				8DD588621CC48B410098A4ED /* ListsDetailViewController.xib in Resources */,
 			);
@@ -1214,6 +1238,7 @@
 				8D2CA1261CC50FB000A7B917 /* CameraView.swift in Sources */,
 				8D340D301CA904A900407F30 /* UIImage+WebP.m in Sources */,
 				8D340D261CA904A900407F30 /* SDImageCache.m in Sources */,
+				3B0EFFFF1CC8767C004EA5EB /* RecruitNewMemberViewController.swift in Sources */,
 				8D340D4C1CA904C200407F30 /* ConstraintItem.swift in Sources */,
 				8D340D701CA9148200407F30 /* MyCenterTableViewController.swift in Sources */,
 				8DC5F9181CBA8E6400AE5223 /* UIViewController+Expand.swift in Sources */,
@@ -1226,7 +1251,6 @@
 				8D340D4E1CA904C200407F30 /* ConstraintRelation.swift in Sources */,
 				8D340D2A1CA904A900407F30 /* SDWebImageDownloaderOperation.m in Sources */,
 				8DEED02F1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift in Sources */,
-				8DC5F9451CBA902D00AE5223 /* AddCarViewController.swift in Sources */,
 				8DA16A171CC51CCC00F97619 /* SCLAlertView.swift in Sources */,
 				8D340CC01CA8F09700407F30 /* GlobalDefinit.swift in Sources */,
 				3B2529971CC08EBD0072B3D9 /* AchievementControllerViewController.swift in Sources */,
@@ -1246,7 +1270,9 @@
 				8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */,
 				8D29568A1CBC065100F88698 /* SelectAdressTableViewController.swift in Sources */,
 				8D340D581CA904CD00407F30 /* MBProgressHUD.m in Sources */,
+				3B8F2F581CC7B12F00787A8E /* TeamListTableViewController.swift in Sources */,
 				8D340CBA1CA8EA2F00407F30 /* NSDate+Expand.swift in Sources */,
+				3B0E00111CC8DA5A004EA5EB /* AddCarViewController.swift in Sources */,
 				8D977D9F1CBA07790049514E /* MyExamViewController.swift in Sources */,
 				8D340D491CA904C200407F30 /* Constraint.swift in Sources */,
 				3BB9004B1CC1172C00399456 /* DetailfFinancialViewCell.swift in Sources */,
@@ -1256,6 +1282,7 @@
 				8D340D281CA904A900407F30 /* SDWebImageDecoder.m in Sources */,
 				8DF9D47D1CBA8485006EB3A7 /* ChiefOfSelectIDCell.swift in Sources */,
 				8DBED2091CBFE19100A77EC9 /* GetMoneyDetailTableViewController.swift in Sources */,
+				3B0E00091CC8BF4C004EA5EB /* SetSexViewController.swift in Sources */,
 				8D340CFE1CA9049B00407F30 /* AFSecurityPolicy.m in Sources */,
 				8DCAF0331CC6703F009921FE /* MyTeamTableViewController.swift in Sources */,
 				8D2CA1111CC50F9900A7B917 /* CameraShot.swift in Sources */,
@@ -1272,9 +1299,9 @@
 				8D340D7A1CA94B1100407F30 /* HomeTableViewCell.swift in Sources */,
 				8D1D19941CB3ADA40037E2B2 /* User.swift in Sources */,
 				8DD2269C1CAA628F00E8DA5B /* MyCenterTableViewCell.swift in Sources */,
-				8DC5F9541CBA906E00AE5223 /* RecruitNewMemberViewController.swift in Sources */,
 				3BB900311CC1151100399456 /* RobListMianViewController.swift in Sources */,
 				8D340CC71CA8F62F00407F30 /* DataObject+CoreDataProperties.swift in Sources */,
+				3B8F2F5B1CC7B16100787A8E /* TeamListTableViewCell.swift in Sources */,
 				8D340D2C1CA904A900407F30 /* SDWebImagePrefetcher.m in Sources */,
 				8D340D4F1CA904C200407F30 /* Debugging.swift in Sources */,
 				8D340D3A1CA904B900407F30 /* UIScrollView+SVPullToRefresh.m in Sources */,
@@ -1285,6 +1312,7 @@
 				8DD5886B1CC4DBE20098A4ED /* Order+CoreDataProperties.swift in Sources */,
 				8D340D011CA9049B00407F30 /* AFURLResponseSerialization.m in Sources */,
 				8D340D6C1CA9141D00407F30 /* ManageTableViewController.swift in Sources */,
+				3B0E000D1CC8D06E004EA5EB /* EditNameViewController.swift in Sources */,
 				3BB9003D1CC115F900399456 /* FinancialViewController.swift in Sources */,
 				8D2CA11B1CC50FA400A7B917 /* CameraViewController.swift in Sources */,
 				8DD226941CAA5ABB00E8DA5B /* DetailOfNewsViewController.swift in Sources */,

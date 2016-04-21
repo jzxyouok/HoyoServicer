@@ -177,7 +177,7 @@
                                                                     <constraint firstAttribute="height" constant="20" id="nOX-qG-KdA"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_bank" translatesAutoresizingMaskIntoConstraints="NO" id="YYP-9w-7aT">
@@ -224,7 +224,7 @@
                                                                     <constraint firstAttribute="height" constant="20" id="CFP-lO-Dnj"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_finance" translatesAutoresizingMaskIntoConstraints="NO" id="0r6-Xc-7kW">
@@ -278,7 +278,7 @@
                                                                     <constraint firstAttribute="height" constant="20" id="qJg-Xe-5Fd"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_award" translatesAutoresizingMaskIntoConstraints="NO" id="LpT-6A-dJX">
@@ -371,7 +371,7 @@
                                                                             <constraint firstAttribute="height" constant="20" id="wCD-4r-osa"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_member" translatesAutoresizingMaskIntoConstraints="NO" id="zkF-5f-OuF">
@@ -418,7 +418,7 @@
                                                                             <constraint firstAttribute="height" constant="20" id="GIK-3k-8XL"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_team" translatesAutoresizingMaskIntoConstraints="NO" id="R3p-X0-PW9">
@@ -472,7 +472,7 @@
                                                                             <constraint firstAttribute="width" constant="55" id="WZO-w5-2Vc"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="manage_storage" translatesAutoresizingMaskIntoConstraints="NO" id="AeR-uV-Q21">
@@ -578,7 +578,7 @@
                                             <constraint firstAttribute="height" constant="30" id="utK-V4-oUV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="zAH-Dj-BJN">

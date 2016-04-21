@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddCarViewController" customModule="HoyoServicer" customModuleProvider="target">
             <connections>
+                <outlet property="cardNumber" destination="IFJ-u7-nt3" id="euf-bR-PQw"/>
+                <outlet property="cardOwner" destination="vJ1-er-GaR" id="CiJ-MG-ro3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -77,7 +79,7 @@
                                 <constraint firstAttribute="height" constant="1" id="tqW-Sr-hRy"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-u7-nt3">
+                        <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-u7-nt3">
                             <rect key="frame" x="70" y="58" width="305" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="MbD-kF-Nmp"/>
@@ -85,7 +87,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJ1-er-GaR">
+                        <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vJ1-er-GaR">
                             <rect key="frame" x="70" y="8" width="305" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="Z0n-Ms-bz9"/>
@@ -132,6 +134,9 @@
                     <state key="normal" title="下一步">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="CYg-Rv-ViJ"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请绑定持卡人的银行卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SON-tB-Gq4">
                     <rect key="frame" x="10" y="76" width="365" height="21"/>
@@ -164,6 +169,6 @@
         </view>
     </objects>
     <resources>
-        <image name="back" width="26" height="42"/>
+        <image name="back" width="13" height="21"/>
     </resources>
 </document>

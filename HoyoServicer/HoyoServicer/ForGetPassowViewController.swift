@@ -44,7 +44,7 @@ class ForGetPassowViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.sharedApplication().statusBarHidden = true
+        //UIApplication.sharedApplication().statusBarHidden = true
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -117,51 +117,12 @@ class ForGetPassowViewController: UIViewController {
     //提交新密码
     @IBAction func submitBtn() {
         print("进去了")
-        //        // MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-//                print(self.iphoneNumber.text)
-//                print(self.code.text)
-//                print(self.newPassword.text)
-//                User.ResetPassword(self.iphoneNumber.text!, code: self.code.text!, password: self.newPassword.text!, success: {
-//                    [weak self] in
-//                  let strongSelf = self
-//                    MBProgressHUD.hideHUDForView(strongSelf!.view, animated: true)
-//                  strongSelf!.dismissViewControllerAnimated(true) {
-//        
-//            }
-//        
-//                   })
-        //            //{
-        //
-        ////                let alertView=SCLAlertView()
-        ////                alertView.addButton("ok", action: {})
-        ////                alertView.showError("错误提示", subTitle: error.localizedDescription)
-        //
-        //    //    }
-        //        { (error) in
-        //            print("失败")
-        //        }
-        ////
-        ////
+
        
         
       MBProgressHUD.showHUDAddedTo(self.view, animated: true)
       
-//        
-//        User.ResetPassword(iphoneNumber.text!, code: code.text!, password: newPassword.text!,
-//                           success: {
-//            print("提交成功")
-//          [weak self] in
-//            let strongSelf = self
-//            MBProgressHUD.hideHUDForView(strongSelf.view, animated: true)
-//            strongSelf.dismissViewControllerAnimated(true) {
-//                
-//            }
-//            
-//              self.dismissViewControllerAnimated(true, completion: nil)
-//        }) { (error) in
-//            print("失败")
-//            
-//        }
+
         User.ResetPassword(iphoneNumber.text!, code: self.code.text!, password: self.newPassword.text!, success: { 
             [weak self] in
             let strongSelf = self
