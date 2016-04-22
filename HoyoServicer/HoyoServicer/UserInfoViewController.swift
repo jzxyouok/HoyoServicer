@@ -10,9 +10,20 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
 
-    var setSexController :SetSexViewController?
-    var  editNameCon :EditNameViewController?
-  
+   
+   
+    lazy var setSexController: SetSexViewController = {
+        
+        let setSexController = SetSexViewController (nibName: "SetSexViewController", bundle: nil)
+     
+        return setSexController
+    }()
+    lazy var editNameCon: EditNameViewController = {
+        
+        let editNameCon = EditNameViewController (nibName: "EditNameViewController", bundle: nil)
+        
+        return editNameCon
+    }()
     
     @IBAction func toDetailController(sender: UIButton) {
         switch sender.tag {
@@ -47,26 +58,10 @@ class UserInfoViewController: UIViewController {
         break
         case 2:
             
-            editNameCon = EditNameViewController()
-            editNameCon!.tmpEditName = self.name.text!//tmpName == nil ? self.name.text : tmpName
-//            if tmpName == nil
-//            {
-//            editNameCon.editName.text = "赵兵"
-//                
-//            }
-//            else {
-//            editNameCon.editName.text = tmpName
-//            }
-//            editNameCon!.backClosure = {
-//            [weak self] editname in
-//                if let strongSelf = self{
-//                    
-//   strongSelf.name.text = editname
-//                    print("----")
-//                    print(strongSelf.name.text)
-//                }
-//            }
-            self.navigationController?.pushViewController(editNameCon!, animated: true)
+           
+            editNameCon.tmpEditName = self.name.text!//tmpName == nil ? self.name.text : tmpName
+
+            self.navigationController?.pushViewController(editNameCon, animated: true)
           
 
             
@@ -74,18 +69,13 @@ class UserInfoViewController: UIViewController {
         case 3:
 
             
-        setSexController     = SetSexViewController(nibName: "SetSexViewController", bundle: nil)
+
             
-        setSexController!.tmpSex = self.sex.text //tmpSex == nil ? self.sex.text : tmpSex
-         
-//            setSexController!.backClosure={ (inputText:String) -> Void in
-//               self.sex.text = inputText
-//               
-//            }
-            self.navigationController?.pushViewController(setSexController!, animated: true)
+        setSexController.tmpSex = self.sex.text //tmpSex == nil ? self.sex.text : tmpSex
+
+            self.navigationController?.pushViewController(setSexController, animated: true)
             
-           // self.navigationController?.pushViewController(selectSexCon!, animated: true)
-            break
+                       break
         default: break
             
         }
@@ -126,7 +116,7 @@ class UserInfoViewController: UIViewController {
         
         //判断程序是不是第一次进入该页面,如果是则网上获取数据，如果不是则
         
-       if  setSexController?.tmpSex == nil && editNameCon?.tmpEditName == nil
+       if  setSexController.tmpSex == nil && editNameCon.tmpEditName == nil
        {
         
         print("第一次进来")
@@ -135,18 +125,19 @@ class UserInfoViewController: UIViewController {
         sex.text=User.currentUser?.sex == "" ? "男":User.currentUser?.sex
     
         }
-       if setSexController?.tmpSex != nil
+        
+       if setSexController.tmpSex != nil
        {
      
-       self.sex.text = setSexController?.tmpSex
+       self.sex.text = setSexController.tmpSex
 //        self.name.text = editNameCon.editName.text
        
 
         }
-      if editNameCon?.tmpEditName != nil {
+      if editNameCon.tmpEditName != nil {
        
         
-         self.name.text = editNameCon?.tmpEditName
+         self.name.text = editNameCon.tmpEditName
         }
      
         

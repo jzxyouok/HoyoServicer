@@ -23,6 +23,7 @@ extension UIViewController
         }
         else {
             item = UIBarButtonItem(title: title, style: .Plain, target: self, action: selector)
+            
         }
         
 item.tintColor = UIColor.whiteColor()

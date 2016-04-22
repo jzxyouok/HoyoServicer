@@ -10,7 +10,7 @@ import UIKit
 
 class EditNameViewController: UIViewController,UITextFieldDelegate {
 
-    var tmpEditName = ""
+    var tmpEditName :String?
     @IBOutlet weak var editName: UITextField!
    
     override func viewDidLoad() {
@@ -19,13 +19,20 @@ self.title = "名字"
         
         editName.delegate = self
         setNavigationItem("取消", selector: #selector(UIViewController.doBack), isRight: false)
-       setNavigationItem("保存", selector: #selector(UIViewController.doBack), isRight: true)
+       setNavigationItem("保存", selector:#selector(EditNameViewController.doBackAndSave), isRight: true)
         self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
 
     }
+    func doBackAndSave()
+    {
+        tmpEditName = self.editName.text!
+        self.navigationController?.popViewControllerAnimated(true)
+    
+    }
+    
     override func doBack() {
         
-        tmpEditName = self.editName.text!
+       
         self.navigationController?.popViewControllerAnimated(true)
         
     }
@@ -37,6 +44,8 @@ self.title = "名字"
     self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(47, g: 210, b: 50, a: 1)
         return  true
     }
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -46,7 +55,13 @@ self.title = "名字"
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
+         tmpEditName = self.editName.text!
+        editName.resignFirstResponder()
+        self.navigationController?.popViewControllerAnimated(true)
+        return true
+    }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         editName.resignFirstResponder()
          self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)

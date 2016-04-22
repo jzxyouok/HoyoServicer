@@ -59,7 +59,7 @@
                                         </mask>
                                     </variation>
                                 </label>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Set_gou" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-Ja-DG5">
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="Set_gou" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-Ja-DG5">
                                     <rect key="frame" x="345" y="18" width="15" height="11"/>
                                 </imageView>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="Set_gou" translatesAutoresizingMaskIntoConstraints="NO" id="2uK-S6-MMc">
