@@ -70,6 +70,7 @@ class SelectAdressTableViewController: UITableViewController {
             
             tmpStr+="    "+((adressData?.objectAtIndex(firstSelectRow!).objectForKey("cities")?.objectAtIndex(indexPath.row))! as! String)
             
+            
             delegate?.SelectAdressFinished(tmpStr)
             self.navigationController?.popToViewController((self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)!-3])!, animated: true)
         }

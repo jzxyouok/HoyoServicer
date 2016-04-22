@@ -25,7 +25,7 @@ self.title = "名字"
     }
     func doBackAndSave()
     {
-        tmpEditName = self.editName.text!
+        User.currentUser?.name = self.editName.text!
         self.navigationController?.popViewControllerAnimated(true)
     
     }
@@ -57,7 +57,7 @@ self.title = "名字"
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
-         tmpEditName = self.editName.text!
+         User.currentUser?.name = self.editName.text!
         editName.resignFirstResponder()
         self.navigationController?.popViewControllerAnimated(true)
         return true

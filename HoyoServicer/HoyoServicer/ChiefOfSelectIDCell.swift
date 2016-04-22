@@ -20,7 +20,9 @@ class ChiefOfSelectIDCell: UITableViewCell {
         delegate?.selectButtonChange(sender.tag)
     }
     @IBAction func selectAdress(sender: AnyObject) {
+        
         delegate?.ToSelectAdressController()
+        
     }
     override func awakeFromNib() {
         super.awakeFromNib()

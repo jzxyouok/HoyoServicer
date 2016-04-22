@@ -8,9 +8,9 @@
 
 import UIKit
 
-class UserInfoViewController: UIViewController {
+class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelegate{
 
-   
+    
    
     lazy var setSexController: SetSexViewController = {
         
@@ -33,7 +33,10 @@ class UserInfoViewController: UIViewController {
                 [weak self] in
                 let libraryViewController = CameraViewController.imagePickerViewController(true) { [weak self] image, asset in
                     if let  strongSelf = self{
+                        
                         strongSelf.headImg.image = image
+                        
+                    
                     }
                     //headImg.setImage(image, forState: .Normal)// = image
                     self!.dismissViewControllerAnimated(true, completion: nil)
@@ -45,7 +48,9 @@ class UserInfoViewController: UIViewController {
                 [weak self] in
                 let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { [weak self] image, asset in
                     if let  strongSelf = self{
+                        
                     strongSelf.headImg.image = image
+                    
                     }
                    // headImg.image = UIImage(CGImage: image)
                     self!.dismissViewControllerAnimated(true, completion: nil)
@@ -58,8 +63,9 @@ class UserInfoViewController: UIViewController {
         break
         case 2:
             
-           
-            editNameCon.tmpEditName = self.name.text!//tmpName == nil ? self.name.text : tmpName
+     
+
+            editNameCon.tmpEditName = self.name.text!
 
             self.navigationController?.pushViewController(editNameCon, animated: true)
           
@@ -69,20 +75,37 @@ class UserInfoViewController: UIViewController {
         case 3:
 
             
-
-            
-        setSexController.tmpSex = self.sex.text //tmpSex == nil ? self.sex.text : tmpSex
-
+         setSexController.tmpSex = self.sex.text
+         
             self.navigationController?.pushViewController(setSexController, animated: true)
             
                        break
+        case 4:
+            
+        
+//            let adressControll = SelectAdressTableViewController(adressData: adressDic, firstSelectRow: -1)
+//            adressControll.delegate=self
+//            self.navigationController?.pushViewController(adressControll, animated: true)
+//            
+            let jsonPath = NSBundle.mainBundle().pathForResource("china_citys", ofType: "json")
+            let jsonData = NSData(contentsOfFile: jsonPath!)! as NSData
+            let tmpObject: AnyObject?
+            do{
+                tmpObject = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
+            }
+            let adressDic = tmpObject as! NSMutableArray
+            let adressControll = SelectAdressTableViewController(adressData: adressDic, firstSelectRow: -1)
+            adressControll.delegate = self
+            self.navigationController?.pushViewController(adressControll, animated: true)
+
+            break
         default: break
             
         }
         
         print(sender.tag)
     }
-    
+  
     @IBOutlet weak var headImg: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phone: UILabel!
@@ -96,8 +119,40 @@ class UserInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //------代理-----
+    func SelectAdressFinished(adress:String)
+    {
+      
+   User.currentUser?.province =   adress.componentsSeparatedByString(" ").first
+        User.currentUser?.city = adress.componentsSeparatedByString(" ").last
+        self.address.text = adress
+        
+    }
+   func selectButtonChange(index:Int)
+   {
+    
+    }
+    func ToSelectAdressController() {
+        
+    }
+    
+    
     //返回
     override func doBack() {
+      
+    
+// //UIImage转换为NSData
+  // NSData *imageData = UIImagePNGRepresentation(aimae);
+     let  imageData = UIImageJPEGRepresentation(headImg.image!, 0.001)! as NSData
+
+        //let imageDataStirng = NSString(data: imageData, encoding: NSUTF8StringEncoding)
+        let tmpDic = ["headImage": imageData,"pro":(User.currentUser?.province)!,"city":(User.currentUser?.city)!,"sex":(User.currentUser?.sex)!]
+        print(tmpDic)
+        User.UpdateUserInfo(tmpDic, success: {
+        print("上传成功")
+        }) { (error) in
+            print("失败")
+        }
         
         self.navigationController?.popViewControllerAnimated(true)
         
@@ -106,7 +161,12 @@ class UserInfoViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden=false
+        if User.currentUser?.province != "" && User.currentUser?.city != ""
+        {
+      self.address.text = "\(User.currentUser?.province)"  + " " + "\(User.currentUser?.city)"
+        }
         self.tabBarController?.tabBar.hidden=true
+        
         if User.currentUser?.headimageurl != ""
         {
             headImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: headImg.image)
@@ -114,33 +174,9 @@ class UserInfoViewController: UIViewController {
        
         phone.text=User.currentUser?.mobile
         
-        //判断程序是不是第一次进入该页面,如果是则网上获取数据，如果不是则
-        
-       if  setSexController.tmpSex == nil && editNameCon.tmpEditName == nil
-       {
-        
-        print("第一次进来")
-        
          name.text=User.currentUser?.name
         sex.text=User.currentUser?.sex == "" ? "男":User.currentUser?.sex
-    
-        }
-        
-       if setSexController.tmpSex != nil
-       {
-     
-       self.sex.text = setSexController.tmpSex
-//        self.name.text = editNameCon.editName.text
-       
 
-        }
-      if editNameCon.tmpEditName != nil {
-       
-        
-         self.name.text = editNameCon.tmpEditName
-        }
-     
-        
         address.text=(User.currentUser?.province)!+"  "+(User.currentUser?.city)!
         level.text=User.currentUser?.score//mei
     }

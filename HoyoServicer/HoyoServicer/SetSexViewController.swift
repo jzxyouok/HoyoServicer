@@ -25,13 +25,13 @@ class SetSexViewController: UIViewController,UIAlertViewDelegate {
     @IBOutlet weak var manImg: UIImageView!
     @IBAction func womenClick(sender: AnyObject) {
         sex="女"
-        self.tmpSex = sex
+        User.currentUser?.sex = sex
         
       self.navigationController?.popViewControllerAnimated(true)
     }
     @IBAction func manClick(sender: AnyObject) {
         sex="男"
-        self.tmpSex = sex
+        User.currentUser?.sex = sex
     
 
         self.navigationController?.popViewControllerAnimated(true)
@@ -49,7 +49,7 @@ class SetSexViewController: UIViewController,UIAlertViewDelegate {
         self.title = "性别"
         print(tmpSex)
         sex=tmpSex ?? "女"
-//        let savebutton=UIBarButtonItem(title: "保存", style: .Plain, target: self, action: #selector(SaveClick))
+
         
     
     setNavigationItem("back.png", selector: #selector(UIViewController.doBack), isRight: false)
