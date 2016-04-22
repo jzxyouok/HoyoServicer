@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow? = {
         let v = UIWindow(frame: UIScreen.mainScreen().bounds)
         return v
+        
     }()
 
 
