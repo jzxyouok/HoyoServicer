@@ -33,12 +33,10 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
                 [weak self] in
                 let libraryViewController = CameraViewController.imagePickerViewController(true) { [weak self] image, asset in
                     if let  strongSelf = self{
-                        
                         strongSelf.headImg.image = image
-                        
-                    
+                        User.currentUser?.headimageurl=UIImageJPEGRepresentation(image!, 0.001)! as NSData
                     }
-                    //headImg.setImage(image, forState: .Normal)// = image
+                    
                     self!.dismissViewControllerAnimated(true, completion: nil)
                 }
                 
@@ -48,38 +46,27 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
                 [weak self] in
                 let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { [weak self] image, asset in
                     if let  strongSelf = self{
-                        
-                    strongSelf.headImg.image = image
-                    
+                        strongSelf.headImg.image = image
+                        User.currentUser?.headimageurl=UIImageJPEGRepresentation(image!, 0.001)! as NSData
                     }
-                   // headImg.image = UIImage(CGImage: image)
                     self!.dismissViewControllerAnimated(true, completion: nil)
                 }
                 self!.presentViewController(cameraViewController, animated: true, completion: nil)
             }
             alert.addButton("取消", action: {})
-            alert.showInfo("", subTitle: "请选择")
-           // alert.showInfo("", subTitle: "请选择")
+            alert.showInfo("", subTitle: "请选择以下方式更新个人头像")
+           
         break
         case 2:
-            
-     
-
             editNameCon.tmpEditName = self.name.text!
-
             self.navigationController?.pushViewController(editNameCon, animated: true)
-          
-
-            
             break
         case 3:
 
-            
-         setSexController.tmpSex = self.sex.text
-         
+            setSexController.tmpSex = self.sex.text
             self.navigationController?.pushViewController(setSexController, animated: true)
             
-                       break
+            break
         case 4:
             
         
@@ -102,8 +89,7 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
         default: break
             
         }
-        
-        print(sender.tag)
+     
     }
   
     @IBOutlet weak var headImg: UIImageView!
@@ -122,8 +108,8 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
     //------代理-----
     func SelectAdressFinished(adress:String)
     {
-      
-   User.currentUser?.province =   adress.componentsSeparatedByString(" ").first
+        
+        User.currentUser?.province =   adress.componentsSeparatedByString(" ").first
         User.currentUser?.city = adress.componentsSeparatedByString(" ").last
         self.address.text = adress
         
@@ -139,22 +125,25 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
     
     //返回
     override func doBack() {
-      
-    
-// //UIImage转换为NSData
-  // NSData *imageData = UIImagePNGRepresentation(aimae);
-     let  imageData = UIImageJPEGRepresentation(headImg.image!, 0.001)! as NSData
-
-        //let imageDataStirng = NSString(data: imageData, encoding: NSUTF8StringEncoding)
-        let tmpDic = ["headImage": imageData,"pro":(User.currentUser?.province)!,"city":(User.currentUser?.city)!,"sex":(User.currentUser?.sex)!]
-        print(tmpDic)
-        User.UpdateUserInfo(tmpDic, success: {
-        print("上传成功")
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+     let parames = ["headImage": (User.currentUser?.headimageurl)!,"province":(User.currentUser?.province)!,"city":(User.currentUser?.city)!,"sex":(User.currentUser?.sex)!]
+        User.UpdateUserInfo(parames, success: {
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            self.navigationController?.popViewControllerAnimated(true)
         }) { (error) in
-            print("失败")
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            let alertView=SCLAlertView()
+            alertView.addButton("重新试一下", action: {
+                [weak self] in
+                self?.doBack()
+            })
+            alertView.addButton("取消", action: {
+                self.navigationController?.popViewControllerAnimated(true)
+            })
+            alertView.showError("错误提示", subTitle: error.localizedDescription)
         }
         
-        self.navigationController?.popViewControllerAnimated(true)
+        
         
     }
     
@@ -167,15 +156,15 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
         }
         self.tabBarController?.tabBar.hidden=true
         
-        if User.currentUser?.headimageurl != ""
+        if User.currentUser?.headimageurl != nil
         {
-            headImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: headImg.image)
+            headImg.image=UIImage(data: (User.currentUser?.headimageurl)!)
         }
        
         phone.text=User.currentUser?.mobile
         
          name.text=User.currentUser?.name
-        sex.text=User.currentUser?.sex == "" ? "男":User.currentUser?.sex
+        sex.text=User.currentUser?.sex == "0" ? "女":"男"
 
         address.text=(User.currentUser?.province)!+"  "+(User.currentUser?.city)!
         level.text=User.currentUser?.score//mei

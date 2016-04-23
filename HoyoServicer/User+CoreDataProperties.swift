@@ -19,7 +19,7 @@ extension User {
     @NSManaged var city: String?
     @NSManaged var country: String?
     @NSManaged var groupdetails: NSData?
-    @NSManaged var headimageurl: String?
+    @NSManaged var headimageurl: NSData?
     @NSManaged var language: String?
     @NSManaged var mobile: String?
     @NSManaged var name: String?

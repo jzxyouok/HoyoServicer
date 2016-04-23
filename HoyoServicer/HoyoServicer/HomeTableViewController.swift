@@ -25,7 +25,11 @@ class HomeTableViewController: UITableViewController {
             }
         }
         
-        self.refresh()
+        //self.refresh()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CurrentUserDidChange), name: CurrentUserDidChangeNotificationName, object: nil)
+    }
+    func CurrentUserDidChange() {
+        self.tableView.reloadData()
     }
      func refresh() {
         let success: (User) -> Void = {
@@ -78,14 +82,11 @@ class HomeTableViewController: UITableViewController {
             
         }
         cell.nameLabel.text = User.currentUser!.name
-        if User.currentUser?.headimageurl != ""
+        if User.currentUser?.headimageurl != nil
         {
-            
-            cell.personImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: cell.personImg.image)
+            cell.personImg.image=UIImage(data: (User.currentUser?.headimageurl)!)
         }
         cell.imageArray=[UIImage(named: "banner1"),UIImage(named: "banner2"),UIImage(named: "banner3")]
-        // Configure the cell...
-
         return cell
     }
     

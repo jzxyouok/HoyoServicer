@@ -11,6 +11,7 @@ import CoreData
 
 let UserDefaultsUserTokenKey = "usertoken"
 let UserDefaultsUserIDKey = "userid"
+let CurrentUserDidChangeNotificationName = "CurrentUserDidChangeNotificationName"
 
 class User: DataObject {
     
@@ -18,7 +19,7 @@ class User: DataObject {
     
     static var currentUser: User? = nil {
         didSet {
-            //NSNotificationCenter.defaultCenter().postNotificationName(CurrentUserDidChangeNotificationName, object: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName(CurrentUserDidChangeNotificationName, object: nil)
         }
     }
     //检查是否自动登录
@@ -157,10 +158,19 @@ class User: DataObject {
                                                 let user = User.cachedObjectWithID((tmpData!.objectForKey("userid") as! NSNumber).stringValue)
                                                 user.city=(tmpData!.objectForKey("city") as? String) ?? ""
                                                 user.country=(tmpData!.objectForKey("country") as? String) ?? ""
-                                                user.headimageurl=(tmpData!.objectForKey("headimageurl") as? String) ?? ""
+                                                var tmpUrl=(tmpData!.objectForKey("headimageurl") as? String) ?? ""
+                                                if (tmpUrl != "")
+                                                {
+                                                    if (tmpUrl.containsString("http"))==false
+                                                    {
+                                                        tmpUrl=(NetworkManager.defaultManager?.website)!+tmpUrl
+                                                    }
+                                                    user.headimageurl=NSData(contentsOfURL: NSURL(string: tmpUrl)!)
+                                                }
+                                                
                                                 user.language=(tmpData!.objectForKey("language") as? String) ?? ""
                                                 user.mobile=(tmpData!.objectForKey("mobile") as? String) ?? ""
-                                                user.name=(tmpData!.objectForKey("name") as? String) ?? ""
+                                                user.name=(tmpData!.objectForKey("nickname") as? String) ?? ""
                                                 user.openid=(tmpData!.objectForKey("openid") as? String) ?? ""
                                                 user.province=(tmpData!.objectForKey("province") as? String) ?? ""
                                                 user.scope=(tmpData!.objectForKey("scope") as? String) ?? ""
@@ -185,21 +195,60 @@ class User: DataObject {
     }
     
     
-    //以下是未解析的借口
-    
-    
-    
     //  /FamilyAccount/UpdateUserInfo    更新用户个人信息
     class func UpdateUserInfo(dataDic:NSDictionary, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
-        NetworkManager.defaultManager!.POST("UpdateUserInfo",
-                                            parameters:dataDic,
-                                            success: {
-                                                data in
-                                                print(data)
-                                                success!()
-            },
-                                            failure: failure)
+        var constructingBlock:((AFMultipartFormData?) -> Void)?=nil
+        if let tmpdata=dataDic["headImage"] {
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "yyyyMMddHHmmss"
+            let str = formatter.stringFromDate(NSDate())
+            let fileName = NSString(format: "%@", str)
+            constructingBlock={
+                data in
+                var _ = data!.appendPartWithFileData((tmpdata as! NSData), name: (fileName as String), fileName: "headImage", mimeType: "image/png")
+            }
+        }
+        NetworkManager.defaultManager!.request("UpdateUserInfo", GETParameters: nil, POSTParameters: dataDic, constructingBodyWithBlock: constructingBlock, success: {
+            data in
+            print(data)
+            let tmpData=data.objectForKey("data")
+            let user = User.cachedObjectWithID((tmpData!.objectForKey("userid") as! NSNumber).stringValue)
+            user.city=(tmpData!.objectForKey("city") as? String) ?? ""
+            user.country=(tmpData!.objectForKey("country") as? String) ?? ""
+            var tmpUrl=(tmpData!.objectForKey("headimageurl") as? String) ?? ""
+            if (tmpUrl != "")
+            {
+                if (tmpUrl.containsString("http"))==false
+                {
+                    tmpUrl=(NetworkManager.defaultManager?.website)!+tmpUrl
+                }
+                user.headimageurl=NSData(contentsOfURL: NSURL(string: tmpUrl)!)
+            }
+            user.language=(tmpData!.objectForKey("language") as? String) ?? ""
+            user.mobile=(tmpData!.objectForKey("mobile") as? String) ?? ""
+            user.name=(tmpData!.objectForKey("nickname") as? String) ?? ""
+            user.openid=(tmpData!.objectForKey("openid") as? String) ?? ""
+            user.province=(tmpData!.objectForKey("province") as? String) ?? ""
+            user.scope=(tmpData!.objectForKey("scope") as? String) ?? ""
+            user.sex=(tmpData!.objectForKey("sex") as? String) ?? ""
+            let tmpDic=tmpData!.objectForKey("GroupDetails")
+            if ((tmpDic?.isKindOfClass(NSDictionary.classForCoder())) == true)
+            {
+                print(tmpDic)
+                let object:NSData?
+                do{
+                    object = try? NSJSONSerialization.dataWithJSONObject(tmpDic!, options: NSJSONWritingOptions.PrettyPrinted)
+                }
+                user.groupdetails=object
+            }
+            User.currentUser=user
+            
+            success!()
+            }, failure: failure)
+        
+        
     }
+    //以下是未解析的借口
     //  /Command/SendMessage             APP发送消息
     class func SendMessage(recvuserid: String, message: String,messagetype: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
         NetworkManager.defaultManager!.POST("SendMessage",
@@ -326,7 +375,15 @@ class User: DataObject {
                                                 let user = User.cachedObjectWithID((tmpUser!.objectForKey("userid") as! NSNumber).stringValue)
                                                 user.city=(tmpUser!.objectForKey("city") as? String) ?? ""
                                                 user.country=(tmpUser!.objectForKey("country") as? String) ?? ""
-                                                user.headimageurl=(tmpUser!.objectForKey("headimageurl") as? String) ?? ""
+                                                var tmpUrl=(tmpData!.objectForKey("headimageurl") as? String) ?? ""
+                                                if (tmpUrl != "")
+                                                {
+                                                    if (tmpUrl.containsString("http"))==false
+                                                    {
+                                                        tmpUrl=(NetworkManager.defaultManager?.website)!+tmpUrl
+                                                    }
+                                                    user.headimageurl=NSData(contentsOfURL: NSURL(string: tmpUrl)!)
+                                                }
                                                 user.language=(tmpUser!.objectForKey("language") as? String) ?? ""
                                                 user.mobile=(tmpUser!.objectForKey("mobile") as? String) ?? ""
                                                 user.name=(tmpUser!.objectForKey("nickname") as? String) ?? ""

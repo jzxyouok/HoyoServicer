@@ -16,9 +16,13 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         self.automaticallyAdjustsScrollViewInsets=false
         tableView.registerNib(UINib(nibName: "MyCenterTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyCenterTableViewCell")
         tableView.separatorStyle=UITableViewCellSeparatorStyle.None
-
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CurrentUserDidChange), name: CurrentUserDidChangeNotificationName, object: nil)
+    
     }
-
+    
+    func CurrentUserDidChange() {
+        self.tableView.reloadData()
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden=false
@@ -49,10 +53,14 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCenterTableViewCell", forIndexPath: indexPath) as! MyCenterTableViewCell
         cell.selectionStyle=UITableViewCellSelectionStyle.None
         cell.delegate=self
-        if User.currentUser?.headimageurl != ""
+        
+        if User.currentUser?.headimageurl != nil
         {
-            cell.headImg.sd_setImageWithURL(NSURL(string: (User.currentUser?.headimageurl)!), placeholderImage: cell.headImg.image)
+            
+            cell.headImg.image=UIImage(data: (User.currentUser?.headimageurl)!)
+
         }
+        
         cell.phone.text=User.currentUser?.mobile
         cell.jobNo.text="(工号:"+(User.currentUser?.userid)!+")"
         cell.name.text=User.currentUser?.name
