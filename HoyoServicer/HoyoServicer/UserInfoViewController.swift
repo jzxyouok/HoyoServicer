@@ -144,8 +144,6 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
         
         
         
-        
-        
 
     }
     
@@ -190,11 +188,9 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
         }
         else{
         
-      
-
-      
    
         let  imageData:NSData = UIImageJPEGRepresentation(headImg.image!, 0.001)!
+        print(sexParam)
         
         print(self.sex.text)
         let  adressDetail

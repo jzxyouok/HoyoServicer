@@ -175,7 +175,14 @@ class User: DataObject {
                                                 user.openid=(tmpData!.objectForKey("openid") as? String) ?? ""
                                                 user.province=(tmpData!.objectForKey("province") as? String) ?? ""
                                                 user.scope=(tmpData!.objectForKey("scope") as? String) ?? ""
-                                                user.sex=(tmpData!.objectForKey("sex") as? String) ?? ""
+                                                let tmpSex=tmpData!.objectForKey("sex")
+                                                if ((tmpSex?.isKindOfClass(NSNumber.classForCoder())) == true)
+                                                {
+                                                    user.sex=(tmpSex as! NSNumber).stringValue
+                                                }
+                                                else{
+                                                    user.sex=""
+                                                }
                                                 let tmpDic=tmpData!.objectForKey("GroupDetails")
                                                 if ((tmpDic?.isKindOfClass(NSDictionary.classForCoder())) == true)
                                                 {
@@ -211,8 +218,9 @@ class User: DataObject {
         }
         NetworkManager.defaultManager!.request("UpdateUserInfo", GETParameters: nil, POSTParameters: dataDic, constructingBodyWithBlock: constructingBlock, success: {
             data in
-          //  print(data)
+          print(data)
             let tmpData=data.objectForKey("data")
+            print(tmpData)
             let user = User.cachedObjectWithID((tmpData!.objectForKey("userid") as! NSNumber).stringValue)
             user.city=(tmpData!.objectForKey("city") as? String) ?? ""
             user.country=(tmpData!.objectForKey("country") as? String) ?? ""
@@ -231,7 +239,15 @@ class User: DataObject {
             user.openid=(tmpData!.objectForKey("openid") as? String) ?? ""
             user.province=(tmpData!.objectForKey("province") as? String) ?? ""
             user.scope=(tmpData!.objectForKey("scope") as? String) ?? ""
-            user.sex=(tmpData!.objectForKey("sex") as? String) ?? ""
+            let tmpSex=tmpData!.objectForKey("sex")
+            if ((tmpSex?.isKindOfClass(NSNumber.classForCoder())) == true)
+            {
+                user.sex=(tmpSex as! NSNumber).stringValue
+            }
+            else{
+               user.sex=""
+            }
+
             let tmpDic=tmpData!.objectForKey("GroupDetails")
             if ((tmpDic?.isKindOfClass(NSDictionary.classForCoder())) == true)
             {
@@ -391,7 +407,14 @@ class User: DataObject {
                                                 user.openid=(tmpUser!.objectForKey("openid") as? String) ?? ""
                                                 user.province=(tmpUser!.objectForKey("province") as? String) ?? ""
                                                 user.scope=(tmpUser!.objectForKey("scope") as? String) ?? ""
-                                                user.sex=(tmpUser!.objectForKey("sex") as? String) ?? ""
+                                                let tmpSex=tmpUser!.objectForKey("sex")
+                                                if ((tmpSex?.isKindOfClass(NSNumber.classForCoder())) == true)
+                                                {
+                                                    user.sex=(tmpSex as! NSNumber).stringValue
+                                                }
+                                                else{
+                                                    user.sex=""
+                                                }
                                                 user.score=(tmpData!.objectForKey("score") as? String) ?? ""
                                                 user.bdimgs=(tmpData!.objectForKey("bdimgs") as? String) ?? ""
                                                 user.bannerimgs=(tmpData!.objectForKey("bannerimgs") as? String) ?? ""
