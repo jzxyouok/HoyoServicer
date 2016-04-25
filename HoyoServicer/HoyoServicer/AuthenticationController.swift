@@ -15,18 +15,45 @@ class AuthenticationController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var centerViewContainer: UIView!
     @IBOutlet weak var firstViewContainer: UIView!
+    @IBOutlet weak var verifierStateLabel: UILabel!
     @IBOutlet weak var verifyButton: UIButton!
     @IBAction func verifyClick(sender: AnyObject) {
         
-        secondViewContainer?.hidden = !((secondViewContainer?.hidden)!)
-        verifyButton.setTitle(((secondViewContainer?.hidden)!)==true ? "身份验证":"提交", forState: .Normal)
-        if dissCallBack != nil {
-            leftButton.hidden = ((secondViewContainer?.hidden)!)
+        if ((secondViewContainer?.hidden)!)==false {//第二个页面的点击事件处理
+            let frontData=UIImageJPEGRepresentation((secondViewContainer?.imageButton1.imageView?.image)!, 0.001)! as NSData
+            let backData=UIImageJPEGRepresentation((secondViewContainer?.imageButton2.imageView?.image)!, 0.001)! as NSData
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            User.UploadImages(frontData, backImg: backData, success: {
+                [weak self] in
+                MBProgressHUD.hideHUDForView(self!.view, animated: true)
+                self!.verifierStateLabel.text="正在审核中。。。"
+                self!.secondViewContainer?.hidden=true
+                self!.verifyButton.setTitle("身份验证", forState: .Normal)
+                self!.verifyButton.backgroundColor=UIColor.grayColor()
+                self!.verifyButton.enabled=false
+                if self!.dissCallBack != nil {
+                    self!.leftButton.hidden = true
+                }
+                }, failure: { (error) in
+                    print(error)
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
+            })
+        }else//第一个页面的点击事件处理
+        {
+            secondViewContainer?.hidden=false
+            verifyButton.setTitle("提交", forState: .Normal)
+            verifyButton.backgroundColor=UIColor.grayColor()
+            verifyButton.enabled=false
+            leftButton.hidden=false
+            
         }
+        
     }
     var secondViewContainer:AuthDetailView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         secondViewContainer=NSBundle.mainBundle().loadNibNamed("AuthDetailView", owner: nil, options: nil).last as? AuthDetailView
         centerViewContainer.addSubview(secondViewContainer!)
         secondViewContainer?.snp_makeConstraints(closure: { (make) in
@@ -39,10 +66,21 @@ class AuthenticationController: UIViewController {
         secondViewContainer?.imageButton2.addTarget(self, action: #selector(cameraClick), forControlEvents: .TouchUpInside)
         leftButton.hidden = !(dissCallBack == nil)
         rightButton.hidden = (dissCallBack == nil)
+        initFrontData=UIImageJPEGRepresentation((secondViewContainer?.imageButton1.imageView?.image)!, 0.001)! as NSData
+        initBackData=UIImageJPEGRepresentation((secondViewContainer?.imageButton2.imageView?.image)!, 0.001)! as NSData
+        //获取认证信息
+        verifyButton.enabled=true
+        verifyButton.backgroundColor=UIColor.grayColor()
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         User.GetNowAuthorityDetail({
-            print("")
-            }) { (error) in
-                print(error)
+            [weak self] in
+            MBProgressHUD.hideHUDForView(self!.view, animated: true)
+            self!.verifierStateLabel.text="您的信息正在审核中。。。"//"您的信息已通过审核"，"您尚未通过身份认证"
+            self!.verifyButton.enabled=true//false
+            self!.verifyButton.backgroundColor=UIColor.grayColor()//UIColor(red: 252/255, green: 134/255, blue: 62/255, alpha: 1)
+        }) { (error) in
+            print(error)
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
         }
         // Do any additional setup after loading the view.
     }
@@ -66,7 +104,12 @@ class AuthenticationController: UIViewController {
         alert.addButton("相册") {
             [weak self] in
             let libraryViewController = CameraViewController.imagePickerViewController(true) { [weak self] image, asset in
-                button.setImage(image, forState: .Normal)// = image
+                if image != nil
+                {
+                    button.setImage(image, forState: .Normal)
+                    self!.checkCommitButtonIsEnable()
+                }
+                
                 self!.dismissViewControllerAnimated(true, completion: nil)
             }
             
@@ -75,7 +118,11 @@ class AuthenticationController: UIViewController {
         alert.addButton("拍摄") {
             [weak self] in
             let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true) { [weak self] image, asset in
-                button.setImage(image, forState: .Normal)
+                if image != nil
+                {
+                    button.setImage(image, forState: .Normal)
+                    self!.checkCommitButtonIsEnable()
+                }
                 
                 self!.dismissViewControllerAnimated(true, completion: nil)
             }
@@ -83,9 +130,19 @@ class AuthenticationController: UIViewController {
         }
         alert.addButton("取消", action: {})
         alert.showInfo("", subTitle: "请选择")
-        
-        
-       
+   
+    }
+    var initFrontData:NSData?
+    var initBackData:NSData?
+    
+    private func checkCommitButtonIsEnable()
+    {
+        let frontData=UIImageJPEGRepresentation((secondViewContainer?.imageButton1.imageView?.image)!, 0.001)! as NSData
+        let backData=UIImageJPEGRepresentation((secondViewContainer?.imageButton2.imageView?.image)!, 0.001)! as NSData
+        if !(initFrontData==frontData||initBackData==backData) {
+            verifyButton.enabled=true
+            verifyButton.backgroundColor=UIColor(red: 252/255, green: 134/255, blue: 62/255, alpha: 1)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

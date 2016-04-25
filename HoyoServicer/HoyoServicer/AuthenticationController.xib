@@ -12,6 +12,7 @@
                 <outlet property="firstViewContainer" destination="NUT-ve-8Rd" id="kTO-5k-cyO"/>
                 <outlet property="leftButton" destination="4Mv-MU-jRw" id="ZQO-wY-8dc"/>
                 <outlet property="rightButton" destination="Uoy-H5-Jan" id="ZRL-ZX-xBy"/>
+                <outlet property="verifierStateLabel" destination="HpJ-cy-hjQ" id="gNI-e9-IMf"/>
                 <outlet property="verifyButton" destination="zyY-vG-AW5" id="ws0-cb-dVa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

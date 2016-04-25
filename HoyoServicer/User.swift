@@ -278,17 +278,25 @@ class User: DataObject {
                                             failure: failure)
     }
     //  /Upload/Images                   上传图片接口
-    class func UploadImages(order: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
-        NetworkManager.defaultManager!.POST("UploadImages",
-                                            parameters:[
-                                                "order":order
-            ],
-                                            success: {
-                                                data in
-                                                print(data)
-                                                success!()
-            },
-                                            failure: failure)
+    class func UploadImages(frontImg:NSData,backImg:NSData, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
+        var constructingBlock:((AFMultipartFormData?) -> Void)?=nil
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmmss"
+        let str = formatter.stringFromDate(NSDate())
+        let fileName = NSString(format: "%@", str)
+        constructingBlock={
+            data in
+            var _ = data!.appendPartWithFileData((frontImg), name: (fileName as String), fileName: "frontImg", mimeType: "image/png")
+            data!.appendPartWithFileData((backImg), name: (fileName as String), fileName: "backImg", mimeType: "image/png")
+        }
+        
+        NetworkManager.defaultManager!.request("UploadImages", GETParameters: nil, POSTParameters: ["order":"cardvf"], constructingBodyWithBlock: constructingBlock, success: {
+            data in
+            print(data)
+            success!()
+            }, failure: failure)
+        
     }
     //  /AppInterface/GetOrderList       分页获取可抢订单列表
     class func GetOrderList(paramDic: NSDictionary, success: (([Order]) -> Void)?, failure: ((NSError) -> Void)?) {
