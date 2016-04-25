@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "User.swift"
-            timestampString = "483242705.584113"
+            timestampString = "483245795.098773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "AppRegister(_:cardid:password:success:failure:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,7 +42,7 @@
                   moduleName = "HoyoServicer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhaobing/Desktop/HoyoServicer_Yang/HoyoServicer/HoyoServicer/LoginAndRegisterViewController.swift"
-                  timestampString = "483244417.72295"
+                  timestampString = "483264319.221678"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "185"
@@ -57,7 +57,7 @@
                   moduleName = "HoyoServicer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhaobing/Desktop/HoyoServicer_Yang/HoyoServicer/HoyoServicer/LoginAndRegisterViewController.swift"
-                  timestampString = "483244417.72316"
+                  timestampString = "483264319.221876"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "185"
@@ -80,6 +80,38 @@
             startingLineNumber = "184"
             endingLineNumber = "184"
             landmarkName = "buttonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HoyoServicer/MyEvaluatTableViewController.swift"
+            timestampString = "483245775.574766"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "User.swift"
+            timestampString = "483247182.571001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "470"
+            endingLineNumber = "470"
+            landmarkName = "GetNowAuthorityDetail(_:failure:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

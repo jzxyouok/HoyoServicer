@@ -39,6 +39,11 @@ class AuthenticationController: UIViewController {
         secondViewContainer?.imageButton2.addTarget(self, action: #selector(cameraClick), forControlEvents: .TouchUpInside)
         leftButton.hidden = !(dissCallBack == nil)
         rightButton.hidden = (dissCallBack == nil)
+        User.GetNowAuthorityDetail({
+            print("")
+            }) { (error) in
+                print(error)
+        }
         // Do any additional setup after loading the view.
     }
     func barButtonClick(button:UIButton)

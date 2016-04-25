@@ -56,7 +56,7 @@ class NetworkManager: NSObject {
             return nil
         }
         // 添加token
-        let tmpParameters = NSMutableDictionary(dictionary: POSTParameters!) 
+        let tmpParameters = NSMutableDictionary(dictionary: POSTParameters ?? NSDictionary())
         tmpParameters.setObject(userToken, forKey: UserDefaultsUserTokenKey)
         print(tmpParameters)
         return manager.POST(URLString!,

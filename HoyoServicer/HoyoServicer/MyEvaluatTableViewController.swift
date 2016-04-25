@@ -18,6 +18,11 @@ class MyEvaluatTableViewController: UITableViewController {
         tableView!.registerNib(UINib(nibName: "MyEvaluatCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyEvaluatCell")
         tableView!.registerNib(UINib(nibName: "MyEvaluatHeadCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "MyEvaluatHeadCell")
         tableView!.separatorStyle=UITableViewCellSeparatorStyle.None
+        User.GetMyScoreDetails({
+            print("")
+            }) { (error) in
+                
+        }
     }
 
     override func didReceiveMemoryWarning() {

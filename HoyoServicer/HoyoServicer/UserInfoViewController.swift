@@ -126,7 +126,7 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
     //返回
     
     override func doBack() {
-        if User.currentUser?.headimageurl==headImg.image&&name.text=User.currentUser?.name{
+        if name.text==User.currentUser?.name{
             self.navigationController?.popViewControllerAnimated(true) 
         }
         else{

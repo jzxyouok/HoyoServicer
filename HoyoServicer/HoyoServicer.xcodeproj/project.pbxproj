@@ -900,16 +900,16 @@
 		8D340D661CA9074000407F30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8D28F4821CABB10C00C7E99B /* AuthenticationController.swift */,
-				8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */,
 				8DB9EA8C1CB788A2005E6E83 /* UserInfoViewController.swift */,
 				8DB9EA8D1CB788A2005E6E83 /* UserInfoViewController.xib */,
-				8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */,
-				8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */,
-				8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */,
 				8D977D9D1CBA07790049514E /* MyExamViewController.swift */,
 				8D977D9E1CBA07790049514E /* MyExamViewController.xib */,
+				8D28F4821CABB10C00C7E99B /* AuthenticationController.swift */,
+				8D28F4831CABB10C00C7E99B /* AuthenticationController.xib */,
 				8DF9D4741CBA2ED5006EB3A7 /* SelectIDTableViewController.swift */,
+				8DEED02E1CB7FDF800C887C4 /* MyEvaluatTableViewController.swift */,
+				8DB9EA931CB7ADFC005E6E83 /* SettingViewController.swift */,
+				8DB9EA941CB7ADFC005E6E83 /* SettingViewController.xib */,
 				8D2956891CBC065100F88698 /* SelectAdressTableViewController.swift */,
 				8DCAF0321CC6703F009921FE /* MyTeamTableViewController.swift */,
 				3B8F2F571CC7B12F00787A8E /* TeamListTableViewController.swift */,

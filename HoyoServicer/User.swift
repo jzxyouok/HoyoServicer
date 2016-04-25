@@ -211,7 +211,6 @@ class User: DataObject {
         }
         NetworkManager.defaultManager!.request("UpdateUserInfo", GETParameters: nil, POSTParameters: dataDic, constructingBodyWithBlock: constructingBlock, success: {
             data in
-            print(data)
             let tmpData=data.objectForKey("data")
             let user = User.cachedObjectWithID((tmpData!.objectForKey("userid") as! NSNumber).stringValue)
             user.city=(tmpData!.objectForKey("city") as? String) ?? ""
