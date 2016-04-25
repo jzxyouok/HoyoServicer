@@ -124,26 +124,31 @@ class UserInfoViewController: UIViewController,SelectIDTableViewControllerDelega
     
     
     //返回
+    
     override func doBack() {
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-     let parames = ["headImage": (User.currentUser?.headimageurl)!,"province":(User.currentUser?.province)!,"city":(User.currentUser?.city)!,"sex":(User.currentUser?.sex)!]
-        User.UpdateUserInfo(parames, success: {
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
-            self.navigationController?.popViewControllerAnimated(true)
-        }) { (error) in
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
-            let alertView=SCLAlertView()
-            alertView.addButton("重新试一下", action: {
-                [weak self] in
-                self?.doBack()
-            })
-            alertView.addButton("取消", action: {
-                self.navigationController?.popViewControllerAnimated(true)
-            })
-            alertView.showError("错误提示", subTitle: error.localizedDescription)
+        if User.currentUser?.headimageurl==headImg.image&&name.text=User.currentUser?.name{
+            self.navigationController?.popViewControllerAnimated(true) 
         }
+        else{
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            let parames = ["headImage": (User.currentUser?.headimageurl)!,"province":(User.currentUser?.province)!,"city":(User.currentUser?.city)!,"sex":(User.currentUser?.sex)!]
+            User.UpdateUserInfo(parames, success: {
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                self.navigationController?.popViewControllerAnimated(true)
+            }) { (error) in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                let alertView=SCLAlertView()
+                alertView.addButton("重新试一下", action: {
+                    [weak self] in
+                    self?.doBack()
+                    })
+                alertView.addButton("取消", action: {
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+                alertView.showError("错误提示", subTitle: error.localizedDescription)
+            }
         
-        
+        }
         
     }
     

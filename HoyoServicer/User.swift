@@ -22,6 +22,7 @@ class User: DataObject {
             NSNotificationCenter.defaultCenter().postNotificationName(CurrentUserDidChangeNotificationName, object: nil)
         }
     }
+   
     //检查是否自动登录
     class func loginWithLocalUserInfo(success success: ((User) -> Void)?, failure: ((NSError) -> Void)?) {
         
