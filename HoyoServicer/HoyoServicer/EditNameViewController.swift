@@ -9,39 +9,42 @@
 import UIKit
 
 class EditNameViewController: UIViewController,UITextFieldDelegate {
-
-    var tmpEditName :String?
+    
+    
     @IBOutlet weak var editName: UITextField!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-self.title = "名字"
+        self.title = "名字"
         
         editName.delegate = self
         setNavigationItem("取消", selector: #selector(UIViewController.doBack), isRight: false)
-       setNavigationItem("保存", selector:#selector(EditNameViewController.doBackAndSave), isRight: true)
+        setNavigationItem("保存", selector:#selector(EditNameViewController.doBackAndSave), isRight: true)
         self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
-
+        self.editName.text =  User.currentUser?.name
     }
     func doBackAndSave()
     {
-        User.currentUser?.name = self.editName.text!
+        if !(self.editName.text! == ""||self.editName.text! == User.currentUser?.name) {
+            callBack!(self.editName.text!)
+        }
+        
         self.navigationController?.popViewControllerAnimated(true)
-    
+        
     }
     
     override func doBack() {
         
-       
+        
         self.navigationController?.popViewControllerAnimated(true)
         
     }
     
-   func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-    
-    print("修改中")
-    
-    self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(47, g: 210, b: 50, a: 1)
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        
+        print("修改中")
+        
+        self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(47, g: 210, b: 50, a: 1)
         return  true
     }
     
@@ -49,7 +52,7 @@ self.title = "名字"
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.editName.text =  tmpEditName
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,15 +60,33 @@ self.title = "名字"
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
-         User.currentUser?.name = self.editName.text!
         editName.resignFirstResponder()
-        self.navigationController?.popViewControllerAnimated(true)
+       doBackAndSave()
         return true
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         editName.resignFirstResponder()
-         self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
+        self.navigationItem.rightBarButtonItem?.tintColor = COLORRGBA(50, g: 104, b: 51, a: 1)
     }
-  
-
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    var callBack:((String)->Void)?
+    
+    convenience  init(callback:((String)->Void)) {
+        
+        var nibNameOrNil = String?("EditNameViewController")
+        if NSBundle.mainBundle().pathForResource(nibNameOrNil, ofType: "xib") == nil
+        {
+            nibNameOrNil = nil
+        }
+        self.init(nibName: nibNameOrNil, bundle: nil)
+        callBack=callback
+    }
+    required init(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+        
+    }
 }

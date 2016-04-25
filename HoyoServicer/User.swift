@@ -211,7 +211,7 @@ class User: DataObject {
         }
         NetworkManager.defaultManager!.request("UpdateUserInfo", GETParameters: nil, POSTParameters: dataDic, constructingBodyWithBlock: constructingBlock, success: {
             data in
-            print(data)
+          //  print(data)
             let tmpData=data.objectForKey("data")
             let user = User.cachedObjectWithID((tmpData!.objectForKey("userid") as! NSNumber).stringValue)
             user.city=(tmpData!.objectForKey("city") as? String) ?? ""
@@ -298,7 +298,7 @@ class User: DataObject {
                                             success: {
                                                 data in
                                                 print(data)
-                                                var orderArr=[Order]()
+                                                let orderArr=[Order]()
 //                                                for i in data
 //                                                {
 //                                                    let tmporder=Order()

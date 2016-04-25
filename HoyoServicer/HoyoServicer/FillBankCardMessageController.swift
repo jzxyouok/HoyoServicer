@@ -21,7 +21,7 @@ class FillBankCardMessageController: UIViewController {
         
     }
     convenience  init() {
-        var nibNameOrNil = String?("DetailOfNewsViewController")
+        var nibNameOrNil = String?("FillBankCardMessageController")
         
         //考虑到xib文件可能不存在或被删，故加入判断
         

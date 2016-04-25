@@ -22,7 +22,7 @@ var tableView: UITableView!
         
     }
     convenience  init() {
-        var nibNameOrNil = String?("DetailOfNewsViewController")
+        var nibNameOrNil = String?("BoundBankCardViewController")
         
         //考虑到xib文件可能不存在或被删，故加入判断
         

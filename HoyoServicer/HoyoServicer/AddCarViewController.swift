@@ -50,7 +50,7 @@ cardOwner.delegate = self
         
     }
     convenience  init() {
-        var nibNameOrNil = String?("DetailOfNewsViewController")
+        var nibNameOrNil = String?("AddCarViewController")
         
         //考虑到xib文件可能不存在或被删，故加入判断
         
