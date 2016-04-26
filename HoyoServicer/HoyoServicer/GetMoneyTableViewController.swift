@@ -15,7 +15,7 @@ class GetMoneyTableViewController: UITableViewController,GetMoneyCellDelegate{
 
         tableView.registerNib(UINib(nibName: "GetMoneyCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "GetMoneyCell")
         tableView.separatorStyle=UITableViewCellSeparatorStyle.None
-    setNavigationItem("back.png", selector: Selector("doBack"), isRight: false)
+        setNavigationItem("back.png", selector:#selector(doBack), isRight: false)
         
     self.title = "提现"
     }

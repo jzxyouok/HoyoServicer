@@ -10,30 +10,30 @@ import UIKit
 //typealias InputClosureType = (String) -> Void   //定义闭包类型（特定的函数类型函数类型）
 class SetSexViewController: UIViewController,UIAlertViewDelegate {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
-        
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-    }
-        required init(coder aDecoder: NSCoder) {
-        
-        fatalError("init(coder:) has not been implemented")
-        
-    }
+
 
     @IBOutlet weak var womenImg: UIImageView!
     @IBOutlet weak var manImg: UIImageView!
+     @IBOutlet weak var secretImage: UIImageView!
     @IBAction func womenClick(sender: AnyObject) {
         sex="女"
-        User.currentUser?.sex = sex
+      callBack!(sex)
         
       self.navigationController?.popViewControllerAnimated(true)
     }
     @IBAction func manClick(sender: AnyObject) {
         sex="男"
-        User.currentUser?.sex = sex
+       callBack!(sex)
     
 
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func secretClick(sender: AnyObject) {
+        sex="保密"
+     callBack!(sex)
+        
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
     var tmpSex:String?//初始化时外部传入的值
@@ -42,6 +42,7 @@ class SetSexViewController: UIViewController,UIAlertViewDelegate {
             print(sex)
             womenImg.hidden = sex=="男"
             manImg.hidden = sex=="女"
+            secretImage.hidden = sex == "保密"
         }
     }
     override func viewDidLoad() {
@@ -69,6 +70,7 @@ class SetSexViewController: UIViewController,UIAlertViewDelegate {
 ////        {
 ////            self.navigationController?.popViewControllerAnimated(true)
 ////        }
+    
     self.navigationController?.popViewControllerAnimated(true)
     
     }
@@ -111,8 +113,38 @@ class SetSexViewController: UIViewController,UIAlertViewDelegate {
         
     }
     
+        var callBack:((String)->Void)?
     
+//    convenience  init(callback:((String)->Void)) {
+//        
+//        var nibNameOrNil = String?("SetSexViewController")
+//        if NSBundle.mainBundle().pathForResource(nibNameOrNil, ofType: "xib") == nil
+//        {
+//            nibNameOrNil = nil
+//        }
+//        self.init(nibName: nibNameOrNil, bundle: nil)
+//        callBack=callback
+//    }
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    convenience init(callback:((String)->Void))
+    {
+        var nibNameOrNil = String?("EditNameViewController")
+        if NSBundle.mainBundle().pathForResource(nibNameOrNil, ofType: "xib") == nil
+        {
+            nibNameOrNil = nil
+        }
+        self.init(nibName: nibNameOrNil, bundle: nil)
+        callBack=callback
+    
+    }
 
+    required init(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+        
+    }
 
 
 }
