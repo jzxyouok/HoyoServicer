@@ -7,33 +7,27 @@
 //
 
 import UIKit
-import INTULocationManager
+//import INTULocationManager
 
 class MainViewController: UITabBarController,BMKGeoCodeSearchDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let locMgr = INTULocationManager.sharedInstance()
-        locMgr.requestLocationWithDesiredAccuracy(INTULocationAccuracy.City, timeout: 10.0, delayUntilAuthorized: true) { (location1, locationAccuracy, status) in
-            if (status == INTULocationStatus.Success) {
-                print(location1.coordinate)
-                //发起反向地理编码检索
-                let pt = CLLocationCoordinate2D(latitude: location1.coordinate.latitude, longitude: location1.coordinate.longitude)
-                let reverseGeoCodeSearchOption = BMKReverseGeoCodeOption()
-                reverseGeoCodeSearchOption.reverseGeoPoint = pt
-                let _searcher=BMKGeoCodeSearch()
-                _searcher.delegate=self
-                let flag:Bool = _searcher.reverseGeoCode(reverseGeoCodeSearchOption)
-                if(flag==false)
-                {
-                    print("反geo检索发送失败")
-                }
-               
-            }
-            else {
-                print("失败")
-            }
+        let locationManager = CLLocationManager()
+        let location1=locationManager.location
+        //发起反向地理编码检索
+        let pt = CLLocationCoordinate2D(latitude: location1!.coordinate.latitude, longitude: location1!.coordinate.longitude)
+        let reverseGeoCodeSearchOption = BMKReverseGeoCodeOption()
+        reverseGeoCodeSearchOption.reverseGeoPoint = pt
+        let _searcher=BMKGeoCodeSearch()
+        _searcher.delegate=self
+        let flag:Bool = _searcher.reverseGeoCode(reverseGeoCodeSearchOption)
+        if(flag==false)
+        {
+            print("反geo检索发送失败")
         }
+        
+        
         
         
         
