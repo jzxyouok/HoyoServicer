@@ -25,11 +25,8 @@ class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
         }
      
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CurrentUserDidChange), name: CurrentUserDidChangeNotificationName, object: nil)
-        
-   
+
     }
-    var manager:CLLocationManager?
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         //定位
