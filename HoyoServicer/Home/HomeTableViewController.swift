@@ -40,7 +40,7 @@ class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations[0]
         
-        let o2d = newLocation.coordinate
+        //let o2d = newLocation.coordinate
         manager.stopUpdatingLocation()
         let  geoC = CLGeocoder()
         geoC.reverseGeocodeLocation(newLocation) { (placemarks, error) in
@@ -48,20 +48,15 @@ class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
             {
                 let placemark=placemarks?.first
                 print("===========\n");
-                
-                
                 print("成功 %@",placemark?.classForCoder);
-                //self.address.text = placemark.name;
                 print("地理名称%@",placemark!.name);
                 print("街道名%@",placemark!.thoroughfare);
                 print("国家%@",placemark!.country);
                 print("城市%@",placemark!.locality);
                 print("区: %@",placemark!.subLocality);
-                
-                
+ 
                 print("==========\n");
-                
-                
+         
             }else
             {
                 print("错误");

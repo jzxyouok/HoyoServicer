@@ -21,9 +21,9 @@ class RobListOneController: UITableViewController {
          tableView.registerNib(UINib(nibName: "RobListViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "RobListViewCell")
         
         
-        setNavigationItem("back.png", selector: Selector("doBack"), isRight: false)
+        setNavigationItem("back.png", selector: #selector(doBack), isRight: false)
 
-    setNavigationItem("上海", selector: Selector("doRight"), isRight: true)
+        setNavigationItem("上海", selector: #selector(doRight), isRight: true)
    
     }
 

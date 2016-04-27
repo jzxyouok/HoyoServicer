@@ -89,7 +89,7 @@ class FinancialViewController: UIViewController,UITableViewDataSource,UITableVie
           addBackControl()
         initTableView()
               seg.tintColor = COLORRGBA(58, g: 58, b: 58, a: 1)
-        seg.addTarget(self, action: "segChange:", forControlEvents: .ValueChanged)
+        seg.addTarget(self, action: #selector(segChange), forControlEvents: .ValueChanged)
 
         seg.selectedSegmentIndex = 0
         

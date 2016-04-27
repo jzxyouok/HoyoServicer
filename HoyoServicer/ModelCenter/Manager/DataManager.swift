@@ -31,7 +31,7 @@ class DataManager: NSObject {
     }
     func fetch(entityName: String, ID: NSString, error: NSErrorPointer) -> DataObject? {
         let request = NSFetchRequest(entityName: entityName)
-        request.predicate = NSPredicate(format: "userid = %@", ID)
+        request.predicate = NSPredicate(format: "id = %@", ID)
         request.fetchLimit = 1
         var results:[AnyObject]?   
         do {
@@ -65,7 +65,7 @@ class DataManager: NSObject {
         var object = fetch(entityName, ID: ID, error: nil)
         if object == nil {
             object = create(entityName)
-            object!.setValue(ID, forKey: "userid")
+            object!.setValue(ID, forKey: "id")
         }
         return object!
     }
