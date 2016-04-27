@@ -40,7 +40,7 @@ class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations[0]
         
-        //let o2d = newLocation.coordinate
+        let o2d = newLocation.coordinate
         manager.stopUpdatingLocation()
         let  geoC = CLGeocoder()
         geoC.reverseGeocodeLocation(newLocation) { (placemarks, error) in
