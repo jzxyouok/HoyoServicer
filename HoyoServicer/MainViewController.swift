@@ -7,30 +7,11 @@
 //
 
 import UIKit
-//import INTULocationManager
 
-class MainViewController: UITabBarController,BMKGeoCodeSearchDelegate {
+class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let locationManager = CLLocationManager()
-        let location1=locationManager.location
-        //发起反向地理编码检索
-        let pt = CLLocationCoordinate2D(latitude: location1!.coordinate.latitude, longitude: location1!.coordinate.longitude)
-        let reverseGeoCodeSearchOption = BMKReverseGeoCodeOption()
-        reverseGeoCodeSearchOption.reverseGeoPoint = pt
-        let _searcher=BMKGeoCodeSearch()
-        _searcher.delegate=self
-        let flag:Bool = _searcher.reverseGeoCode(reverseGeoCodeSearchOption)
-        if(flag==false)
-        {
-            print("反geo检索发送失败")
-        }
-        
-        
-        
-        
-        
+        super.viewDidLoad() 
         let c1=HomeTableViewController()
         c1.tabBarItem.title="首页"
         c1.tabBarItem.image=UIImage(named: "HomeIcon")
@@ -74,13 +55,7 @@ class MainViewController: UITabBarController,BMKGeoCodeSearchDelegate {
         super.viewDidAppear(animated)
         
     }
-    func onGetReverseGeoCodeResult(searcher: BMKGeoCodeSearch!, result: BMKReverseGeoCodeResult!, errorCode error: BMKSearchErrorCode) {
-        print(result.addressDetail.province)//省
-        print(result.addressDetail.city)//市
-        print(result.addressDetail.district)//区县
-        print(result.addressDetail.streetName)//街道
-        print(result.addressDetail.streetNumber)//街号
-    }
+    
     /*
      // MARK: - Navigation
      

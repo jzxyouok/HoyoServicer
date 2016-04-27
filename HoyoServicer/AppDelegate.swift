@@ -31,15 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //主视图控制器
     var mainViewController: MainViewController!
     
-    var _mapManager: BMKMapManager?
+   
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //百度地图定位
-        _mapManager = BMKMapManager()
-        // 如果要关注网络及授权验证事件，请设定generalDelegate参数
-        let ret = _mapManager?.start("wkqI7tqbpkrVdpyxBxodtoGtZyylPxSG", generalDelegate: nil)
-        if ret == false {
-            NSLog("manager start failed!")
-        }
+        
         //检查网络状况，无网络，wifi，普通网络三种情况实时变化通知
         reachOfNetwork = Reachability(hostName: "www.baidu.com")
         reachOfNetwork!.startNotifier()

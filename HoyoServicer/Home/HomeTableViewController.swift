@@ -9,10 +9,8 @@
 import UIKit
 import SVPullToRefresh
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets=false
@@ -25,10 +23,56 @@ class HomeTableViewController: UITableViewController {
                 strongSelf.refresh()
             }
         }
-        
-        //self.refresh()
+     
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CurrentUserDidChange), name: CurrentUserDidChangeNotificationName, object: nil)
+        
+   
     }
+    var manager:CLLocationManager?
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //定位
+        let  manager=CLLocationManager()
+        manager.delegate=self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.distanceFilter = 10.0
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
+    }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let newLocation = locations[0]
+        
+        //let o2d = newLocation.coordinate
+        manager.stopUpdatingLocation()
+        let  geoC = CLGeocoder()
+        geoC.reverseGeocodeLocation(newLocation) { (placemarks, error) in
+            if(error == nil)
+            {
+                let placemark=placemarks?.first
+                print("===========\n");
+                
+                
+                print("成功 %@",placemark?.classForCoder);
+                //self.address.text = placemark.name;
+                print("地理名称%@",placemark!.name);
+                print("街道名%@",placemark!.thoroughfare);
+                print("国家%@",placemark!.country);
+                print("城市%@",placemark!.locality);
+                print("区: %@",placemark!.subLocality);
+                
+                
+                print("==========\n");
+                
+                
+            }else
+            {
+                print("错误");
+            }
+        }
+        
+    }
+    
     func CurrentUserDidChange() {
         self.tableView.reloadData()
     }

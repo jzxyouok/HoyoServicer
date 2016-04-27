@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D24C17C1CD056FB006B638E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D24C17B1CD056FB006B638E /* CoreLocation.framework */; };
+		8D24C17E1CD0570B006B638E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D24C17D1CD0570B006B638E /* MapKit.framework */; };
 		8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */; };
 		8D2681EC1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681EA1CA8DB37009E7BAC /* HoyoServicer.xcdatamodeld */; };
 		8D2681F11CA8DB37009E7BAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2681EF1CA8DB37009E7BAC /* LaunchScreen.storyboard */; };
@@ -160,6 +162,8 @@
 		1865C640CE193CAE00B6B2B0 /* Pods-HoyoServicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoyoServicer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoyoServicer/Pods-HoyoServicer.debug.xcconfig"; sourceTree = "<group>"; };
 		55E040ACB6C426D49CDCFEE1 /* Pods-HoyoServicer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoyoServicer.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoyoServicer/Pods-HoyoServicer.release.xcconfig"; sourceTree = "<group>"; };
 		6467DB0AB2C776DEAD3BA491 /* Pods_HoyoServicer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoyoServicer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D24C17B1CD056FB006B638E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8D24C17D1CD0570B006B638E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8D2681E01CA8DB37009E7BAC /* HoyoServicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoyoServicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D2681EB1CA8DB37009E7BAC /* HoyoServicer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoyoServicer.xcdatamodel; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D24C17E1CD0570B006B638E /* MapKit.framework in Frameworks */,
+				8D24C17C1CD056FB006B638E /* CoreLocation.framework in Frameworks */,
 				AF77C862A1198CFF356E0622 /* Pods_HoyoServicer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +762,8 @@
 		E266CB30D571A370AF9EDEF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D24C17D1CD0570B006B638E /* MapKit.framework */,
+				8D24C17B1CD056FB006B638E /* CoreLocation.framework */,
 				6467DB0AB2C776DEAD3BA491 /* Pods_HoyoServicer.framework */,
 			);
 			name = Frameworks;
@@ -1209,7 +1217,7 @@
 				INFOPLIST_FILE = HoyoServicer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengwenxiang.HoyoServicer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ozner.hoyoservicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HoyoServicer-Bridging-Header.h";
@@ -1229,7 +1237,7 @@
 				INFOPLIST_FILE = HoyoServicer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengwenxiang.HoyoServicer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ozner.hoyoservicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HoyoServicer-Bridging-Header.h";
