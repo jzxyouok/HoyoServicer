@@ -30,7 +30,7 @@ extension User {
     @NSManaged var scope: String?
     @NSManaged var score: String?
     @NSManaged var sex: String?
-    @NSManaged var userid: String?
+    @NSManaged var id: String?//userid
     @NSManaged var usertoken: String?
 
 }

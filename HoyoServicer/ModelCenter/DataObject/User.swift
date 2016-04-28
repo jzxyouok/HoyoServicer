@@ -136,7 +136,7 @@ class User: DataObject {
                                                 
                                                 let tmpUserID=data.objectForKey("data") as! NSNumber
                                                 let user = User.cachedObjectWithID(tmpUserID.stringValue)
-                                                user.userid =  tmpUserID.stringValue//userId
+                                                user.id =  tmpUserID.stringValue//userId
                                                 user.usertoken = data.objectForKey("msg") as? String//usertoken
                                                 
                                                 let defaults = NSUserDefaults.standardUserDefaults()

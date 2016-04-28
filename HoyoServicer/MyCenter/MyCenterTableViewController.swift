@@ -62,7 +62,7 @@ class MyCenterTableViewController: UITableViewController,MyCenterTableViewCellDe
         }
         
         cell.phone.text=User.currentUser?.mobile
-        cell.jobNo.text="(工号:"+(User.currentUser?.userid)!+")"
+        cell.jobNo.text="(工号:"+(User.currentUser?.id)!+")"
         cell.name.text=User.currentUser?.name
         return cell
     }
