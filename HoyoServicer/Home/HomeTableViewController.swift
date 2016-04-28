@@ -9,8 +9,11 @@
 import UIKit
 import SVPullToRefresh
 
-class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
 
+class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
+    var  manager :CLLocationManager?
+    var orders=[Order]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets=false
@@ -26,42 +29,64 @@ class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
      
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CurrentUserDidChange), name: CurrentUserDidChangeNotificationName, object: nil)
 
+     
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         //定位
-        let  manager=CLLocationManager()
-        manager.delegate=self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.distanceFilter = 10.0
-        manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
+        manager = CLLocationManager()
+        manager!.delegate=self
+        manager!.desiredAccuracy = kCLLocationAccuracyBest
+        manager!.distanceFilter = 10.0
+        manager!.requestAlwaysAuthorization()
+        manager!.startUpdatingLocation()
     }
+    
+    var addressDic=NSMutableDictionary()
+    var pagesize = 10
+    var pageindex = 0
+    
+
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations[0]
-        
-        let o2d = newLocation.coordinate
+       let o2d = newLocation.coordinate
+
+        //let o2d = newLocation.coordinate
         manager.stopUpdatingLocation()
         let  geoC = CLGeocoder()
+       
         geoC.reverseGeocodeLocation(newLocation) { (placemarks, error) in
             if(error == nil)
             {
+                
                 let placemark=placemarks?.first
+            
+               // addressDic?.setValue(<#T##value: AnyObject?##AnyObject?#>, forKey: <#T##String#>)
                 print("===========\n");
-                
-                
                 print("成功 %@",placemark?.classForCoder);
-                //self.address.text = placemark.name;
                 print("地理名称%@",placemark!.name);
                 print("街道名%@",placemark!.thoroughfare);
                 print("国家%@",placemark!.country);
                 print("城市%@",placemark!.locality);
+                
                 print("区: %@",placemark!.subLocality);
-                
-                
+ 
                 print("==========\n");
+               
+                self.addressDic.setValue(10, forKey: "pagesize")
+                self.addressDic.setValue(1, forKey: "pageindex")
+        
+               
+                self.addressDic.setValue((placemark!.administrativeArea! as String), forKey: "province")
+                self.addressDic.setValue((placemark!.locality! as String), forKey: "city")
+          //  let  latitude =
                 
-                
+                self.addressDic.setValue((o2d.latitude as NSNumber).stringValue, forKey: "lat")
+               
+                self.addressDic.setValue((o2d.longitude as NSNumber).stringValue, forKey: "lng")
+  
+                self.loadData("ywcation", orderby: "location")
             }else
             {
                 print("错误");
@@ -69,6 +94,27 @@ class HomeTableViewController: UITableViewController,CLLocationManagerDelegate {
         }
         
     }
+    
+    func loadData(action :String,orderby : String){
+    
+        self.addressDic.setValue("location", forKey: "orderby")
+        self.addressDic.setValue("ywcation", forKey: "action")
+  
+User.GetOrderList(self.addressDic, success: { orders in
+
+
+//    or = order
+ self.orders=orders
+    print("成功.....-------")
+ 
+    }) { (error) in
+        
+        print(error)
+        }
+        
+    
+    }
+
     
     func CurrentUserDidChange() {
         self.tableView.reloadData()

@@ -94,9 +94,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-ve-8Rd">
                             <rect key="frame" x="0.0" y="181.5" width="375" height="156"/>
                             <subviews>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="auth_wait" translatesAutoresizingMaskIntoConstraints="NO" id="VTM-RC-9Dz">
-                                    <rect key="frame" x="147.5" y="0.5" width="80" height="80"/>
-                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只有身份认证通过，才能正常接单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIs-GD-0ZK">
                                     <rect key="frame" x="15" y="141" width="345" height="15"/>
                                     <constraints>
@@ -114,6 +111,9 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="auth_wait" translatesAutoresizingMaskIntoConstraints="NO" id="VTM-RC-9Dz">
+                                    <rect key="frame" x="147" y="0.0" width="80" height="80"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>

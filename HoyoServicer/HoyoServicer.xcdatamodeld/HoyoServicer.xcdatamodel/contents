@@ -2,8 +2,16 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="DataObject" representedClassName=".DataObject" syncable="YES"/>
     <entity name="Order" representedClassName=".Order" syncable="YES">
-        <attribute name="orderId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="county" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderby" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pageindex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pagesize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="province" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="ServiceAreas" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -38,7 +46,7 @@
     </entity>
     <elements>
         <element name="DataObject" positionX="-63" positionY="-18" width="128" height="45"/>
-        <element name="Order" positionX="-54" positionY="90" width="128" height="75"/>
+        <element name="Order" positionX="-54" positionY="90" width="128" height="195"/>
         <element name="ServiceAreas" positionX="-54" positionY="63" width="128" height="180"/>
         <element name="User" positionX="-54" positionY="0" width="128" height="315"/>
     </elements>

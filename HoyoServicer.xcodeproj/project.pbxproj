@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BBB05C21CD1BA0C00CA6BD8 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBB05C01CD1BA0C00CA6BD8 /* Order+CoreDataProperties.swift */; };
+		3BBB05C31CD1BA0C00CA6BD8 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBB05C11CD1BA0C00CA6BD8 /* Order.swift */; };
 		8D24C17C1CD056FB006B638E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D24C17B1CD056FB006B638E /* CoreLocation.framework */; };
 		8D24C17E1CD0570B006B638E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D24C17D1CD0570B006B638E /* MapKit.framework */; };
 		8D2681E41CA8DB37009E7BAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2681E31CA8DB37009E7BAC /* AppDelegate.swift */; };
@@ -124,8 +126,6 @@
 		E04196471CCF37D5005D08DC /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E04196271CCF37D5005D08DC /* AFURLSessionManager.m */; };
 		E04196481CCF37D5005D08DC /* DataObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041962B1CCF37D5005D08DC /* DataObject+CoreDataProperties.swift */; };
 		E04196491CCF37D5005D08DC /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041962C1CCF37D5005D08DC /* DataObject.swift */; };
-		E041964A1CCF37D5005D08DC /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041962D1CCF37D5005D08DC /* Order+CoreDataProperties.swift */; };
-		E041964B1CCF37D5005D08DC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041962E1CCF37D5005D08DC /* Order.swift */; };
 		E041964C1CCF37D5005D08DC /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041962F1CCF37D5005D08DC /* User+CoreDataProperties.swift */; };
 		E041964D1CCF37D5005D08DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04196301CCF37D5005D08DC /* User.swift */; };
 		E041964E1CCF37D5005D08DC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04196321CCF37D5005D08DC /* DataManager.swift */; };
@@ -160,6 +160,8 @@
 
 /* Begin PBXFileReference section */
 		1865C640CE193CAE00B6B2B0 /* Pods-HoyoServicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoyoServicer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoyoServicer/Pods-HoyoServicer.debug.xcconfig"; sourceTree = "<group>"; };
+		3BBB05C01CD1BA0C00CA6BD8 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BBB05C11CD1BA0C00CA6BD8 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		55E040ACB6C426D49CDCFEE1 /* Pods-HoyoServicer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoyoServicer.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoyoServicer/Pods-HoyoServicer.release.xcconfig"; sourceTree = "<group>"; };
 		6467DB0AB2C776DEAD3BA491 /* Pods_HoyoServicer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoyoServicer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D24C17B1CD056FB006B638E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -295,8 +297,6 @@
 		E04196271CCF37D5005D08DC /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		E041962B1CCF37D5005D08DC /* DataObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E041962C1CCF37D5005D08DC /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
-		E041962D1CCF37D5005D08DC /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E041962E1CCF37D5005D08DC /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		E041962F1CCF37D5005D08DC /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E04196301CCF37D5005D08DC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E04196321CCF37D5005D08DC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -717,10 +717,10 @@
 		E041962A1CCF37D5005D08DC /* DataObject */ = {
 			isa = PBXGroup;
 			children = (
+				3BBB05C01CD1BA0C00CA6BD8 /* Order+CoreDataProperties.swift */,
+				3BBB05C11CD1BA0C00CA6BD8 /* Order.swift */,
 				E041962B1CCF37D5005D08DC /* DataObject+CoreDataProperties.swift */,
 				E041962C1CCF37D5005D08DC /* DataObject.swift */,
-				E041962D1CCF37D5005D08DC /* Order+CoreDataProperties.swift */,
-				E041962E1CCF37D5005D08DC /* Order.swift */,
 				E041962F1CCF37D5005D08DC /* User+CoreDataProperties.swift */,
 				E04196301CCF37D5005D08DC /* User.swift */,
 			);
@@ -840,6 +840,7 @@
 				TargetAttributes = {
 					8D2681DF1CA8DB37009E7BAC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 55B4CEK32J;
 					};
 					8D2681F61CA8DB37009E7BAC = {
 						CreatedOnToolsVersion = 7.3;
@@ -1018,7 +1019,6 @@
 				E04196511CCF37D5005D08DC /* CALayer+Expand.swift in Sources */,
 				E04195711CCF2C7C005D08DC /* RobListMianViewController.swift in Sources */,
 				E04195AE1CCF2D77005D08DC /* ManageTableViewController.swift in Sources */,
-				E041964A1CCF37D5005D08DC /* Order+CoreDataProperties.swift in Sources */,
 				E041964D1CCF37D5005D08DC /* User.swift in Sources */,
 				E041959E1CCF2D77005D08DC /* AchievementControllerViewController.swift in Sources */,
 				E04196031CCF2F41005D08DC /* MyCenterTableViewCell.swift in Sources */,
@@ -1030,6 +1030,7 @@
 				E04195411CCF2B4F005D08DC /* WeiXinURLViewController.swift in Sources */,
 				E04196541CCF37D5005D08DC /* Other+Expand.swift in Sources */,
 				E04195B51CCF2D77005D08DC /* GetMoneyCell.swift in Sources */,
+				3BBB05C31CD1BA0C00CA6BD8 /* Order.swift in Sources */,
 				E04195501CCF2BA3005D08DC /* ForGetPassowViewController.swift in Sources */,
 				E04195F11CCF2F41005D08DC /* EditNameViewController.swift in Sources */,
 				E04195521CCF2BA3005D08DC /* LoginAndRegisterViewController.swift in Sources */,
@@ -1057,6 +1058,7 @@
 				E041960E1CCF2F41005D08DC /* GeneralOfSelectIDCell.swift in Sources */,
 				E04195A81CCF2D77005D08DC /* FinancialViewController.swift in Sources */,
 				E04196471CCF37D5005D08DC /* AFURLSessionManager.m in Sources */,
+				3BBB05C21CD1BA0C00CA6BD8 /* Order+CoreDataProperties.swift in Sources */,
 				E04195A41CCF2D77005D08DC /* FillBankCardMessageController.swift in Sources */,
 				E04196071CCF2F41005D08DC /* MyEvaluatHeadCell.swift in Sources */,
 				E04195A61CCF2D77005D08DC /* DetailFinancialTableViewController.swift in Sources */,
@@ -1071,7 +1073,6 @@
 				E04195541CCF2BA3005D08DC /* LoginFooterView.swift in Sources */,
 				E04195B31CCF2D77005D08DC /* DetailfFinancialViewCell.swift in Sources */,
 				E04195F91CCF2F41005D08DC /* SetSexViewController.swift in Sources */,
-				E041964B1CCF37D5005D08DC /* Order.swift in Sources */,
 				E04195731CCF2C7C005D08DC /* RobListOneController.swift in Sources */,
 				E04195771CCF2C7C005D08DC /* HomeTableViewCell.swift in Sources */,
 				E04196571CCF37D5005D08DC /* UIColor+Expand.swift in Sources */,
@@ -1217,7 +1218,7 @@
 				INFOPLIST_FILE = HoyoServicer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ozner.hoyoservicer;
+				PRODUCT_BUNDLE_IDENTIFIER = dd.zhengwenxiang.HoyoServicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HoyoServicer-Bridging-Header.h";
@@ -1237,7 +1238,7 @@
 				INFOPLIST_FILE = HoyoServicer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ozner.hoyoservicer;
+				PRODUCT_BUNDLE_IDENTIFIER = dd.zhengwenxiang.HoyoServicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HoyoServicer-Bridging-Header.h";

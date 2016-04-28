@@ -318,22 +318,23 @@ class User: DataObject {
     //  /AppInterface/GetOrderList       分页获取可抢订单列表
     class func GetOrderList(paramDic: NSDictionary, success: (([Order]) -> Void)?, failure: ((NSError) -> Void)?) {
         NetworkManager.defaultManager!.POST("GetOrderList",
-                                            parameters:paramDic,
+                                                 parameters:paramDic,
                                             success: {
                                                 data in
-                                                print(data)
-                                                let orderArr=[Order]()
-//                                                for i in data
-//                                                {
-//                                                    let tmporder=Order()
-//                                                    tmporder.orderId=""
-//                                                    tmporder.userId=""
-//                                                    orderArr.append(tmporder)
-//                                                }
-                                                success!(orderArr)
+                                             print(data)
+                                                var orders=[Order]()
+                                                let order=Order()
+                                                order.action = data.objectForKey("action") as? String
+                                                order.city = data .objectForKey("city") as? String
+                                                orders.append(order)
+
+                                                success!(orders)
             },
-                                            failure: failure)
+                                            failure:
+            failure)
     }
+    
+    
     //  /AppInterface/RobOrder           抢订单
     class func RobOrder(orderid: String, success: (() -> Void)?, failure: ((NSError) -> Void)?) {
         NetworkManager.defaultManager!.POST("RobOrder",
